@@ -1,0 +1,15 @@
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.csprojAssemblyReference.cache
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.Form1.resources
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.Properties.Resources.resources
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.csproj.GenerateResource.cache
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.csproj.CoreCompileInputs.cache
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\UI_Design.exe.config
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\UI_Design.exe
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\UI_Design.pdb
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\EntityFramework.dll
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\EntityFramework.xml
+C:\Users\Ola\source\repos\UI_Design\UI_Design\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.csproj.CopyComplete
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.exe
+C:\Users\Ola\source\repos\UI_Design\UI_Design\obj\Debug\UI_Design.pdb
