@@ -60,92 +60,37 @@ namespace UI_Design
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            //pnlNav.Height = btnHome.Height;
-            //pnlNav.Top = btnHome.Top;
-            //pnlNav.Left = btnHome.Left;
-            //btnHome.BackColor = Color.FromArgb(46, 51, 73);
-            viewClickButtun(sender);
+            SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
         private void btnDocuments_Click(object sender, EventArgs e)
         {
-            //pnlNav.Height = btnDocuments.Height;
-            //pnlNav.Top = btnDocuments.Top;
-            //pnlNav.Left = btnDocuments.Left;
-            //btnDocuments.BackColor = Color.FromArgb(46, 51, 73);
-            viewClickButtun(sender);
+            SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
-            //pnlNav.Height = btnMed.Height;
-            //pnlNav.Top = btnMed.Top;
-            //pnlNav.Left = btnMed.Left;
-            //btnMed.BackColor = Color.FromArgb(46, 51, 73);
-            viewClickButtun(sender);
+            SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
         private void btnGrowth_Click(object sender, EventArgs e)
         {
-            //pnlNav.Height = btnGrowth.Height;
-            //pnlNav.Top = btnGrowth.Top;
-            //pnlNav.Left = btnGrowth.Left;
-            //btnGrowth.BackColor = Color.FromArgb(46, 51, 73);
-            viewClickButtun(sender);
+            SetStyleElemens.viewClickButton(sender, pnlNav);
+        }
+
+        private void btnWeight_Click(object sender, EventArgs e)
+        {
+            SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            //pnlNav.Height = btnSettings.Height;
-            //pnlNav.Top = btnSettings.Top;
-            //pnlNav.Left = btnSettings.Left;
-            //btnSettings.BackColor = Color.FromArgb(46, 51, 73);
-            viewClickButtun(sender);
+            SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
-        private void btnHome_Leave(object sender, EventArgs e)
+        private void btnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
-            //btnHome.BackColor = Color.FromArgb(24, 30, 54);
-            viewBakcColorButton(sender);
-        }
-
-        private void btnDocuments_Leave(object sender, EventArgs e)
-        {
-            //btnDocuments.BackColor = Color.FromArgb(24, 30, 54);
-            viewBakcColorButton(sender);
-        }
-
-        private void btnMed_Leave(object sender, EventArgs e)
-        {
-            //btnMed.BackColor = Color.FromArgb(24, 30, 54);
-            viewBakcColorButton(sender);
-        }
-
-        private void btnGrowth_Leave(object sender, EventArgs e)
-        {
-            //btnGrowth.BackColor = Color.FromArgb(24, 30, 54);
-            viewBakcColorButton(sender);
-        }
-
-        private void btnSettings_Leave(object sender, EventArgs e)
-        {
-            //btnSettings.BackColor = Color.FromArgb(24, 30, 54);
-            viewBakcColorButton(sender);
-        }
-
-        private void viewClickButtun(object sender)
-        {
-            Button senderBtn = sender as Button;
-            pnlNav.Height = btnHome.Height;
-            pnlNav.Top = btnHome.Top;
-            pnlNav.Left = btnHome.Left;
-            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
-        }
-
-        private void viewBakcColorButton(object sender)
-        {
-            Button senderBtn = sender as Button;
-            senderBtn.BackColor = Color.FromArgb(24, 30, 54);
+            SetStyleElemens.viewBakcColorButton(sender);
         }
     }
 }
