@@ -50,12 +50,14 @@ namespace UI_Design
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Show();
 
+            LoginForm logForm = new LoginForm();
+            logForm.ShowDialog();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
