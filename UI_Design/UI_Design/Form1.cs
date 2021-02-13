@@ -36,15 +36,15 @@ namespace UI_Design
         //SqlDataAdapter adapter = null;
         public Form1()
         {
-            //db = new BabyDbContext();
-            
-            //string connString = ConfigurationManager
-            //   .ConnectionStrings["defaultConnection"]
-            //   .ConnectionString;
-            //db.Parents.Load();
-            //db.Childs.Load();
-            //db.Growth_Weights.Load();
-            //connection = new SqlConnection(connString);
+            db = new BabyDbContext();
+
+            string connString = ConfigurationManager
+               .ConnectionStrings["defaultConnection"]
+               .ConnectionString;
+            db.Parents.Load();
+            db.Childs.Load();
+            db.Growth_Weights.Load();
+            connection = new SqlConnection(connString);
 
             //set = new DataSet();
 
@@ -54,10 +54,14 @@ namespace UI_Design
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Opacity = 0.85;
             Show();
 
             LoginForm logForm = new LoginForm();
-            logForm.ShowDialog();
+            if(logForm.ShowDialog()==DialogResult.OK)
+            {
+                Opacity = 1.0;
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -92,7 +96,7 @@ namespace UI_Design
 
         private void btnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
-            SetStyleElemens.viewBakcColorButton(sender);
+            SetStyleElemens.viewBackColorButton(sender);
         }
     }
 }

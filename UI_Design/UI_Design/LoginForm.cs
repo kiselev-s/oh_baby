@@ -26,7 +26,9 @@ namespace UI_Design
         private void btnRegister_Click(object sender, EventArgs e)
         {
             RegisterForm regForm = new RegisterForm();
-            regForm.ShowDialog();
+            Hide();
+            if (regForm.ShowDialog() == DialogResult.OK)
+                Show();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace UI_Design
 
         private void button1_Click(object sender, EventArgs e)//временно!!!
         {
+            DialogResult = DialogResult.OK;
             Close();
         }
 
@@ -43,15 +46,28 @@ namespace UI_Design
         {
             if(txtEmail.Text == string.Empty)
             {
-                MessageBox.Show("Введите email!");
+                MessageBox.Show("Enter email!");
             }
             else if(txtPass.Text == string.Empty)
             {
-                MessageBox.Show("Введите password!");
+                MessageBox.Show("Enter password!");
             }
-            else// сюда логику проверки логина и пароля из базы
+            else
             {
-                Close();//временное решение!
+                int returnId = GetDataDB.verifyLoginLinq(txtEmail.Text, txtPass.Text);
+                if(returnId == -1)
+                {
+                    MessageBox.Show("Login or password is incorrect");
+                }
+                else
+                {
+                    DialogResult = DialogResult.OK;
+                    //
+                    MessageBox.Show("Залогинились успешно. Надо добавить возврат значения в главную форму (Id того кто залогинился)");
+                    // добавить возврат значения в главную форму (Id того кто залогинился)
+                    //
+                    Close();
+                }
             }
         }
     }

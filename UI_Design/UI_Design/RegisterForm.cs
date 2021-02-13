@@ -19,6 +19,7 @@ namespace UI_Design
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
             Close();
         }
 
@@ -38,7 +39,17 @@ namespace UI_Design
                 MessageBox.Show("Введенные пароли не совпадают!!");
             else//сюда логику проверки на уникальность Email из базы. Если ок, то функция добавления в базу пользователя
             {
-                MessageBox.Show("Поздравляем! Вы зарегистрировались! Но регистрация пока бесполезна =))))))");
+                try
+                {
+                    GetDataDB.addParentLinq(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
+                    //MessageBox.Show("Поздравляем! Вы зарегистрировались! Но регистрация пока бесполезна =))))))");
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                catch (System.Data.SqlClient.SqlException)
+                {
+                    MessageBox.Show("User with this email exists!");
+                }
             }
         }
     }

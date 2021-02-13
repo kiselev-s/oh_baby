@@ -19,7 +19,7 @@ namespace UI_Design
             senderBtn.BackColor = Color.FromArgb(46, 51, 73);
         }
 
-        public static void viewBakcColorButton(object sender)
+        public static void viewBackColorButton(object sender)
         {
             Button senderBtn = sender as Button;
             senderBtn.BackColor = Color.FromArgb(24, 30, 54);

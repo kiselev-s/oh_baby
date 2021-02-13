@@ -214,6 +214,9 @@ namespace UI_Design
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
