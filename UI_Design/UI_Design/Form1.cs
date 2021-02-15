@@ -36,15 +36,15 @@ namespace UI_Design
         //SqlDataAdapter adapter = null;
         public Form1()
         {
-            db = new BabyDbContext();
+            //db = new BabyDbContext();
 
-            string connString = ConfigurationManager
-               .ConnectionStrings["defaultConnection"]
-               .ConnectionString;
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
-            connection = new SqlConnection(connString);
+            //string connString = ConfigurationManager
+            //   .ConnectionStrings["defaultConnection"]
+            //   .ConnectionString;
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
+            //connection = new SqlConnection(connString);
 
             //set = new DataSet();
 
@@ -61,6 +61,20 @@ namespace UI_Design
             if(logForm.ShowDialog()==DialogResult.OK)
             {
                 Opacity = 1.0;
+                try
+                {
+                    //MessageBox.Show($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
+                    int test = logForm.getParentId();
+                    //Например посмотрим кто же там
+                    MessageBox.Show($@"{GetDataDB.findParentById(test).FirstName}
+{GetDataDB.findParentById(test).LastName}
+{GetDataDB.findParentById(test).Email}
+{GetDataDB.findParentById(test).Password}");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ай яй яй! Надо было залогиниться...");
+                }
             }
         }
 

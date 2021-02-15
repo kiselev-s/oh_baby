@@ -43,6 +43,7 @@ namespace UI_Design
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnVisiblePass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,12 +202,29 @@ namespace UI_Design
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // btnVisiblePass
+            // 
+            this.btnVisiblePass.FlatAppearance.BorderSize = 0;
+            this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnVisiblePass.Location = new System.Drawing.Point(367, 148);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisiblePass.Name = "btnVisiblePass";
+            this.btnVisiblePass.Size = new System.Drawing.Size(76, 26);
+            this.btnVisiblePass.TabIndex = 24;
+            this.btnVisiblePass.Text = "Глазик";
+            this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVisiblePass.UseVisualStyleBackColor = true;
+            this.btnVisiblePass.Click += new System.EventHandler(this.btnVisiblePassTrue_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(443, 258);
+            this.Controls.Add(this.btnVisiblePass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -218,7 +236,7 @@ namespace UI_Design
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterForm";
@@ -246,5 +264,6 @@ namespace UI_Design
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnVisiblePass;
     }
 }

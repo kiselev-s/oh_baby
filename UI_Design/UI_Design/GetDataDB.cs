@@ -45,7 +45,7 @@ namespace UI_Design
             if (result.Count() > 0)
             {
                 Parent parent = result.FirstOrDefault();
-                return parent.Id;// или может лучше вернуть обьект класса Parent содержащий данные о пользователе
+                return parent.Id;
             }
             else
             {
@@ -78,6 +78,27 @@ namespace UI_Design
         public static void deleteParentLinq()
         {
             //надо реализовать
+        }
+
+        public static Parent findParentById(int findId)
+        {
+            string connString = ConfigurationManager
+               .ConnectionStrings["defaultConnection"]
+               .ConnectionString;
+            DataContext db = new DataContext(connString);
+
+            var result = db.GetTable<Parent>()
+                .Where(p => p.Id == findId);
+            //if (result.Count() > 0)
+            //{
+            Parent parent = result.FirstOrDefault();
+            return parent;
+            // LoginForm по любому возвращает Id который существует в базе, поэтому мне кажется что никакие if не нужны
+            //}
+            //else
+            //{
+            //    return null;
+            //}
         }
 
 
