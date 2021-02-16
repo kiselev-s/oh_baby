@@ -40,7 +40,7 @@ namespace UI_Design
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)//временно!!!
+        private void button1_Click(object sender, EventArgs e)//ВРЕМЕННО!!! ПОТОМ УДАЛИТЬ!
         {
             DialogResult = DialogResult.OK;
             Close();
@@ -59,21 +59,20 @@ namespace UI_Design
             }
             else
             {
-                parentId = GetDataDB.verifyLoginLinq(txtEmail.Text, txtPass.Text);
+                parentId = GetDataDB.verifyLogin(txtEmail.Text, txtPass.Text);
                 if(parentId == -1)
                 {
                     MessageBox.Show("Login or password is incorrect");
                 }
-                else
+                else//залогинились успешно
                 {
                     DialogResult = DialogResult.OK;
-                    //MessageBox.Show("Залогинились успешно.");
                     Close();
                 }
             }
         }
 
-        public int getParentId()
+        public int getParentId()//функция возвращает Id пользователя, который вошел в приложение
         {
             return parentId;
         }

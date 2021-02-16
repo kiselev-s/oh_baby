@@ -33,7 +33,7 @@ namespace UI_Design
         //        MessageBox.Show("Пичаль.......");
         //    }
         //}
-        public static int verifyLoginLinq(string email, string pass)
+        public static int verifyLogin(string email, string pass)//проверка наличия в базе пользователя с данным Email и Password
         {
             string connString = ConfigurationManager
                .ConnectionStrings["defaultConnection"]
@@ -53,14 +53,13 @@ namespace UI_Design
             }
         }
 
-        public static void addParentLinq(string firstName, string lastName, string email, string password)
+        public static void addParent(string firstName, string lastName, string email, string password)//джобавление нового пользователя в базу
         {
             string connString = ConfigurationManager
                 .ConnectionStrings["defaultConnection"]
                 .ConnectionString;
             DataContext db = new DataContext(connString);
 
-            //INSERT
             Table<Parent> parents = db.GetTable<Parent>();
 
             Parent newParent = new Parent()
@@ -75,12 +74,12 @@ namespace UI_Design
             db.SubmitChanges();
         }
 
-        public static void deleteParentLinq()
+        public static void deleteParentLinq()//а надо ли?
         {
             //надо реализовать
         }
 
-        public static Parent findParentById(int findId)
+        public static Parent findParentById(int findId)//поиск в базе пользователя по искомому Id, возвращает обьект класса Parent
         {
             string connString = ConfigurationManager
                .ConnectionStrings["defaultConnection"]
@@ -100,7 +99,5 @@ namespace UI_Design
             //    return null;
             //}
         }
-
-
     }
 }

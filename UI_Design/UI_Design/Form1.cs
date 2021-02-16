@@ -30,23 +30,27 @@ namespace UI_Design
             int nHeightEllipse
         );
 
-        BabyDbContext db;
-        SqlConnection connection;
-        //DataSet set = null;
-        //SqlDataAdapter adapter = null;
+        readonly BabyDbContext db;
+
+        //SqlConnection connection;//вроде бы не используется, нужно?
+        //DataSet set = null;//вроде бы не используется, нужно?
+        //SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
+
         public Form1()
         {
-            //db = new BabyDbContext();
+            db = new BabyDbContext();
 
-            //string connString = ConfigurationManager
-            //   .ConnectionStrings["defaultConnection"]
-            //   .ConnectionString;
-            //db.Parents.Load();
-            //db.Childs.Load();
-            //db.Growth_Weights.Load();
-            //connection = new SqlConnection(connString);
+            db.Parents.Load();
+            db.Childs.Load();
+            db.Growth_Weights.Load();
 
-            //set = new DataSet();
+            //string connString = ConfigurationManager //вроде бы не используется, нужно?
+            //   .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
+            //   .ConnectionString; //вроде бы не используется, нужно?
+
+            //connection = new SqlConnection(connString);//вроде бы не используется, нужно?
+
+            //set = new DataSet();//вроде бы не используется, нужно?
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -65,7 +69,7 @@ namespace UI_Design
                 {
                     //MessageBox.Show($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
                     int test = logForm.getParentId();
-                    //Например посмотрим кто же там
+                    //Например посмотрим кто же там. Временно естественно
                     MessageBox.Show($@"{GetDataDB.findParentById(test).FirstName}
 {GetDataDB.findParentById(test).LastName}
 {GetDataDB.findParentById(test).Email}

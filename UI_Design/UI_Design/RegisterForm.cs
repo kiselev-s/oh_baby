@@ -39,24 +39,27 @@ namespace UI_Design
             else if (txtPassCheck.Text == string.Empty)
                 MessageBox.Show("Введите проверочный пароль!");
             else if (txtPassCheck.Text != txtPass.Text)
-                MessageBox.Show("Введенные пароли не совпадают!!");
+                MessageBox.Show("Введенные пароли не совпадают!");
+            else if (txtPass.Text.Length < 8 || txtPassCheck.TextLength < 8)
+                MessageBox.Show("Минимальная длина пароля - 8 символов");
+            else if(txtPass.Text.Length > 16 || txtPassCheck.TextLength > 16)
+                MessageBox.Show("Максимальная длина пароля - 16 символов");
             else
             {
                 try
                 {
-                    GetDataDB.addParentLinq(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
+                    GetDataDB.addParent(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);//добавить в таблицу нового пользователя
                     DialogResult = DialogResult.OK;
                     Close();
                 }
                 catch (System.Data.SqlClient.SqlException)
                 {
-                    //MessageBox.Show("User with this email exists!");
                     MessageBox.Show("Пользователь с таким email существует!");
                 }
             }
         }
 
-        bool isValidEmail(string email)
+        bool isValidEmail(string email)//проверка валидности Email
         {
             string pattern = "[.\\-_a-z0-9]+@([a-z0-9][\\-a-z0-9]+\\.)+[a-z]{2,6}";
             Match isMatch = Regex.Match(email, pattern, RegexOptions.IgnoreCase);

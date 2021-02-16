@@ -4,26 +4,29 @@ using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using ColumnAttribute = System.Data.Linq.Mapping.ColumnAttribute;
+using TableAttribute = System.Data.Linq.Mapping.TableAttribute;
+using System.ComponentModel.DataAnnotations;
 
 namespace UI_Design
 {
     [Table(Name = "parents")]
     class Parent
     {
-        [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true, DbType = "int")]
+        [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
-        [Column(Name = "FirstName", CanBeNull = true)]
+        [Column(Name = "FirstName"), MaxLength(60)]
         public string FirstName { get; set; }
 
-        [Column(Name = "LastName", CanBeNull = true)]
+        [Column(Name = "LastName"), MaxLength(60)]
         public string LastName { get; set; }
 
-        [Column(Name = "Email", DbType = "NVarChar")]// Как сделать уникальный ключ?
-        //[System.ComponentModel.DataAnnotations.Schema.Index(IsUnique = true)]
-        public string Email { get; set; }
+        [Column(Name = "Email"), Required, Index(IsUnique = true), MaxLength(100)]
+        public string Email { get; set;}
 
-        [Column(Name = "password")]
+        [Column(Name = "password"), Required, MaxLength(16)]
         public string Password { get; set; }
 
         public virtual ICollection<Child> childs { get; set; }
@@ -35,14 +38,5 @@ namespace UI_Design
         //public string Password { get; set; }
 
         //public virtual ICollection<Child> childs { get; set; }
-
-        //public Parent (int _id, string _firstName, string _lastName, string _email, string _password)// это вообще можно было здесь создавать?
-        //{
-        //    Id = _id;
-        //    FirstName = _firstName;
-        //    LastName = _lastName;
-        //    Email = _email;
-        //    Password = _password;
-        //}
     }
 }
