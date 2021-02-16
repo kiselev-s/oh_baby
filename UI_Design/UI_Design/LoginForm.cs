@@ -51,18 +51,18 @@ namespace UI_Design
             parentId = 0;
             if(txtEmail.Text == string.Empty)
             {
-                MessageBox.Show("Enter email!");
+                MyMessageBox.MyShow("Enter email!");
             }
             else if(txtPass.Text == string.Empty)
             {
-                MessageBox.Show("Enter password!");
+                MyMessageBox.MyShow("Enter password!");
             }
             else
             {
-                parentId = GetDataDB.verifyLogin(txtEmail.Text, txtPass.Text);
+                parentId = GetDataDB.verifyLogin(txtEmail.Text, GetDataDB.GetHash(txtPass.Text));
                 if(parentId == -1)
                 {
-                    MessageBox.Show("Login or password is incorrect");
+                    MyMessageBox.MyShow("Login or password is incorrect");
                 }
                 else//залогинились успешно
                 {

@@ -52,7 +52,7 @@ namespace UI_Design
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(53, 168);
+            this.label5.Location = new System.Drawing.Point(53, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 19);
             this.label5.TabIndex = 23;
@@ -63,7 +63,7 @@ namespace UI_Design
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(53, 132);
+            this.label4.Location = new System.Drawing.Point(53, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 19);
             this.label4.TabIndex = 22;
@@ -104,39 +104,54 @@ namespace UI_Design
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(214, 18);
+            this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtFirstName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtFirstName.Location = new System.Drawing.Point(214, 16);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(161, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(161, 26);
             this.txtFirstName.TabIndex = 18;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(214, 55);
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtLastName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtLastName.Location = new System.Drawing.Point(214, 53);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(161, 20);
+            this.txtLastName.Size = new System.Drawing.Size(161, 26);
             this.txtLastName.TabIndex = 17;
             // 
             // txtPassCheck
             // 
-            this.txtPassCheck.Location = new System.Drawing.Point(214, 169);
+            this.txtPassCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPassCheck.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPassCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtPassCheck.Location = new System.Drawing.Point(214, 167);
             this.txtPassCheck.Name = "txtPassCheck";
             this.txtPassCheck.PasswordChar = '*';
-            this.txtPassCheck.Size = new System.Drawing.Size(161, 20);
+            this.txtPassCheck.Size = new System.Drawing.Size(161, 26);
             this.txtPassCheck.TabIndex = 16;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(214, 132);
+            this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtPass.Location = new System.Drawing.Point(214, 130);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(161, 20);
+            this.txtPass.Size = new System.Drawing.Size(161, 26);
             this.txtPass.TabIndex = 15;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(214, 93);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtEmail.Location = new System.Drawing.Point(214, 91);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(161, 20);
+            this.txtEmail.Size = new System.Drawing.Size(161, 26);
             this.txtEmail.TabIndex = 14;
             // 
             // panel1
@@ -208,7 +223,7 @@ namespace UI_Design
             this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnVisiblePass.Location = new System.Drawing.Point(367, 148);
+            this.btnVisiblePass.Location = new System.Drawing.Point(367, 146);
             this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
             this.btnVisiblePass.Name = "btnVisiblePass";
             this.btnVisiblePass.Size = new System.Drawing.Size(76, 26);

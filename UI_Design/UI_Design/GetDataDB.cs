@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -98,6 +99,14 @@ namespace UI_Design
             //{
             //    return null;
             //}
+        }
+
+        public static string GetHash(string input)//шифруем пароль в MD5
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            return Convert.ToBase64String(hash);
         }
     }
 }

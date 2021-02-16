@@ -26,7 +26,7 @@ namespace UI_Design
         [Column(Name = "Email"), Required, Index(IsUnique = true), MaxLength(100)]
         public string Email { get; set;}
 
-        [Column(Name = "password"), Required, MaxLength(16)]
+        [Column(Name = "password"), Required, MaxLength(130)]
         public string Password { get; set; }
 
         public virtual ICollection<Child> childs { get; set; }

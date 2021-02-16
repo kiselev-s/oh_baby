@@ -67,17 +67,14 @@ namespace UI_Design
                 Opacity = 1.0;
                 try
                 {
-                    //MessageBox.Show($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
+                    //MyMessageBox.MyShow($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
                     int test = logForm.getParentId();
                     //Например посмотрим кто же там. Временно естественно
-                    MessageBox.Show($@"{GetDataDB.findParentById(test).FirstName}
-{GetDataDB.findParentById(test).LastName}
-{GetDataDB.findParentById(test).Email}
-{GetDataDB.findParentById(test).Password}");
+                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(test).FirstName} {GetDataDB.findParentById(test).LastName} {GetDataDB.findParentById(test).Email} {GetDataDB.findParentById(test).Password}");
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Ай яй яй! Надо было залогиниться...");
+                    MyMessageBox.MyShow("Ай яй яй! Надо было залогиниться...");
                 }
             }
         }

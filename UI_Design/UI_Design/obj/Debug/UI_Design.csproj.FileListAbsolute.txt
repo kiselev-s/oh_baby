@@ -30,3 +30,4 @@ C:\Users\Viking\Desktop\Kursovoy\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design
 C:\Users\Viking\Desktop\Kursovoy\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.pdb
 C:\Users\Viking\Desktop\Kursovoy\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.LoginForm.resources
 C:\Users\Viking\Desktop\Kursovoy\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.RegisterForm.resources
+C:\Users\Viking\Desktop\Kursovoy\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.MyMessageBox.resources
