@@ -30,23 +30,27 @@ namespace UI_Design
             int nHeightEllipse
         );
 
-        BabyDbContext db;
-        SqlConnection connection;
-        //DataSet set = null;
-        //SqlDataAdapter adapter = null;
+        readonly BabyDbContext db;
+
+        //SqlConnection connection;//вроде бы не используется, нужно?
+        //DataSet set = null;//вроде бы не используется, нужно?
+        //SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
+
         public Form1()
         {
             db = new BabyDbContext();
 
-            string connString = ConfigurationManager
-               .ConnectionStrings["defaultConnection"]
-               .ConnectionString;
             db.Parents.Load();
             db.Childs.Load();
             db.Growth_Weights.Load();
-            connection = new SqlConnection(connString);
 
-            //set = new DataSet();
+            //string connString = ConfigurationManager //вроде бы не используется, нужно?
+            //   .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
+            //   .ConnectionString; //вроде бы не используется, нужно?
+
+            //connection = new SqlConnection(connString);//вроде бы не используется, нужно?
+
+            //set = new DataSet();//вроде бы не используется, нужно?
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -61,6 +65,17 @@ namespace UI_Design
             if(logForm.ShowDialog()==DialogResult.OK)
             {
                 Opacity = 1.0;
+                try
+                {
+                    //MyMessageBox.MyShow($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
+                    int test = logForm.getParentId();
+                    //Например посмотрим кто же там. Временно естественно
+                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(test).FirstName} {GetDataDB.findParentById(test).LastName} {GetDataDB.findParentById(test).Email} {GetDataDB.findParentById(test).Password}");
+                }
+                catch (Exception)
+                {
+                    MyMessageBox.MyShow("Ай яй яй! Надо было залогиниться...");
+                }
             }
         }
 

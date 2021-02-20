@@ -42,6 +42,7 @@ namespace UI_Design
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
+            this.btnVisiblePass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace UI_Design
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.txtEmail.Location = new System.Drawing.Point(205, 35);
+            this.txtEmail.Location = new System.Drawing.Point(196, 33);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(161, 26);
             this.txtEmail.TabIndex = 2;
@@ -60,7 +61,7 @@ namespace UI_Design
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.txtPass.Location = new System.Drawing.Point(205, 74);
+            this.txtPass.Location = new System.Drawing.Point(196, 72);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(161, 26);
@@ -71,7 +72,7 @@ namespace UI_Design
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(80, 36);
+            this.label3.Location = new System.Drawing.Point(71, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 19);
             this.label3.TabIndex = 10;
@@ -82,7 +83,7 @@ namespace UI_Design
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(80, 74);
+            this.label4.Location = new System.Drawing.Point(71, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 11;
@@ -202,19 +203,37 @@ namespace UI_Design
             this.toolTipLogin.ReshowDelay = 20;
             this.toolTipLogin.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // btnVisiblePass
+            // 
+            this.btnVisiblePass.FlatAppearance.BorderSize = 0;
+            this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnVisiblePass.Location = new System.Drawing.Point(357, 72);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisiblePass.Name = "btnVisiblePass";
+            this.btnVisiblePass.Size = new System.Drawing.Size(76, 26);
+            this.btnVisiblePass.TabIndex = 8;
+            this.btnVisiblePass.Text = "Глазик";
+            this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTipLogin.SetToolTip(this.btnVisiblePass, "Log in");
+            this.btnVisiblePass.UseVisualStyleBackColor = true;
+            this.btnVisiblePass.Click += new System.EventHandler(this.btnVisiblePassTrue_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(433, 216);
+            this.Controls.Add(this.btnVisiblePass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
@@ -241,5 +260,6 @@ namespace UI_Design
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ToolTip toolTipLogin;
+        private System.Windows.Forms.Button btnVisiblePass;
     }
 }

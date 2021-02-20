@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -33,7 +34,7 @@ namespace UI_Design
         //        MessageBox.Show("Пичаль.......");
         //    }
         //}
-        public static int verifyLoginLinq(string email, string pass)
+        public static int verifyLogin(string email, string pass)//проверка наличия в базе пользователя с данным Email и Password
         {
             string connString = ConfigurationManager
                .ConnectionStrings["defaultConnection"]
@@ -45,7 +46,7 @@ namespace UI_Design
             if (result.Count() > 0)
             {
                 Parent parent = result.FirstOrDefault();
-                return parent.Id;// или может лучше вернуть обьект класса Parent содержащий данные о пользователе
+                return parent.Id;
             }
             else
             {
@@ -53,14 +54,13 @@ namespace UI_Design
             }
         }
 
-        public static void addParentLinq(string firstName, string lastName, string email, string password)
+        public static void addParent(string firstName, string lastName, string email, string password)//джобавление нового пользователя в базу
         {
             string connString = ConfigurationManager
                 .ConnectionStrings["defaultConnection"]
                 .ConnectionString;
             DataContext db = new DataContext(connString);
 
-            //INSERT
             Table<Parent> parents = db.GetTable<Parent>();
 
             Parent newParent = new Parent()
@@ -75,11 +75,38 @@ namespace UI_Design
             db.SubmitChanges();
         }
 
-        public static void deleteParentLinq()
+        public static void deleteParentLinq()//а надо ли?
         {
             //надо реализовать
         }
 
+        public static Parent findParentById(int findId)//поиск в базе пользователя по искомому Id, возвращает обьект класса Parent
+        {
+            string connString = ConfigurationManager
+               .ConnectionStrings["defaultConnection"]
+               .ConnectionString;
+            DataContext db = new DataContext(connString);
 
+            var result = db.GetTable<Parent>()
+                .Where(p => p.Id == findId);
+            //if (result.Count() > 0)
+            //{
+            Parent parent = result.FirstOrDefault();
+            return parent;
+            // LoginForm по любому возвращает Id который существует в базе, поэтому мне кажется что никакие if не нужны
+            //}
+            //else
+            //{
+            //    return null;
+            //}
+        }
+
+        public static string GetHash(string input)//шифруем пароль в MD5
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            return Convert.ToBase64String(hash);
+        }
     }
 }
