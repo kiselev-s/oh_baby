@@ -16,7 +16,19 @@ namespace UI_Design
             senderPanel.Height = senderBtn.Height;
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
-            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+            senderBtn.BackColor = Color.FromArgb(46, 51, 73);            
+        }
+        public static Form createForm(object sender, Panel senderPanel, Label senderLable, string titleForm)
+        {
+            senderLable.Text = titleForm;
+            senderPanel.Controls.Clear();
+            
+            Form form = new Form() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            form.FormBorderStyle = FormBorderStyle.None;
+            senderPanel.Controls.Add(form);
+            senderPanel.BackColor= Color.FromArgb(46, 51, 73);
+            form.Show();
+            return form;
         }
 
         public static void viewBackColorButton(object sender)

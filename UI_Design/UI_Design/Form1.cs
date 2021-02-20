@@ -32,9 +32,9 @@ namespace UI_Design
 
         readonly BabyDbContext db;
 
-        //SqlConnection connection;//вроде бы не используется, нужно?
-        //DataSet set = null;//вроде бы не используется, нужно?
-        //SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
+        SqlConnection connection;//вроде бы не используется, нужно?
+        DataSet set = null;//вроде бы не используется, нужно?
+        SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
 
         public Form1()
         {
@@ -44,13 +44,13 @@ namespace UI_Design
             db.Childs.Load();
             db.Growth_Weights.Load();
 
-            //string connString = ConfigurationManager //вроде бы не используется, нужно?
-            //   .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
-            //   .ConnectionString; //вроде бы не используется, нужно?
+            string connString = ConfigurationManager //вроде бы не используется, нужно?
+              .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
+              .ConnectionString; //вроде бы не используется, нужно?
 
-            //connection = new SqlConnection(connString);//вроде бы не используется, нужно?
+            connection = new SqlConnection(connString);//вроде бы не используется, нужно?
 
-            //set = new DataSet();//вроде бы не используется, нужно?
+            set = new DataSet();//вроде бы не используется, нужно?
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -82,16 +82,37 @@ namespace UI_Design
         private void btnHome_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
+            lblTitle.Text = "Home";
+            this.pnlFormLoader.Controls.Clear();
+            //Form1 formHome = new Form1(); //{ Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //formHome.FormBorderStyle = FormBorderStyle.None;
+            //this.pnlFormLoader.Controls.Add(formHome);
+            //formHome.Show();
         }
 
         private void btnDocuments_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
+
+            lblTitle.Text = "Documents";
+            this.pnlFormLoader.Controls.Clear();
+            FormDocuments formDoc = new FormDocuments() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formDoc.FormBorderStyle = FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(formDoc);
+            formDoc.Show();
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
+            FormMedicen formMed=SetStyleElemens.createForm(sender, pnlFormLoader, lblTitle, "Medicina") as FormMedicen;
+           
+            //lblTitle.Text = "Medicina";
+            //this.pnlFormLoader.Controls.Clear();
+            //FormMedicen formMed = new FormMedicen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            //formMed.FormBorderStyle = FormBorderStyle.None;
+            //this.pnlFormLoader.Controls.Add(formMed);
+            //formMed.Show();
         }
 
         private void btnGrowth_Click(object sender, EventArgs e)

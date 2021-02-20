@@ -69,6 +69,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocuments.Designer.cs">
+      <DependentUpon>FormDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMedicen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMedicen.Designer.cs">
+      <DependentUpon>FormMedicen.cs</DependentUpon>
+    </Compile>
     <Compile Include="GetDataDB.cs" />
     <Compile Include="Growth_Weight.cs" />
     <Compile Include="LoginForm.cs">
@@ -95,6 +107,12 @@
     <Compile Include="SetStyleElemens.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocuments.resx">
+      <DependentUpon>FormDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMedicen.resx">
+      <DependentUpon>FormMedicen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
