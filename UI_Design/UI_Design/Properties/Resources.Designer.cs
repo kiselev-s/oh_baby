@@ -133,6 +133,26 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye_60px {
+            get {
+                object obj = ResourceManager.GetObject("eye_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyelashes_3d_64px {
+            get {
+                object obj = ResourceManager.GetObject("eyelashes_3d_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap growth {
             get {
                 object obj = ResourceManager.GetObject("growth", resourceCulture);

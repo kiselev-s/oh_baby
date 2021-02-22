@@ -79,13 +79,19 @@ namespace UI_Design
 
         private void btnVisiblePassTrue_Click(object sender, EventArgs e)//показать пароль
         {
+            btnVisiblePass.BackgroundImage = Properties.Resources.eye_60px;//"глаз открыт"
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
             txtPass.PasswordChar = '\0';
+            
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassTrue_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassFalse_Click);
         }
         private void btnVisiblePassFalse_Click(object sender, EventArgs e)//скрыть пароль
         {
+            btnVisiblePass.BackgroundImage = Properties.Resources.eyelashes_3d_64px;//"глаз закрыт"
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
             txtPass.PasswordChar = '*';
+
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassFalse_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassTrue_Click);
         }

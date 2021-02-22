@@ -195,6 +195,12 @@
   <ItemGroup>
     <None Include="Resources\weight1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyelashes_3d_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_60px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

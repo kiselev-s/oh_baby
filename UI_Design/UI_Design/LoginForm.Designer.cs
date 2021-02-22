@@ -51,9 +51,10 @@ namespace UI_Design
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.txtEmail.Location = new System.Drawing.Point(196, 33);
+            this.txtEmail.Location = new System.Drawing.Point(261, 41);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(161, 26);
+            this.txtEmail.Size = new System.Drawing.Size(213, 30);
             this.txtEmail.TabIndex = 2;
             // 
             // txtPass
@@ -61,10 +62,11 @@ namespace UI_Design
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.txtPass.Location = new System.Drawing.Point(196, 72);
+            this.txtPass.Location = new System.Drawing.Point(261, 89);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(161, 26);
+            this.txtPass.Size = new System.Drawing.Size(213, 30);
             this.txtPass.TabIndex = 3;
             // 
             // label3
@@ -72,9 +74,10 @@ namespace UI_Design
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(71, 34);
+            this.label3.Location = new System.Drawing.Point(95, 42);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 19);
+            this.label3.Size = new System.Drawing.Size(54, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "Email";
             // 
@@ -83,17 +86,19 @@ namespace UI_Design
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(71, 72);
+            this.label4.Location = new System.Drawing.Point(95, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 19);
+            this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "Password";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 4);
+            this.button1.Location = new System.Drawing.Point(77, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(321, 23);
+            this.button1.Size = new System.Drawing.Size(428, 28);
             this.button1.TabIndex = 12;
             this.button1.Text = "Временно! Пропустить этот шаг Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -108,10 +113,10 @@ namespace UI_Design
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 158);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(433, 88);
+            this.panel1.Size = new System.Drawing.Size(577, 108);
             this.panel1.TabIndex = 14;
             // 
             // lblRegister
@@ -119,9 +124,10 @@ namespace UI_Design
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblRegister.Location = new System.Drawing.Point(35, 56);
+            this.lblRegister.Location = new System.Drawing.Point(47, 69);
+            this.lblRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(162, 19);
+            this.lblRegister.Size = new System.Drawing.Size(194, 23);
             this.lblRegister.TabIndex = 7;
             this.lblRegister.Text = "Don\'t have an account?";
             // 
@@ -132,10 +138,10 @@ namespace UI_Design
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnSettings.Location = new System.Drawing.Point(0, 418);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSettings.Location = new System.Drawing.Point(0, 514);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(140, 34);
+            this.btnSettings.Size = new System.Drawing.Size(187, 42);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -148,10 +154,10 @@ namespace UI_Design
             this.btnRegister.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnRegister.Image = global::UI_Design.Properties.Resources.weight1;
-            this.btnRegister.Location = new System.Drawing.Point(271, 48);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(361, 59);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(104, 34);
+            this.btnRegister.Size = new System.Drawing.Size(139, 42);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -166,10 +172,10 @@ namespace UI_Design
             this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCancel.Image = global::UI_Design.Properties.Resources.doc4;
-            this.btnCancel.Location = new System.Drawing.Point(257, 2);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(343, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 34);
+            this.btnCancel.Size = new System.Drawing.Size(187, 42);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -184,10 +190,10 @@ namespace UI_Design
             this.btnLogin.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogin.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnLogin.Location = new System.Drawing.Point(39, 2);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(52, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(95, 34);
+            this.btnLogin.Size = new System.Drawing.Size(127, 42);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -205,16 +211,17 @@ namespace UI_Design
             // 
             // btnVisiblePass
             // 
+            this.btnVisiblePass.BackgroundImage = global::UI_Design.Properties.Resources.eyelashes_3d_64px;
+            this.btnVisiblePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnVisiblePass.FlatAppearance.BorderSize = 0;
             this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnVisiblePass.Location = new System.Drawing.Point(357, 72);
-            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisiblePass.Location = new System.Drawing.Point(476, 89);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVisiblePass.Name = "btnVisiblePass";
-            this.btnVisiblePass.Size = new System.Drawing.Size(76, 26);
+            this.btnVisiblePass.Size = new System.Drawing.Size(37, 32);
             this.btnVisiblePass.TabIndex = 8;
-            this.btnVisiblePass.Text = "Глазик";
             this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipLogin.SetToolTip(this.btnVisiblePass, "Log in");
             this.btnVisiblePass.UseVisualStyleBackColor = true;
@@ -222,10 +229,10 @@ namespace UI_Design
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(433, 216);
+            this.ClientSize = new System.Drawing.Size(577, 266);
             this.Controls.Add(this.btnVisiblePass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -234,6 +241,7 @@ namespace UI_Design
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
