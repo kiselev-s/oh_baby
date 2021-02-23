@@ -108,5 +108,25 @@ namespace UI_Design
 
             return Convert.ToBase64String(hash);
         }
+
+        public static void addChild(string firstName, string lastName, DateTime birthday)//джобавление ребенка в базу
+        {
+            string connString = ConfigurationManager
+                .ConnectionStrings["defaultConnection"]
+                .ConnectionString;
+            DataContext db = new DataContext(connString);
+
+            Table<Child> childs = db.GetTable<Child>();
+
+            Child newChild = new Child()
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Birthday = birthday
+            };
+
+            childs.InsertOnSubmit(newChild);
+            db.SubmitChanges();
+        }
     }
 }

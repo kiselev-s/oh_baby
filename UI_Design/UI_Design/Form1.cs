@@ -36,6 +36,8 @@ namespace UI_Design
         DataSet set = null;//вроде бы не используется, нужно?
         SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
 
+        private static int parentId = -1;
+
         public Form1()
         {
             db = new BabyDbContext();
@@ -68,9 +70,9 @@ namespace UI_Design
                 try
                 {
                     //MyMessageBox.MyShow($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
-                    int test = logForm.getParentId();
+                    parentId = logForm.getParentId();
                     //Например посмотрим кто же там. Временно естественно
-                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(test).FirstName} {GetDataDB.findParentById(test).LastName} {GetDataDB.findParentById(test).Email} {GetDataDB.findParentById(test).Password}");
+                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(parentId).FirstName} {GetDataDB.findParentById(parentId).LastName} {GetDataDB.findParentById(parentId).Email} {GetDataDB.findParentById(parentId).Password}");
                 }
                 catch (Exception)
                 {
@@ -123,6 +125,31 @@ namespace UI_Design
         private void btnWeight_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
+        }
+
+        private void btnAddChild_Click(object sender, EventArgs e)
+        {
+            SetStyleElemens.viewClickButton(sender, pnlNav);
+
+            Opacity = 0.85;
+
+            FormAddChild formAddChild = new FormAddChild();
+            if (formAddChild.ShowDialog() == DialogResult.OK)
+            {
+                Opacity = 1.0;
+                try
+                {
+                    // сюда какой-то код после добавления ребенка
+                }
+                catch (Exception)
+                {
+                    MyMessageBox.MyShow("Нарушение доступа к базе данных???");
+                }
+            }
+            else
+            {
+                Opacity = 1.0;
+            }
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
