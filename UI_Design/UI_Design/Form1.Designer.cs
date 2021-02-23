@@ -35,6 +35,8 @@ namespace UI_Design
             this.label1 = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlFormLoader = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnWeight = new System.Windows.Forms.Button();
             this.btnGrowth = new System.Windows.Forms.Button();
@@ -42,7 +44,6 @@ namespace UI_Design
             this.btnDocuments = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +52,7 @@ namespace UI_Design
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnWeight);
             this.panel1.Controls.Add(this.btnGrowth);
@@ -116,6 +118,34 @@ namespace UI_Design
             this.pnlFormLoader.Size = new System.Drawing.Size(764, 477);
             this.pnlFormLoader.TabIndex = 2;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitle.Location = new System.Drawing.Point(484, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(78, 29);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Home";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Image = global::UI_Design.Properties.Resources.icons8_exit;
+            this.button1.Location = new System.Drawing.Point(0, 513);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 42);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Выход";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSettings
             // 
             this.btnSettings.FlatAppearance.BorderSize = 0;
@@ -123,7 +153,7 @@ namespace UI_Design
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnSettings.Location = new System.Drawing.Point(0, 514);
+            this.btnSettings.Location = new System.Drawing.Point(-3, 467);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(187, 42);
@@ -241,17 +271,6 @@ namespace UI_Design
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitle.Location = new System.Drawing.Point(484, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(78, 29);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Home";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,6 +312,7 @@ namespace UI_Design
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button button1;
     }
 }
 
