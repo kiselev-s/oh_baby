@@ -36,13 +36,15 @@ namespace UI_Design
         DataSet set = null;//вроде бы не используется, нужно?
         SqlDataAdapter adapter = null;//вроде бы не используется, нужно?
 
+        private static int parentId = -1;
+
         public Form1()
         {
-            db = new BabyDbContext();
+            //db = new BabyDbContext();
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
 
             string connString = ConfigurationManager //вроде бы не используется, нужно?
               .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
@@ -62,20 +64,24 @@ namespace UI_Design
             Show();
 
             LoginForm logForm = new LoginForm();
-            if(logForm.ShowDialog()==DialogResult.OK)
+            if (logForm.ShowDialog() == DialogResult.OK)
             {
                 Opacity = 1.0;
                 try
                 {
                     //MyMessageBox.MyShow($"Залогинился пользователь Id = {logForm.getParentId()}");// сюда вернулся Id пользователя, берем его отсюда и длаем с ним все что угодно
-                    int test = logForm.getParentId();
+                    parentId = logForm.getParentId();
                     //Например посмотрим кто же там. Временно естественно
-                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(test).FirstName} {GetDataDB.findParentById(test).LastName} {GetDataDB.findParentById(test).Email} {GetDataDB.findParentById(test).Password}");
+                    MyMessageBox.MyShow($@"{GetDataDB.findParentById(parentId).FirstName} {GetDataDB.findParentById(parentId).LastName} {GetDataDB.findParentById(parentId).Email} {GetDataDB.findParentById(parentId).Password}");
                 }
                 catch (Exception)
                 {
                     MyMessageBox.MyShow("Ай яй яй! Надо было залогиниться...");
                 }
+            }
+            else
+            {
+                Opacity = 1.0;
             }
         }
 
@@ -94,25 +100,17 @@ namespace UI_Design
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
 
-            lblTitle.Text = "Documents";
-            this.pnlFormLoader.Controls.Clear();
-            FormDocuments formDoc = new FormDocuments() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formDoc.FormBorderStyle = FormBorderStyle.None;
-            this.pnlFormLoader.Controls.Add(formDoc);
-            formDoc.Show();
+            FormDocuments fornDoc = new FormDocuments();
+            SetStyleElemens.CreateForm(fornDoc, pnlFormLoader, lblTitle, "Documents");           
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
-            FormMedicen formMed=SetStyleElemens.createForm(sender, pnlFormLoader, lblTitle, "Medicina") as FormMedicen;
+
+            FormMedicen formMed = new FormMedicen();
+            SetStyleElemens.CreateForm(formMed, pnlFormLoader, lblTitle, "Medicina");       
            
-            //lblTitle.Text = "Medicina";
-            //this.pnlFormLoader.Controls.Clear();
-            //FormMedicen formMed = new FormMedicen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //formMed.FormBorderStyle = FormBorderStyle.None;
-            //this.pnlFormLoader.Controls.Add(formMed);
-            //formMed.Show();
         }
 
         private void btnGrowth_Click(object sender, EventArgs e)
@@ -125,6 +123,31 @@ namespace UI_Design
             SetStyleElemens.viewClickButton(sender, pnlNav);
         }
 
+        private void btnAddChild_Click(object sender, EventArgs e)
+        {
+            SetStyleElemens.viewClickButton(sender, pnlNav);
+
+            Opacity = 0.85;
+
+            FormAddChild formAddChild = new FormAddChild();
+            if (formAddChild.ShowDialog() == DialogResult.OK)
+            {
+                Opacity = 1.0;
+                try
+                {
+                    // сюда какой-то код после добавления ребенка
+                }
+                catch (Exception)
+                {
+                    MyMessageBox.MyShow("Нарушение доступа к базе данных???");
+                }
+            }
+            else
+            {
+                Opacity = 1.0;
+            }
+        }
+
         private void btnSettings_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
@@ -133,6 +156,11 @@ namespace UI_Design
         private void btnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
             SetStyleElemens.viewBackColorButton(sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

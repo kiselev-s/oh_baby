@@ -51,18 +51,18 @@ namespace UI_Design
             parentId = 0;
             if(txtEmail.Text == string.Empty)
             {
-                MyMessageBox.MyShow("Enter email!");
+                MyMessageBox.MyShow("Ввеите email!");
             }
             else if(txtPass.Text == string.Empty)
             {
-                MyMessageBox.MyShow("Enter password!");
+                MyMessageBox.MyShow("Введите пароль!");
             }
             else
             {
                 parentId = GetDataDB.verifyLogin(txtEmail.Text, GetDataDB.GetHash(txtPass.Text));
                 if(parentId == -1)
                 {
-                    MyMessageBox.MyShow("Login or password is incorrect");
+                    MyMessageBox.MyShow("Еmail или пароль не корректны! Попробуй ещё.");
                 }
                 else//залогинились успешно
                 {
@@ -79,13 +79,19 @@ namespace UI_Design
 
         private void btnVisiblePassTrue_Click(object sender, EventArgs e)//показать пароль
         {
+            btnVisiblePass.BackgroundImage = Properties.Resources.eye_60px;//"глаз открыт"
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
             txtPass.PasswordChar = '\0';
+            
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassTrue_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassFalse_Click);
         }
         private void btnVisiblePassFalse_Click(object sender, EventArgs e)//скрыть пароль
         {
+            btnVisiblePass.BackgroundImage = Properties.Resources.eyelashes_3d_64px;//"глаз закрыт"
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
             txtPass.PasswordChar = '*';
+
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassFalse_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassTrue_Click);
         }
