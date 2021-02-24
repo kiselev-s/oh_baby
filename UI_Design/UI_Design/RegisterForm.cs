@@ -71,6 +71,9 @@ namespace UI_Design
         {
             txtPass.PasswordChar = '\0';
             txtPassCheck.PasswordChar = '\0';
+            btnVisiblePass.BackgroundImage = Properties.Resources.eye_60px;
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
+
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassTrue_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassFalse_Click);
         }
@@ -78,6 +81,8 @@ namespace UI_Design
         {
             txtPass.PasswordChar = '*';
             txtPassCheck.PasswordChar = '*';
+            btnVisiblePass.BackgroundImage = Properties.Resources.eyelashes_3d_64px;
+            btnVisiblePass.BackgroundImageLayout = ImageLayout.Zoom;
             btnVisiblePass.Click -= new EventHandler(btnVisiblePassFalse_Click);
             btnVisiblePass.Click += new EventHandler(btnVisiblePassTrue_Click);
         }

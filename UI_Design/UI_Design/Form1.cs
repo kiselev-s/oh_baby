@@ -40,11 +40,11 @@ namespace UI_Design
 
         public Form1()
         {
-            db = new BabyDbContext();
+            //db = new BabyDbContext();
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
 
             string connString = ConfigurationManager //вроде бы не используется, нужно?
               .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
@@ -96,25 +96,17 @@ namespace UI_Design
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
 
-            lblTitle.Text = "Documents";
-            this.pnlFormLoader.Controls.Clear();
-            FormDocuments formDoc = new FormDocuments() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formDoc.FormBorderStyle = FormBorderStyle.None;
-            this.pnlFormLoader.Controls.Add(formDoc);
-            formDoc.Show();
+            FormDocuments fornDoc = new FormDocuments();
+            SetStyleElemens.CreateForm(fornDoc, pnlFormLoader, lblTitle, "Documents");           
         }
 
         private void btnMed_Click(object sender, EventArgs e)
         {
             SetStyleElemens.viewClickButton(sender, pnlNav);
-            FormMedicen formMed=SetStyleElemens.createForm(sender, pnlFormLoader, lblTitle, "Medicina") as FormMedicen;
+
+            FormMedicen formMed = new FormMedicen();
+            SetStyleElemens.CreateForm(formMed, pnlFormLoader, lblTitle, "Medicina");       
            
-            //lblTitle.Text = "Medicina";
-            //this.pnlFormLoader.Controls.Clear();
-            //FormMedicen formMed = new FormMedicen() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //formMed.FormBorderStyle = FormBorderStyle.None;
-            //this.pnlFormLoader.Controls.Add(formMed);
-            //formMed.Show();
         }
 
         private void btnGrowth_Click(object sender, EventArgs e)
@@ -160,6 +152,11 @@ namespace UI_Design
         private void btnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
             SetStyleElemens.viewBackColorButton(sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

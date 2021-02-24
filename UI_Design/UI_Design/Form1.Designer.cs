@@ -30,6 +30,8 @@ namespace UI_Design
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddChild = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnWeight = new System.Windows.Forms.Button();
             this.btnGrowth = new System.Windows.Forms.Button();
@@ -43,7 +45,6 @@ namespace UI_Design
             this.pnlNav = new System.Windows.Forms.Panel();
             this.pnlFormLoader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnAddChild = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +54,7 @@ namespace UI_Design
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.btnAddChild);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnWeight);
             this.panel1.Controls.Add(this.btnGrowth);
@@ -67,6 +69,42 @@ namespace UI_Design
             this.panel1.Size = new System.Drawing.Size(140, 469);
             this.panel1.TabIndex = 0;
             // 
+            // btnAddChild
+            // 
+            this.btnAddChild.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddChild.FlatAppearance.BorderSize = 0;
+            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddChild.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddChild.Image = global::UI_Design.Properties.Resources.med1;
+            this.btnAddChild.Location = new System.Drawing.Point(0, 287);
+            this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddChild.Name = "btnAddChild";
+            this.btnAddChild.Size = new System.Drawing.Size(140, 28);
+            this.btnAddChild.TabIndex = 7;
+            this.btnAddChild.Text = "Add child";
+            this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
+            this.btnAddChild.Leave += new System.EventHandler(this.btnAll_Leave);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.button1.Image = global::UI_Design.Properties.Resources.icons8_exit;
+            this.button1.Location = new System.Drawing.Point(0, 417);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 34);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Выход";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnSettings
             // 
             this.btnSettings.FlatAppearance.BorderSize = 0;
@@ -74,7 +112,7 @@ namespace UI_Design
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnSettings.Location = new System.Drawing.Point(0, 418);
+            this.btnSettings.Location = new System.Drawing.Point(-2, 379);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(140, 34);
@@ -258,25 +296,6 @@ namespace UI_Design
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Home";
             // 
-            // btnAddChild
-            // 
-            this.btnAddChild.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddChild.FlatAppearance.BorderSize = 0;
-            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddChild.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAddChild.Image = global::UI_Design.Properties.Resources.med1;
-            this.btnAddChild.Location = new System.Drawing.Point(0, 287);
-            this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddChild.Name = "btnAddChild";
-            this.btnAddChild.Size = new System.Drawing.Size(140, 34);
-            this.btnAddChild.TabIndex = 7;
-            this.btnAddChild.Text = "Add child";
-            this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAddChild.UseVisualStyleBackColor = true;
-            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
-            this.btnAddChild.Leave += new System.EventHandler(this.btnAll_Leave);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +338,7 @@ namespace UI_Design
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddChild;
+        private System.Windows.Forms.Button button1;
     }
 }
 

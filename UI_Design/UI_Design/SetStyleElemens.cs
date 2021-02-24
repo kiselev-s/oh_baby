@@ -18,17 +18,18 @@ namespace UI_Design
             senderPanel.Left = senderBtn.Left;
             senderBtn.BackColor = Color.FromArgb(46, 51, 73);            
         }
-        public static Form createForm(object sender, Panel senderPanel, Label senderLable, string titleForm)
+        public static void CreateForm(Form form, Panel senderPanel, Label senderLable, string titleForm)
         {
             senderLable.Text = titleForm;
             senderPanel.Controls.Clear();
             
-            Form form = new Form() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            form.Dock = DockStyle.Fill;
+            form.TopLevel = false;
+            form.TopMost = true;
             form.FormBorderStyle = FormBorderStyle.None;
             senderPanel.Controls.Add(form);
             senderPanel.BackColor= Color.FromArgb(46, 51, 73);
-            form.Show();
-            return form;
+            form.Show();           
         }
 
         public static void viewBackColorButton(object sender)

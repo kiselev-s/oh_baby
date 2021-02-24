@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UI_Design
 {
-    [Table(Name = "childs")]
+    [Table(Name = "children")]
     class Child
     {
         [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true)]
