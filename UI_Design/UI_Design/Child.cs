@@ -24,8 +24,10 @@ namespace UI_Design
 
         [Column(Name = "Birthday", DbType = "SmallDateTime")]
         public DateTime Birthday { get; set; }
+        public int? Parent_Id { get; set; }
 
-        public Parent Parent { get; set; }
+        [ForeignKey("Parent_Id")]
+        public virtual Parent Parent { get; set; }
     }
 
     //class Child //старое

@@ -64,7 +64,7 @@ namespace UI_Design
             Show();
 
             LoginForm logForm = new LoginForm();
-            if(logForm.ShowDialog()==DialogResult.OK)
+            if (logForm.ShowDialog() == DialogResult.OK)
             {
                 Opacity = 1.0;
                 try
@@ -78,6 +78,10 @@ namespace UI_Design
                 {
                     MyMessageBox.MyShow("Ай яй яй! Надо было залогиниться...");
                 }
+            }
+            else
+            {
+                Opacity = 1.0;
             }
         }
 

@@ -50,16 +50,16 @@ namespace UI_Design
             // 
             // txtEmail
             // 
-            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.txtEmail.Name = "txtEmail";
             this.toolTipLogin.SetToolTip(this.txtEmail, resources.GetString("txtEmail.ToolTip"));
             // 
             // txtPass
             // 
-            resources.ApplyResources(this.txtPass, "txtPass");
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            resources.ApplyResources(this.txtPass, "txtPass");
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.txtPass.Name = "txtPass";
             this.toolTipLogin.SetToolTip(this.txtPass, resources.GetString("txtPass.ToolTip"));
@@ -69,20 +69,17 @@ namespace UI_Design
             resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label3.Name = "label3";
-            this.toolTipLogin.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label4.Name = "label4";
-            this.toolTipLogin.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
             // button1
             // 
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.toolTipLogin.SetToolTip(this.button1, resources.GetString("button1.ToolTip"));
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -96,8 +93,8 @@ namespace UI_Design
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCancel.Name = "btnCancel";
@@ -107,8 +104,8 @@ namespace UI_Design
             // 
             // btnLogin
             // 
-            resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogin.Name = "btnLogin";
@@ -118,8 +115,8 @@ namespace UI_Design
             // 
             // btnVisiblePass
             // 
-            resources.ApplyResources(this.btnVisiblePass, "btnVisiblePass");
             this.btnVisiblePass.BackgroundImage = global::UI_Design.Properties.Resources.eyelashes_3d_64px;
+            resources.ApplyResources(this.btnVisiblePass, "btnVisiblePass");
             this.btnVisiblePass.FlatAppearance.BorderSize = 0;
             this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnVisiblePass.Name = "btnVisiblePass";
@@ -129,9 +126,9 @@ namespace UI_Design
             // 
             // btnRegister
             // 
-            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnRegister.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnRegister, "btnRegister");
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnRegister.Name = "btnRegister";
             this.toolTipLogin.SetToolTip(this.btnRegister, resources.GetString("btnRegister.ToolTip"));
@@ -144,32 +141,28 @@ namespace UI_Design
             this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.lblRegister.Image = global::UI_Design.Properties.Resources.icons8_downward_arrow;
             this.lblRegister.Name = "lblRegister";
-            this.toolTipLogin.SetToolTip(this.lblRegister, resources.GetString("lblRegister.ToolTip"));
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Name = "panel1";
-            this.toolTipLogin.SetToolTip(this.panel1, resources.GetString("panel1.ToolTip"));
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label1.Name = "label1";
-            this.toolTipLogin.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // btnSettings
             // 
-            resources.ApplyResources(this.btnSettings, "btnSettings");
             this.btnSettings.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSettings, "btnSettings");
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
             this.btnSettings.Name = "btnSettings";
-            this.toolTipLogin.SetToolTip(this.btnSettings, resources.GetString("btnSettings.ToolTip"));
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
             // LoginForm
@@ -193,7 +186,6 @@ namespace UI_Design
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
-            this.toolTipLogin.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

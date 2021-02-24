@@ -109,7 +109,7 @@ namespace UI_Design
             return Convert.ToBase64String(hash);
         }
 
-        public static void addChild(string firstName, string lastName, DateTime birthday)//джобавление ребенка в базу
+        public static void addChild(string firstName, string lastName, DateTime birthday)//добавление ребенка в базу
         {
             string connString = ConfigurationManager
                 .ConnectionStrings["defaultConnection"]
@@ -122,7 +122,9 @@ namespace UI_Design
             {
                 FirstName = firstName,
                 LastName = lastName,
-                Birthday = birthday
+                Birthday = birthday,
+                Parent = findParentById(1),//все равно не работает
+                Parent_Id = findParentById(1).Id//все равно не работает
             };
 
             childs.InsertOnSubmit(newChild);
