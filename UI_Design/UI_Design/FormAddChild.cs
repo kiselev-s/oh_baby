@@ -12,9 +12,12 @@ namespace UI_Design
 {
     public partial class FormAddChild : Form
     {
-        public FormAddChild()
+        private static int parentId;
+        private static int childId;
+        public FormAddChild(int _parentId)//приняли Id того кто залогинился
         {
             InitializeComponent();
+            parentId = _parentId;
             dtpBirthday.MaxDate = DateTime.Now;
             dtpBirthday.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
         }
@@ -31,7 +34,7 @@ namespace UI_Design
             {
                 try
                 {
-                    GetDataDB.addChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value);//добавляем нового ребенка
+                    childId = GetDataDB.addChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parentId).Id;//добавляем нового ребенка и получаем его Id
                     DialogResult = DialogResult.OK;
                     Close();
                 }
@@ -46,6 +49,11 @@ namespace UI_Design
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        public Child getChild()//функция возвращает обьект Child
+        {
+            return GetDataDB.findChildById(childId);
         }
     }
 }

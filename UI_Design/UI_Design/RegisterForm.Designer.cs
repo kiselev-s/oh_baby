@@ -116,6 +116,7 @@ namespace UI_Design
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(207, 26);
             this.txtFirstName.TabIndex = 18;
+            this.txtFirstName.Text = "Василий";
             this.toolTipRegister.SetToolTip(this.txtFirstName, "Введите свое имя");
             // 
             // txtLastName
@@ -127,6 +128,7 @@ namespace UI_Design
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(207, 26);
             this.txtLastName.TabIndex = 17;
+            this.txtLastName.Text = "Иванов";
             this.toolTipRegister.SetToolTip(this.txtLastName, "Введите свою фамилию");
             // 
             // txtPassCheck
@@ -139,6 +141,7 @@ namespace UI_Design
             this.txtPassCheck.PasswordChar = '*';
             this.txtPassCheck.Size = new System.Drawing.Size(207, 26);
             this.txtPassCheck.TabIndex = 16;
+            this.txtPassCheck.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPassCheck, "Повторно введите придуманный пароль");
             // 
             // txtPass
@@ -151,6 +154,7 @@ namespace UI_Design
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(207, 26);
             this.txtPass.TabIndex = 15;
+            this.txtPass.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPass, "Придумайте пароль. Минимальная длина - 8 символов, максимальная - 16");
             // 
             // txtEmail
@@ -162,6 +166,7 @@ namespace UI_Design
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(207, 26);
             this.txtEmail.TabIndex = 14;
+            this.txtEmail.Text = "vvv@vvv.ru";
             this.toolTipRegister.SetToolTip(this.txtEmail, "Введите настоящий email");
             // 
             // panel1
