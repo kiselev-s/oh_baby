@@ -34,23 +34,14 @@ namespace UI_Design
         //        MessageBox.Show("Пичаль.......");
         //    }
         //}
-        public static int verifyLogin(string email, string pass)//проверка наличия в базе пользователя с данным Email и Password
+        #region
+        public static Parent verifyLogin(string email, string pass)//проверка наличия в базе пользователя с данным Email и Password
         {
-            string connString = ConfigurationManager
-               .ConnectionStrings["defaultConnection"]
-               .ConnectionString;
-            DataContext db = new DataContext(connString);
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                Parent par = db.Parents.FirstOrDefault(p => p.Email == email);
 
-            var result = db.GetTable<Parent>()
-                .Where(p => p.Email == email).Where(u => u.Password == pass);
-            if (result.Count() > 0)
-            {
-                Parent parent = result.FirstOrDefault();
-                return parent.Id;
-            }
-            else
-            {
-                return -1;
+                return par;
             }
         }
 
@@ -107,32 +98,24 @@ namespace UI_Design
 
             return Convert.ToBase64String(hash);
         }
-
-        public static Child addChild(string firstName, string lastName, DateTime birthday, int parentId)//добавление ребенка в базу
+        #endregion
+        public static void addChild(string firstName, string lastName, DateTime birthday, int parentId)//добавление ребенка в базу
         {
-            //string connString = ConfigurationManager
-            //    .ConnectionStrings["defaultConnection"]
-            //    .ConnectionString;
-            //DataContext db = new DataContext(connString);
-            BabyDbContext db = new BabyDbContext();
-
-            //Table<Child> childs = db.GetTable<Child>();
-
-            Child newChild = new Child()
+            using (BabyDbContext db = new BabyDbContext())
             {
-                FirstName = firstName,
-                LastName = lastName,
-                Birthday = birthday,
-                Parent_Id = parentId//наконец-то работает!
-            };
-            //db.Childs.AddRange(new List<Child> { newChild });
-            db.Childs.Add(newChild);
-            db.SaveChanges();
-            //childs.InsertOnSubmit(newChild);
-            //db.SubmitChanges();
-            return newChild; // а надо ли возвращать значение таким образом?
-        }
+                Child newChild = new Child()
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Birthday = birthday
+                };
 
+                Parent par = db.Parents.FirstOrDefault(p => p.Id == parentId);
+                par.Children.Add(newChild);
+                db.SaveChanges();
+            }
+        }
+        #region
         public static Child findChildById(int findId)//поиск в базе ребенка по искомому Id, возвращает обьект класса Child
         {
             string connString = ConfigurationManager
@@ -145,5 +128,6 @@ namespace UI_Design
 
             return result.FirstOrDefault();
         }
+        #endregion
     }
 }

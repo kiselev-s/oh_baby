@@ -61,6 +61,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repositories\ChildRepos.cs" />
+    <Compile Include="ParentRepos.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="BabyDbContext.cs" />
     <Compile Include="Child.cs" />
     <Compile Include="Form1.cs">
@@ -87,7 +90,7 @@
     <Compile Include="FormMedicen.Designer.cs">
       <DependentUpon>FormMedicen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetDataDB.cs" />
+    <Compile Include="Repositories\GetDataDB.cs" />
     <Compile Include="Growth_Weight.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="LoginForm.cs">

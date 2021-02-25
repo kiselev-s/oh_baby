@@ -13,7 +13,8 @@ namespace UI_Design
 {
     public partial class LoginForm : Form
     {
-        private static int parentId;
+        private static int parentId = 0;
+        private static Parent returnParent;
 
         public LoginForm()
         {
@@ -48,7 +49,6 @@ namespace UI_Design
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            parentId = 0;
             if(txtEmail.Text == string.Empty)
             {
                 MyMessageBox.MyShow("Ввеите email!");
@@ -59,23 +59,34 @@ namespace UI_Design
             }
             else
             {
-                parentId = GetDataDB.verifyLogin(txtEmail.Text, GetDataDB.GetHash(txtPass.Text));
-                if(parentId == -1)
+                if(AuthService.Login(txtEmail.Text, txtPass.Text))
                 {
-                    MyMessageBox.MyShow("Еmail или пароль не корректны! Попробуй ещё.");
-                }
-                else//залогинились успешно
-                {
+                    returnParent = ParentRepos.findByEmail(txtEmail.Text);
                     DialogResult = DialogResult.OK;
                     Close();
                 }
+                else
+                {
+                    MyMessageBox.MyShow("Еmail или пароль не корректны! Попробуй ещё.");
+                }
+                #region
+                //    GetDataDB.verifyLogin(txtEmail.Text, GetDataDB.GetHash(txtPass.Text));
+
+                //    parentId = GetDataDB.verifyLogin(txtEmail.Text, GetDataDB.GetHash(txtPass.Text));
+                //    if(parentId == -1)
+                //    {
+                //        MyMessageBox.MyShow("Еmail или пароль не корректны! Попробуй ещё.");
+                //    }
+                //    else//залогинились успешно
+                //    {
+                //        DialogResult = DialogResult.OK;
+                //        Close();
+                //    }
+                #endregion
             }
         }
 
-        public int getParentId()//функция возвращает Id пользователя, который вошел в приложение
-        {
-            return parentId;
-        }
+        public Parent getParent() => returnParent;
 
         private void btnVisiblePassTrue_Click(object sender, EventArgs e)//показать пароль
         {

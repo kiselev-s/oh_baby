@@ -38,14 +38,15 @@ namespace UI_Design
 
         private static int parentId = -1;
         private static int childId = -1;
+        private static Parent parent;
 
         public Form1()
         {
-            db = new BabyDbContext();
+            //db = new BabyDbContext();
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
 
             string connString = ConfigurationManager //вроде бы не используется, нужно?
               .ConnectionStrings["defaultConnection"] //вроде бы не используется, нужно?
@@ -58,7 +59,7 @@ namespace UI_Design
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
-
+        #region
         private void Form1_Load(object sender, EventArgs e)
         {
             Opacity = 0.85;
@@ -70,9 +71,10 @@ namespace UI_Design
                 Opacity = 1.0;
                 try
                 {
-                    parentId = logForm.getParentId();//!!!!! в эту переменную приняли Id залогинившегося пользователя
+                    parent = logForm.getParent();
+                    //parentId = logForm.getParentId();//!!!!! в эту переменную приняли Id залогинившегося пользователя
                     //Например посмотрим кто же там. Временно естественно
-                    MyMessageBox.MyShow($@"Добро пожаловать {GetDataDB.findParentById(parentId).FirstName} {GetDataDB.findParentById(parentId).LastName}");
+                    MyMessageBox.MyShow($@"Добро пожаловать {parent.FirstName} {parent.LastName}");
                 }
                 catch (Exception)
                 {
@@ -135,12 +137,15 @@ namespace UI_Design
                 Opacity = 1.0;
                 try
                 {
-                    Child child = formAddChild.getChild();
-                    childId = child.Id;//сюда вернули Id добавленного ребенка
+                    using (BabyDbContext db = new BabyDbContext())
+                    {
+                        Child child = db.Childs.FirstOrDefault(c => c.Parent_Id == parentId);
+                        //Child child = formAddChild.getChild();
+                        //childId = child.Id;//сюда вернули Id добавленного ребенка
 
-                    //MyMessageBox.MyShow($"Добавлен ребенок: {child.FirstName} {child.LastName}, дата рождения: {child.Birthday.ToShortDateString()}, родитель: {GetDataDB.findParentById(parentId).LastName}");
-                    MyMessageBox.MyShow($"Добавлен ребенок: {child.FirstName} {child.LastName}, дата рождения: {child.Birthday.ToShortDateString()}");
-                    // сюда какой-то код после добавления ребенка
+                        MyMessageBox.MyShow($"Добавлен ребенок: {child.FirstName} {child.LastName}, дата рождения: {child.Birthday.ToShortDateString()}");
+                        // сюда какой-то код после добавления ребенка
+                    }
                 }
                 catch (Exception)
                 {
@@ -167,5 +172,6 @@ namespace UI_Design
         {
             Application.Exit();
         }
+        #endregion
     }
 }

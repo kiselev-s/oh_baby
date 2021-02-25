@@ -34,7 +34,8 @@ namespace UI_Design
             {
                 try
                 {
-                    childId = GetDataDB.addChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parentId).Id;//добавляем нового ребенка и получаем его Id
+                    childId = 1;
+                    GetDataDB.addChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parentId);//добавляем нового ребенка и получаем его Id
                     DialogResult = DialogResult.OK;
                     Close();
                 }
