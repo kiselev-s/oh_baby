@@ -91,8 +91,7 @@ namespace UI_Design
                 .Where(p => p.Id == findId);
             //if (result.Count() > 0)
             //{
-            Parent parent = result.FirstOrDefault();
-            return parent;
+            return result.FirstOrDefault();
             // LoginForm по любому возвращает Id который существует в базе, поэтому мне кажется что никакие if не нужны
             //}
             //else
@@ -109,26 +108,42 @@ namespace UI_Design
             return Convert.ToBase64String(hash);
         }
 
-        public static void addChild(string firstName, string lastName, DateTime birthday)//добавление ребенка в базу
+        public static Child addChild(string firstName, string lastName, DateTime birthday, int parentId)//добавление ребенка в базу
         {
-            string connString = ConfigurationManager
-                .ConnectionStrings["defaultConnection"]
-                .ConnectionString;
-            DataContext db = new DataContext(connString);
+            //string connString = ConfigurationManager
+            //    .ConnectionStrings["defaultConnection"]
+            //    .ConnectionString;
+            //DataContext db = new DataContext(connString);
+            BabyDbContext db = new BabyDbContext();
 
-            Table<Child> childs = db.GetTable<Child>();
+            //Table<Child> childs = db.GetTable<Child>();
 
             Child newChild = new Child()
             {
                 FirstName = firstName,
                 LastName = lastName,
                 Birthday = birthday,
-                Parent = findParentById(1),//все равно не работает
-                Parent_Id = findParentById(1).Id//все равно не работает
+                Parent_Id = parentId//наконец-то работает!
             };
+            //db.Childs.AddRange(new List<Child> { newChild });
+            db.Childs.Add(newChild);
+            db.SaveChanges();
+            //childs.InsertOnSubmit(newChild);
+            //db.SubmitChanges();
+            return newChild; // а надо ли возвращать значение таким образом?
+        }
 
-            childs.InsertOnSubmit(newChild);
-            db.SubmitChanges();
+        public static Child findChildById(int findId)//поиск в базе ребенка по искомому Id, возвращает обьект класса Child
+        {
+            string connString = ConfigurationManager
+               .ConnectionStrings["defaultConnection"]
+               .ConnectionString;
+            DataContext db = new DataContext(connString);
+
+            var result = db.GetTable<Child>()
+                .Where(ch => ch.Id == findId);
+
+            return result.FirstOrDefault();
         }
     }
 }

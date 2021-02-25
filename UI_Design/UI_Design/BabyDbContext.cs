@@ -17,5 +17,14 @@ namespace UI_Design
         public DbSet<Parent> Parents { get; set; }
         public DbSet<Child> Childs { get; set; }
         public DbSet<Growth_Weight> Growth_Weights { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Child>()
+                        .Property(e => e.Birthday)
+                        .HasColumnType("date");
+        }
     }
 }

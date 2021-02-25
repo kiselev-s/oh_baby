@@ -12,7 +12,7 @@ using System.ComponentModel.DataAnnotations;
 namespace UI_Design
 {
     [Table(Name = "parents")]
-    class Parent
+    public class Parent
     {
         [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
@@ -29,7 +29,7 @@ namespace UI_Design
         [Column(Name = "password"), Required, MaxLength(130)]
         public string Password { get; set; }
 
-        public virtual ICollection<Child> childs { get; set; }
+        public virtual ICollection<Child> Children { get; set; }
 
         //public int Id { get; set; }
         //public string FirstName { get; set; }

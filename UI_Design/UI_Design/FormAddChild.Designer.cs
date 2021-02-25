@@ -88,6 +88,7 @@ namespace UI_Design
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(183, 26);
             this.txtFirstName.TabIndex = 30;
+            this.txtFirstName.Text = "Василиса";
             this.toolTipAddChild.SetToolTip(this.txtFirstName, "Введите имя ребенка");
             // 
             // txtLastName
@@ -99,6 +100,7 @@ namespace UI_Design
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(183, 26);
             this.txtLastName.TabIndex = 29;
+            this.txtLastName.Text = "Иванова";
             this.toolTipAddChild.SetToolTip(this.txtLastName, "Введите фамилию ребенка");
             // 
             // btnAddChild
@@ -201,6 +203,7 @@ namespace UI_Design
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(183, 27);
             this.cbxGender.TabIndex = 37;
+            this.cbxGender.Text = "женский";
             this.toolTipAddChild.SetToolTip(this.cbxGender, "Выберите пол");
             // 
             // toolTipAddChild
