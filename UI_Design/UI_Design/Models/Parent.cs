@@ -11,32 +11,28 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UI_Design
 {
-    [Table(Name = "parents")]
     public class Parent
     {
-        [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true)]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
-        [Column(Name = "FirstName"), MaxLength(60)]
+        [Required, MaxLength(60)]
         public string FirstName { get; set; }
 
-        [Column(Name = "LastName"), MaxLength(60)]
+        [Required, MaxLength(60)]
         public string LastName { get; set; }
 
-        [Column(Name = "Email"), Required, Index(IsUnique = true), MaxLength(100)]
-        public string Email { get; set;}
+        [Required, Index(IsUnique = true), MaxLength(100)]
+        public string Email { get; set; }
 
-        [Column(Name = "password"), Required, MaxLength(130)]
+        [Required, MaxLength(130)]
         public string Password { get; set; }
 
         public virtual ICollection<Child> Children { get; set; }
 
-        //public int Id { get; set; }
-        //public string FirstName { get; set; }
-        //public string LastName { get; set; }
-        //public string Email { get; set; }
-        //public string Password { get; set; }
-
-        //public virtual ICollection<Child> childs { get; set; }
+        public Parent()
+        {
+            Children = new List<Child>();
+        }
     }
 }

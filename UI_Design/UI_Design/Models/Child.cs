@@ -10,19 +10,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UI_Design
 {
-    [Table(Name = "Children")]
     public class Child
     {
-        [Column(Name = "Id", IsPrimaryKey = true, IsDbGenerated = true)]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
-        [Column(Name = "FirstName"), MaxLength(60)]
+        [Required, MaxLength(60)]
         public string FirstName { get; set; }
 
-        [Column(Name = "LastName"), MaxLength(60)]
+        [Required, MaxLength(60)]
         public string LastName { get; set; }
 
-        [Column(Name = "Birthday")]
+        [Required]
         public DateTime Birthday { get; set; }
 
         public int Parent_Id { get; set; }

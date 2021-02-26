@@ -1,7 +1,7 @@
 ﻿
 namespace UI_Design
 {
-    partial class RegisterForm
+    partial class FormRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -45,9 +45,9 @@ namespace UI_Design
             this.btnSettings = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.btnVisiblePass = new System.Windows.Forms.Button();
             this.toolTipRegister = new System.Windows.Forms.ToolTip(this.components);
+            this.btnRegister = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -238,27 +238,7 @@ namespace UI_Design
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipRegister.SetToolTip(this.btnCancel, "Отменить регистрацию в приложении");
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.AutoEllipsis = true;
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegister.FlatAppearance.BorderSize = 0;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegister.Location = new System.Drawing.Point(9, 366);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(381, 24);
-            this.btnRegister.TabIndex = 5;
-            this.btnRegister.Text = "З А Р Е Г И С Т Р И Р О В А Т Ь С Я";
-            this.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnVisiblePass
             // 
@@ -276,7 +256,7 @@ namespace UI_Design
             this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipRegister.SetToolTip(this.btnVisiblePass, "Показать пароль");
             this.btnVisiblePass.UseVisualStyleBackColor = true;
-            this.btnVisiblePass.Click += new System.EventHandler(this.btnVisiblePassTrue_Click);
+            this.btnVisiblePass.Click += new System.EventHandler(this.BtnVisiblePassTrue_Click);
             // 
             // toolTipRegister
             // 
@@ -286,7 +266,25 @@ namespace UI_Design
             this.toolTipRegister.ReshowDelay = 20;
             this.toolTipRegister.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // RegisterForm
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnRegister.Location = new System.Drawing.Point(9, 366);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(381, 24);
+            this.btnRegister.TabIndex = 25;
+            this.btnRegister.Text = "З А Р Е Г И С Т Р И Р О В А Т Ь С Я";
+            this.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTipRegister.SetToolTip(this.btnRegister, "Зарегистрироваться");
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
+            // 
+            // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -309,7 +307,7 @@ namespace UI_Design
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RegisterForm";
+            this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.panel1.ResumeLayout(false);
@@ -334,11 +332,11 @@ namespace UI_Design
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnVisiblePass;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTipRegister;
+        private System.Windows.Forms.Button btnRegister;
     }
 }

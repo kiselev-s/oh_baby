@@ -1,7 +1,7 @@
 ﻿
 namespace UI_Design
 {
-    partial class LoginForm
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,11 @@ namespace UI_Design
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -76,13 +75,6 @@ namespace UI_Design
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label4.Name = "label4";
             // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // toolTipLogin
             // 
             this.toolTipLogin.AutomaticDelay = 100;
@@ -100,7 +92,7 @@ namespace UI_Design
             this.btnCancel.Name = "btnCancel";
             this.toolTipLogin.SetToolTip(this.btnCancel, resources.GetString("btnCancel.ToolTip"));
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnLogin
             // 
@@ -111,7 +103,7 @@ namespace UI_Design
             this.btnLogin.Name = "btnLogin";
             this.toolTipLogin.SetToolTip(this.btnLogin, resources.GetString("btnLogin.ToolTip"));
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // btnVisiblePass
             // 
@@ -122,7 +114,7 @@ namespace UI_Design
             this.btnVisiblePass.Name = "btnVisiblePass";
             this.toolTipLogin.SetToolTip(this.btnVisiblePass, resources.GetString("btnVisiblePass.ToolTip"));
             this.btnVisiblePass.UseVisualStyleBackColor = true;
-            this.btnVisiblePass.Click += new System.EventHandler(this.btnVisiblePassTrue_Click);
+            this.btnVisiblePass.Click += new System.EventHandler(this.BtnVisiblePassTrue_Click);
             // 
             // btnRegister
             // 
@@ -133,7 +125,7 @@ namespace UI_Design
             this.btnRegister.Name = "btnRegister";
             this.toolTipLogin.SetToolTip(this.btnRegister, resources.GetString("btnRegister.ToolTip"));
             this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // lblRegister
             // 
@@ -165,14 +157,13 @@ namespace UI_Design
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.UseVisualStyleBackColor = true;
             // 
-            // LoginForm
+            // FormLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.lblRegister);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVisiblePass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
@@ -185,7 +176,7 @@ namespace UI_Design
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LoginForm";
+            this.Name = "FormLogin";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -199,7 +190,6 @@ namespace UI_Design
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Button btnSettings;

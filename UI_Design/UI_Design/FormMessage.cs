@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace UI_Design
 {
-    public partial class MyMessageBox : Form
+    public partial class FormMessage : Form
     {
-        public MyMessageBox()
+        public FormMessage()
         {
             InitializeComponent();
         }
 
-        public static void MyShow(string text)
+        public static void Show(string text)
         {
-            MyMessageBox mb = new MyMessageBox();
+            FormMessage mb = new FormMessage();
 
             mb.Width = 12 + (text.Length * 10);
             mb.labelHide.Width = text.Length * 10;
@@ -31,7 +31,7 @@ namespace UI_Design
             mb.ShowDialog();
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private void BtnOK_Click(object sender, EventArgs e)
         {
             Close();
         }
