@@ -1,7 +1,7 @@
 ﻿
 namespace UI_Design
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace UI_Design
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddChild = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnWeight = new System.Windows.Forms.Button();
             this.btnGrowth = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@ namespace UI_Design
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.btnAddChild);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnWeight);
             this.panel1.Controls.Add(this.btnGrowth);
@@ -64,7 +64,7 @@ namespace UI_Design
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(140, 469);
             this.panel1.TabIndex = 0;
@@ -75,7 +75,7 @@ namespace UI_Design
             this.btnAddChild.FlatAppearance.BorderSize = 0;
             this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddChild.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnAddChild.Image = global::UI_Design.Properties.Resources.med1;
             this.btnAddChild.Location = new System.Drawing.Point(0, 287);
             this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
@@ -85,25 +85,25 @@ namespace UI_Design
             this.btnAddChild.Text = "Add child";
             this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAddChild.UseVisualStyleBackColor = true;
-            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
-            this.btnAddChild.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
+            this.btnAddChild.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Image = global::UI_Design.Properties.Resources.icons8_exit;
-            this.button1.Location = new System.Drawing.Point(0, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 34);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Выход";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnExit.Image = global::UI_Design.Properties.Resources.icons8_exit;
+            this.btnExit.Location = new System.Drawing.Point(0, 417);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(140, 34);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Выход";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnSettings
             // 
@@ -113,15 +113,15 @@ namespace UI_Design
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
             this.btnSettings.Location = new System.Drawing.Point(-2, 379);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(140, 34);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
+            this.btnSettings.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // btnWeight
             // 
@@ -132,15 +132,15 @@ namespace UI_Design
             this.btnWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnWeight.Image = global::UI_Design.Properties.Resources.weight1;
             this.btnWeight.Location = new System.Drawing.Point(0, 253);
-            this.btnWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnWeight.Margin = new System.Windows.Forms.Padding(2);
             this.btnWeight.Name = "btnWeight";
             this.btnWeight.Size = new System.Drawing.Size(140, 34);
             this.btnWeight.TabIndex = 5;
             this.btnWeight.Text = "Weight";
             this.btnWeight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnWeight.UseVisualStyleBackColor = true;
-            this.btnWeight.Click += new System.EventHandler(this.btnWeight_Click);
-            this.btnWeight.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnWeight.Click += new System.EventHandler(this.BtnWeight_Click);
+            this.btnWeight.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // btnGrowth
             // 
@@ -151,15 +151,15 @@ namespace UI_Design
             this.btnGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnGrowth.Image = global::UI_Design.Properties.Resources.growth;
             this.btnGrowth.Location = new System.Drawing.Point(0, 219);
-            this.btnGrowth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrowth.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrowth.Name = "btnGrowth";
             this.btnGrowth.Size = new System.Drawing.Size(140, 34);
             this.btnGrowth.TabIndex = 4;
             this.btnGrowth.Text = "Growth";
             this.btnGrowth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGrowth.UseVisualStyleBackColor = true;
-            this.btnGrowth.Click += new System.EventHandler(this.btnGrowth_Click);
-            this.btnGrowth.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnGrowth.Click += new System.EventHandler(this.BtnGrowth_Click);
+            this.btnGrowth.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // btnMed
             // 
@@ -170,15 +170,15 @@ namespace UI_Design
             this.btnMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnMed.Image = global::UI_Design.Properties.Resources.med1;
             this.btnMed.Location = new System.Drawing.Point(0, 185);
-            this.btnMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMed.Margin = new System.Windows.Forms.Padding(2);
             this.btnMed.Name = "btnMed";
             this.btnMed.Size = new System.Drawing.Size(140, 34);
             this.btnMed.TabIndex = 3;
             this.btnMed.Text = "Medicina";
             this.btnMed.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnMed.UseVisualStyleBackColor = true;
-            this.btnMed.Click += new System.EventHandler(this.btnMed_Click);
-            this.btnMed.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnMed.Click += new System.EventHandler(this.BtnMed_Click);
+            this.btnMed.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // btnDocuments
             // 
@@ -189,15 +189,15 @@ namespace UI_Design
             this.btnDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnDocuments.Image = global::UI_Design.Properties.Resources.doc4;
             this.btnDocuments.Location = new System.Drawing.Point(0, 151);
-            this.btnDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.btnDocuments.Name = "btnDocuments";
             this.btnDocuments.Size = new System.Drawing.Size(140, 34);
             this.btnDocuments.TabIndex = 2;
             this.btnDocuments.Text = "Documents";
             this.btnDocuments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDocuments.UseVisualStyleBackColor = true;
-            this.btnDocuments.Click += new System.EventHandler(this.btnDocuments_Click);
-            this.btnDocuments.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnDocuments.Click += new System.EventHandler(this.BtnDocuments_Click);
+            this.btnDocuments.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // btnHome
             // 
@@ -208,15 +208,15 @@ namespace UI_Design
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnHome.Image = global::UI_Design.Properties.Resources.home1;
             this.btnHome.Location = new System.Drawing.Point(0, 117);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(140, 34);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            this.btnHome.Leave += new System.EventHandler(this.btnAll_Leave);
+            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.btnHome.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // panel2
             // 
@@ -225,7 +225,7 @@ namespace UI_Design
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 117);
             this.panel2.TabIndex = 0;
@@ -259,7 +259,7 @@ namespace UI_Design
             this.pictureBox1.Image = global::UI_Design.Properties.Resources.men;
             this.pictureBox1.InitialImage = global::UI_Design.Properties.Resources.men;
             this.pictureBox1.Location = new System.Drawing.Point(45, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -270,7 +270,7 @@ namespace UI_Design
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.pnlNav.Location = new System.Drawing.Point(0, 117);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(2, 34);
             this.pnlNav.TabIndex = 1;
@@ -279,7 +279,7 @@ namespace UI_Design
             // 
             this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFormLoader.Location = new System.Drawing.Point(140, 81);
-            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFormLoader.Name = "pnlFormLoader";
             this.pnlFormLoader.Size = new System.Drawing.Size(573, 388);
             this.pnlFormLoader.TabIndex = 2;
@@ -296,7 +296,7 @@ namespace UI_Design
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Home";
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,11 +307,11 @@ namespace UI_Design
             this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -338,7 +338,7 @@ namespace UI_Design
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddChild;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

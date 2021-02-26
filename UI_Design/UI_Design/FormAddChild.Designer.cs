@@ -50,7 +50,7 @@ namespace UI_Design
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label3.Location = new System.Drawing.Point(14, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 19);
@@ -61,7 +61,7 @@ namespace UI_Design
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label2.Location = new System.Drawing.Point(14, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
@@ -72,7 +72,7 @@ namespace UI_Design
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label1.Location = new System.Drawing.Point(14, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 19);
@@ -83,24 +83,24 @@ namespace UI_Design
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtFirstName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.txtFirstName.Location = new System.Drawing.Point(147, 8);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(183, 26);
             this.txtFirstName.TabIndex = 30;
-            this.txtFirstName.Text = "Василиса";
+            this.txtFirstName.Text = "Иван";
             this.toolTipAddChild.SetToolTip(this.txtFirstName, "Введите имя ребенка");
             // 
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtLastName.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.txtLastName.Location = new System.Drawing.Point(147, 38);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(183, 26);
             this.txtLastName.TabIndex = 29;
-            this.txtLastName.Text = "Иванова";
+            this.txtLastName.Text = "Иванов";
             this.toolTipAddChild.SetToolTip(this.txtLastName, "Введите фамилию ребенка");
             // 
             // btnAddChild
@@ -108,7 +108,7 @@ namespace UI_Design
             this.btnAddChild.FlatAppearance.BorderSize = 0;
             this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddChild.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnAddChild.Image = global::UI_Design.Properties.Resources.weight1;
             this.btnAddChild.Location = new System.Drawing.Point(11, 6);
             this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
@@ -119,14 +119,14 @@ namespace UI_Design
             this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipAddChild.SetToolTip(this.btnAddChild, "Добавить ребенка в приложение");
             this.btnAddChild.UseVisualStyleBackColor = true;
-            this.btnAddChild.Click += new System.EventHandler(this.btnAddChild_Click);
+            this.btnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Image = global::UI_Design.Properties.Resources.doc4;
             this.btnCancel.Location = new System.Drawing.Point(190, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -137,7 +137,7 @@ namespace UI_Design
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipAddChild.SetToolTip(this.btnCancel, "Отменить добавление");
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // panel1
             // 
@@ -172,7 +172,7 @@ namespace UI_Design
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label4.Location = new System.Drawing.Point(14, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 19);
@@ -194,7 +194,7 @@ namespace UI_Design
             // 
             this.cbxGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cbxGender.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.cbxGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.cbxGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.cbxGender.FormattingEnabled = true;
             this.cbxGender.Items.AddRange(new object[] {
             "женский",
@@ -203,7 +203,7 @@ namespace UI_Design
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(183, 27);
             this.cbxGender.TabIndex = 37;
-            this.cbxGender.Text = "женский";
+            this.cbxGender.Text = "мужской";
             this.toolTipAddChild.SetToolTip(this.cbxGender, "Выберите пол");
             // 
             // toolTipAddChild

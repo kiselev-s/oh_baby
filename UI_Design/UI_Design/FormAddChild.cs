@@ -12,49 +12,33 @@ namespace UI_Design
 {
     public partial class FormAddChild : Form
     {
-        private static int parentId;
-        private static int childId;
-        public FormAddChild(int _parentId)//приняли Id того кто залогинился
+        private static Parent parent;
+        private static Child returnChild;
+        public FormAddChild(Parent _parent)//приняли сущность Parent
         {
             InitializeComponent();
-            parentId = _parentId;
+            parent = _parent;
             dtpBirthday.MaxDate = DateTime.Now;
             dtpBirthday.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
         }
 
-        private void btnAddChild_Click(object sender, EventArgs e)
+        private void BtnAddChild_Click(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == string.Empty)
-                MyMessageBox.MyShow("Введите имя!");
-            else if (txtLastName.Text == string.Empty)
-                MyMessageBox.MyShow("Введите фамилию!");
-            else if (cbxGender.Text == string.Empty)
-                MyMessageBox.MyShow("Выберите пол ребенка!");
-            else
+            if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
-                try
-                {
-                    childId = 1;
-                    GetDataDB.addChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parentId);//добавляем нового ребенка и получаем его Id
-                    DialogResult = DialogResult.OK;
-                    Close();
-                }
-                catch (System.Data.SqlClient.SqlException)
-                {
-                    MyMessageBox.MyShow("Ошибка чтения базы данных????");
-                }
+                ChildRepos.AddChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent);//добавляем нового ребенка
+                returnChild =  ChildRepos.GetNewAddChild();
+                DialogResult = DialogResult.OK;
+                Close();
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        public Child getChild()//функция возвращает обьект Child
-        {
-            return GetDataDB.findChildById(childId);
-        }
+        public Child GetChild() => returnChild;
     }
 }
