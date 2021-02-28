@@ -92,3 +92,5 @@ C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormLog
 C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormMessage.resources
 C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormRegister.resources
 C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormTitleImg.resources
+C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormGrowth.resources
+C:\Users\Ola\Desktop\DEV\oh_baby\UI_Design\UI_Design\obj\Debug\UI_Design.FormSettings.resources

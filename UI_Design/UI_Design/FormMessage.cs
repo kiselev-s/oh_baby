@@ -35,5 +35,10 @@ namespace UI_Design
         {
             Close();
         }
+
+        private void labelHide_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

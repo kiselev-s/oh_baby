@@ -61,11 +61,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormGrowth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrowth.Designer.cs">
+      <DependentUpon>FormGrowth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTitleImg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTitleImg.Designer.cs">
       <DependentUpon>FormTitleImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ImagesRepos.cs" />
     <Compile Include="Repositories\ChildRepos.cs" />
@@ -122,6 +139,9 @@
     </Compile>
     <Compile Include="Services\StylesService.cs" />
     <Compile Include="Services\ValidateService.cs" />
+    <EmbeddedResource Include="FormGrowth.resx">
+      <DependentUpon>FormGrowth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,19 +160,17 @@
     <EmbeddedResource Include="FormMessage.resx">
       <DependentUpon>FormMessage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTitleImg.resx">
       <DependentUpon>FormTitleImg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,184 +189,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Web_%28660%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\men.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc31.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\med.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\med1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\growth.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\weight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\weight1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eyelashes_3d_64px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eye_60px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registration_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registration_64px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registration_64px2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_64px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_64px2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user_male_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user_male_64px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_64px3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enter_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enter_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_32px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel_32px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\down_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user_male_64px2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user_male_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\id_not_verified_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_user_male_16px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registration_332px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hello_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_48px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_exit.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_down_3_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_down.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_down_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\thick_arrow_pointing_down_32px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_downward_arrow.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\doc311.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_document.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_240px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Untitled-3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_240px1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled-5.png" />
@@ -366,25 +207,7 @@
     <None Include="Resources\increase_48px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\treatment_240px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\treatment_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_240px2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\document_64_1px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\home_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exit_64px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home_64_1px.png" />
@@ -396,31 +219,10 @@
     <None Include="Resources\treatment_64_1px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Untitled-51.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-52.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-53.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-54.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Untitled-9.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled-8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-81.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Untitled-91.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eyelashes_3d_32px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye_32px.png" />
@@ -429,28 +231,19 @@
     <None Include="Resources\eyelashes_3d_32px1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\here_80px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\down_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\here_80px1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\here_80_1px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\here_80_2px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downward_arrow_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downward_arrow_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\here_80_2px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unavailable_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_50px2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

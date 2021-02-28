@@ -64,5 +64,10 @@ namespace UI_Design
             FormTitleImg form = new FormTitleImg(parent);
             form.ShowDialog();
         }
+
+        private void btnShowImg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

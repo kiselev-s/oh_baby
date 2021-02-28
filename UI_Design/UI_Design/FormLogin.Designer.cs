@@ -36,7 +36,7 @@ namespace UI_Design
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
             this.btnVisiblePass = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@ namespace UI_Design
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             resources.ApplyResources(this.txtEmail, "txtEmail");
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtEmail.Name = "txtEmail";
             this.toolTipLogin.SetToolTip(this.txtEmail, resources.GetString("txtEmail.ToolTip"));
             // 
@@ -56,7 +56,7 @@ namespace UI_Design
             // 
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             resources.ApplyResources(this.txtPass, "txtPass");
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtPass.Name = "txtPass";
             this.toolTipLogin.SetToolTip(this.txtPass, resources.GetString("txtPass.ToolTip"));
             // 
@@ -80,12 +80,12 @@ namespace UI_Design
             this.toolTipLogin.ReshowDelay = 20;
             this.toolTipLogin.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // label1
+            // lblLogo
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label1.Image = global::UI_Design.Properties.Resources.Untitled_81;
-            this.label1.Name = "label1";
+            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
+            resources.ApplyResources(this.lblLogo, "lblLogo");
+            this.lblLogo.Name = "lblLogo";
             // 
             // lblRegister
             // 
@@ -147,7 +147,7 @@ namespace UI_Design
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnVisiblePass);
             this.Controls.Add(this.btnRegister);
@@ -178,6 +178,6 @@ namespace UI_Design
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ToolTip toolTipLogin;
         private System.Windows.Forms.Button btnVisiblePass;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogo;
     }
 }

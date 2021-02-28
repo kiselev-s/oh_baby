@@ -29,31 +29,15 @@ namespace UI_Design
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOK = new System.Windows.Forms.Button();
             this.panelBackgroundMessage = new System.Windows.Forms.Panel();
+            this.labelHide = new System.Windows.Forms.Label();
             this.panelBack = new System.Windows.Forms.Panel();
             this.panelBackgroundButton = new System.Windows.Forms.Panel();
-            this.labelHide = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.panelBackgroundMessage.SuspendLayout();
             this.panelBack.SuspendLayout();
             this.panelBackgroundButton.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnOK
-            // 
-            this.btnOK.FlatAppearance.BorderSize = 0;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOK.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnOK.Location = new System.Drawing.Point(14, 8);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(0);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(76, 26);
-            this.btnOK.TabIndex = 9;
-            this.btnOK.Text = "OK";
-            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
             // panelBackgroundMessage
             // 
@@ -61,9 +45,23 @@ namespace UI_Design
             this.panelBackgroundMessage.Controls.Add(this.labelHide);
             this.panelBackgroundMessage.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBackgroundMessage.Location = new System.Drawing.Point(0, 0);
+            this.panelBackgroundMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBackgroundMessage.Name = "panelBackgroundMessage";
-            this.panelBackgroundMessage.Size = new System.Drawing.Size(126, 41);
+            this.panelBackgroundMessage.Size = new System.Drawing.Size(169, 50);
             this.panelBackgroundMessage.TabIndex = 11;
+            // 
+            // labelHide
+            // 
+            this.labelHide.BackColor = System.Drawing.Color.Transparent;
+            this.labelHide.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.labelHide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.labelHide.Location = new System.Drawing.Point(63, 8);
+            this.labelHide.Margin = new System.Windows.Forms.Padding(0);
+            this.labelHide.Name = "labelHide";
+            this.labelHide.Size = new System.Drawing.Size(40, 30);
+            this.labelHide.TabIndex = 12;
+            this.labelHide.Text = "label1";
+            this.labelHide.Click += new System.EventHandler(this.labelHide_Click);
             // 
             // panelBack
             // 
@@ -73,8 +71,9 @@ namespace UI_Design
             this.panelBack.Controls.Add(this.panelBackgroundMessage);
             this.panelBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBack.Location = new System.Drawing.Point(0, 0);
+            this.panelBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBack.Name = "panelBack";
-            this.panelBack.Size = new System.Drawing.Size(128, 82);
+            this.panelBack.Size = new System.Drawing.Size(171, 101);
             this.panelBack.TabIndex = 12;
             // 
             // panelBackgroundButton
@@ -82,32 +81,40 @@ namespace UI_Design
             this.panelBackgroundButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panelBackgroundButton.Controls.Add(this.btnOK);
             this.panelBackgroundButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBackgroundButton.Location = new System.Drawing.Point(0, 39);
+            this.panelBackgroundButton.Location = new System.Drawing.Point(0, 49);
+            this.panelBackgroundButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBackgroundButton.Name = "panelBackgroundButton";
-            this.panelBackgroundButton.Size = new System.Drawing.Size(126, 41);
+            this.panelBackgroundButton.Size = new System.Drawing.Size(169, 50);
             this.panelBackgroundButton.TabIndex = 13;
             // 
-            // labelHide
+            // btnOK
             // 
-            this.labelHide.BackColor = System.Drawing.Color.Transparent;
-            this.labelHide.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.labelHide.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.labelHide.Location = new System.Drawing.Point(15, 8);
-            this.labelHide.Margin = new System.Windows.Forms.Padding(0);
-            this.labelHide.Name = "labelHide";
-            this.labelHide.Size = new System.Drawing.Size(30, 24);
-            this.labelHide.TabIndex = 12;
-            this.labelHide.Text = "label1";
+            this.btnOK.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.btnOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnOK.Location = new System.Drawing.Point(36, 10);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(0);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(101, 32);
+            this.btnOK.TabIndex = 9;
+            this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.BtnOK_Click);
             // 
-            // MyMessageBox
+            // FormMessage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(128, 82);
+            this.ClientSize = new System.Drawing.Size(171, 101);
             this.Controls.Add(this.panelBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MyMessageBox";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FormMessage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyMessageBox";
             this.panelBackgroundMessage.ResumeLayout(false);
