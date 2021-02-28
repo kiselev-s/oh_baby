@@ -43,7 +43,7 @@ namespace UI_Design
             Button senderBtn = senderButton as Button;
             txtPass.PasswordChar = '\0';
             txtPassCheck.PasswordChar = '\0';
-            senderBtn.BackgroundImage = Properties.Resources.eye_60px;
+            senderBtn.BackgroundImage = Properties.Resources.eye_32px;
             senderBtn.BackgroundImageLayout = ImageLayout.Zoom;
 
             senderBtn.Click -= new EventHandler(visiblePassTrue);
@@ -53,7 +53,7 @@ namespace UI_Design
         {
             Button senderBtn = senderButton as Button;
             txtPass.PasswordChar = '\0';
-            senderBtn.BackgroundImage = Properties.Resources.eye_60px;
+            senderBtn.BackgroundImage = Properties.Resources.eye_32px;
             senderBtn.BackgroundImageLayout = ImageLayout.Zoom;
 
             senderBtn.Click -= new EventHandler(visiblePassTrue);
@@ -64,7 +64,7 @@ namespace UI_Design
             Button senderBtn = senderButton as Button;
             txtPass.PasswordChar = '*';
             txtPassCheck.PasswordChar = '*';
-            senderBtn.BackgroundImage = Properties.Resources.eyelashes_3d_64px;
+            senderBtn.BackgroundImage = Properties.Resources.eyelashes_3d_32px1;
             senderBtn.BackgroundImageLayout = ImageLayout.Zoom;
 
             senderBtn.Click -= new EventHandler(visiblePassFalse);
@@ -74,7 +74,7 @@ namespace UI_Design
         {
             Button senderBtn = senderButton as Button;
             txtPass.PasswordChar = '*';
-            senderBtn.BackgroundImage = Properties.Resources.eyelashes_3d_64px;
+            senderBtn.BackgroundImage = Properties.Resources.eyelashes_3d_32px1;
             senderBtn.BackgroundImageLayout = ImageLayout.Zoom;
 
             senderBtn.Click -= new EventHandler(visiblePassFalse);

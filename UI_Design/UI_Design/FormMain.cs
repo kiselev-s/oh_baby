@@ -38,11 +38,11 @@ namespace UI_Design
         public FormMain()
         {
             db = new BabyDbContext();
-
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
-            db.Images.Load();
+           // lblBaby.Text = child.FirstName;//???
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
+            //db.Images.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -76,8 +76,8 @@ namespace UI_Design
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormDocuments fornDoc = new FormDocuments();
-            StylesService.CreateForm(fornDoc, pnlFormLoader, lblTitle, "Documents");           
+            FormDocuments formDoc = new FormDocuments(parent);
+            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "Documents");           
         }
 
         private void BtnMed_Click(object sender, EventArgs e)

@@ -30,9 +30,9 @@ namespace UI_Design
 
         public virtual ICollection<Child> Children { get; set; }
 
-        public Parent()
-        {
-            Children = new List<Child>();
-        }
+        //public Parent()
+        //{
+        //    Children = new List<Child>();
+        //}
     }
 }

@@ -27,5 +27,7 @@ namespace UI_Design
         public int Parent_Id { get; set; }
         [ForeignKey("Parent_Id")]
         public virtual Parent Parent { get; set; }
+
+        public virtual ICollection<Imagge> Images { get; set; }
     }
 }

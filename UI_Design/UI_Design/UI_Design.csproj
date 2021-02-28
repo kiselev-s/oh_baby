@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormTitleImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTitleImg.Designer.cs">
+      <DependentUpon>FormTitleImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ImagesRepos.cs" />
     <Compile Include="Repositories\ChildRepos.cs" />
     <Compile Include="Repositories\ParentRepos.cs" />
     <Compile Include="Services\AuthService.cs" />
@@ -132,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessage.resx">
       <DependentUpon>FormMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTitleImg.resx">
+      <DependentUpon>FormTitleImg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -306,6 +316,141 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_downward_arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_240px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\babys_room_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automation_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\increase_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treatment_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treatment_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_240px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_64_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_64_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_64_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treatment_64_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyelashes_3d_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyelashes_3d_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\here_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\here_80px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\here_80_1px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\here_80_2px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downward_arrow_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downward_arrow_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\here_80_2px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
