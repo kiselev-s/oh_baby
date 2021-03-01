@@ -42,10 +42,5 @@ namespace UI_Design
         {
             StylesService.ViewEyePassFalse(sender, txtPass, txtPassCheck, BtnVisiblePassTrue_Click, BtnVisiblePassFalse_Click);
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -103,7 +103,7 @@ namespace UI_Design
             dtpBirthday.CustomFormat = "dd.MM.yyyy";
         }
 
-        public static Child ViewChildComboBox (string firstName)
+        public static Child ViewChildComboBox (string firstName)// в ChildReposit, GetChildName
         {
             Child child = ChildRepos.FindByFirstName(firstName);
             FormMessage.Show($"Ребенок: {child.FirstName} {child.LastName}");

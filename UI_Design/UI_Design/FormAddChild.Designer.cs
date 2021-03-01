@@ -45,6 +45,7 @@ namespace UI_Design
             this.toolTipAddChild = new System.Windows.Forms.ToolTip(this.components);
             this.lblLogo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.myDateTimePicker1 = new UI_Design.MyDateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -242,12 +243,20 @@ namespace UI_Design
             this.label6.Text = "ДАННЫЕ МОЕГО РЕБЕНКА";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // myDateTimePicker1
+            // 
+            this.myDateTimePicker1.Location = new System.Drawing.Point(212, 316);
+            this.myDateTimePicker1.Name = "myDateTimePicker1";
+            this.myDateTimePicker1.Size = new System.Drawing.Size(213, 20);
+            this.myDateTimePicker1.TabIndex = 40;
+            // 
             // FormAddChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(600, 650);
+            this.Controls.Add(this.myDateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.cbxGender);
@@ -285,5 +294,6 @@ namespace UI_Design
         private System.Windows.Forms.ToolTip toolTipAddChild;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label label6;
+        private MyDateTimePicker myDateTimePicker1;
     }
 }

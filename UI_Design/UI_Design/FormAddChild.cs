@@ -14,19 +14,20 @@ namespace UI_Design
     {
         private static Parent parent;
         private static Child returnChild;
+
         public FormAddChild(Parent _parent)//приняли сущность Parent
         {
             InitializeComponent();
             parent = _parent;
             StylesService.SetEnabledPropDateTP(dtpBirthday);
+            myDateTimePicker1.Invalidate();
         }
 
         private void BtnAddChild_Click(object sender, EventArgs e)
         {
             if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
-                ChildRepos.AddChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent);//добавляем нового ребенка
-                returnChild =  ChildRepos.GetNewAddChild();
+                returnChild =  ChildRepos.CreateChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent);//добавляем нового ребенка
                 DialogResult = DialogResult.OK;
                 Close();
             }

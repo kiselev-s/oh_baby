@@ -53,10 +53,10 @@ namespace UI_Design
         {
             FormLogin logForm = new FormLogin();
 
-            if (AuthService.LoginParentTrue(this, logForm))
+            if (AuthService.CheckLogin(this, logForm))
             {
                 parent = logForm.GetParent();
-                ChildRepos.FindAllChild(parent, cmbBoxNameChild, false);//вот тут заполняем cmbBoxNameChild всеми детьми Parent'a
+                ChildRepos.FindByParent(parent, cmbBoxNameChild, false);//вот тут заполняем cmbBoxNameChild всеми детьми Parent'a
             }
             else
             {
@@ -120,7 +120,7 @@ namespace UI_Design
             if(AuthService.AddChildTrue(this, formAddChild))
             {
                 child = formAddChild.GetChild();
-                ChildRepos.FindAllChild(parent, cmbBoxNameChild, true);//добавили нового ребенка в cmbBoxNameChild
+                ChildRepos.FindByParent(parent, cmbBoxNameChild, true);//добавили нового ребенка в cmbBoxNameChild
             }
             else
             {

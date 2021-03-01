@@ -42,7 +42,7 @@ namespace UI_Design
             return Convert.ToBase64String(hash);
         }
 
-        public static bool LoginParentTrue(Form mainForm, FormLogin loginForm)
+        public static bool CheckLogin(Form mainForm, FormLogin loginForm)
         {
             mainForm.Opacity = 0.85;
             mainForm.Show();
