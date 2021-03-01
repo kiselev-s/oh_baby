@@ -51,7 +51,7 @@ namespace UI_Design
             {
                 mainForm.Opacity = 1.0;
                 Parent parent = loginForm.GetParent();
-                FormMessage.Show($@"Добро пожаловать {parent.FirstName} {parent.LastName}");
+                FormMessage.Show($@"Добро пожаловать, {parent.FirstName} {parent.LastName}");
                 return true;
             }
             else

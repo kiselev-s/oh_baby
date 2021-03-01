@@ -29,22 +29,24 @@ namespace UI_Design
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddChild = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.btnWeight = new System.Windows.Forms.Button();
-            this.btnGrowth = new System.Windows.Forms.Button();
-            this.btnMed = new System.Windows.Forms.Button();
-            this.btnDocuments = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnSettings = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.BtnGrowth = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.BtnMed = new System.Windows.Forms.Button();
+            this.BtnDocuments = new System.Windows.Forms.Button();
+            this.BtnHome = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblBaby = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbBoxNameChild = new System.Windows.Forms.ComboBox();
+            this.btnAddChild = new System.Windows.Forms.Button();
             this.pnlFormLoader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,261 +55,277 @@ namespace UI_Design
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.btnAddChild);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnSettings);
-            this.panel1.Controls.Add(this.btnWeight);
-            this.panel1.Controls.Add(this.btnGrowth);
-            this.panel1.Controls.Add(this.btnMed);
-            this.panel1.Controls.Add(this.btnDocuments);
-            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.BtnSettings);
+            this.panel1.Controls.Add(this.BtnExit);
+            this.panel1.Controls.Add(this.BtnGrowth);
+            this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.BtnMed);
+            this.panel1.Controls.Add(this.BtnDocuments);
+            this.panel1.Controls.Add(this.BtnHome);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 469);
+            this.panel1.Size = new System.Drawing.Size(218, 650);
             this.panel1.TabIndex = 0;
             // 
-            // btnAddChild
+            // BtnSettings
             // 
-            this.btnAddChild.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddChild.FlatAppearance.BorderSize = 0;
-            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddChild.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnAddChild.Image = global::UI_Design.Properties.Resources.med1;
-            this.btnAddChild.Location = new System.Drawing.Point(0, 287);
-            this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddChild.Name = "btnAddChild";
-            this.btnAddChild.Size = new System.Drawing.Size(140, 28);
-            this.btnAddChild.TabIndex = 7;
-            this.btnAddChild.Text = "Add child";
-            this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAddChild.UseVisualStyleBackColor = true;
-            this.btnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
-            this.btnAddChild.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.BtnSettings.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnSettings.FlatAppearance.BorderSize = 0;
+            this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnSettings.Image = global::UI_Design.Properties.Resources.automation_48px;
+            this.BtnSettings.Location = new System.Drawing.Point(0, 520);
+            this.BtnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSettings.Name = "BtnSettings";
+            this.BtnSettings.Size = new System.Drawing.Size(218, 65);
+            this.BtnSettings.TabIndex = 8;
+            this.BtnSettings.Text = "> Свойства  ";
+            this.BtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnSettings.UseVisualStyleBackColor = true;
+            this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click_1);
             // 
-            // btnExit
+            // BtnExit
             // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnExit.Image = global::UI_Design.Properties.Resources.icons8_exit;
-            this.btnExit.Location = new System.Drawing.Point(0, 417);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(140, 34);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "Выход";
-            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.BtnExit.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnExit.Image = global::UI_Design.Properties.Resources.exit_64_1px;
+            this.BtnExit.Location = new System.Drawing.Point(0, 585);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(218, 65);
+            this.BtnExit.TabIndex = 7;
+            this.BtnExit.Text = "> Выход     ";
+            this.BtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // btnSettings
+            // BtnGrowth
             // 
-            this.btnSettings.FlatAppearance.BorderSize = 0;
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnSettings.Location = new System.Drawing.Point(-2, 379);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(140, 34);
-            this.btnSettings.TabIndex = 6;
-            this.btnSettings.Text = "Settings";
-            this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
-            this.btnSettings.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.BtnGrowth.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnGrowth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnGrowth.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnGrowth.FlatAppearance.BorderSize = 0;
+            this.BtnGrowth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnGrowth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnGrowth.Image = global::UI_Design.Properties.Resources.increase_48px;
+            this.BtnGrowth.Location = new System.Drawing.Point(0, 397);
+            this.BtnGrowth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGrowth.Name = "BtnGrowth";
+            this.BtnGrowth.Size = new System.Drawing.Size(218, 65);
+            this.BtnGrowth.TabIndex = 4;
+            this.BtnGrowth.Text = "> Развитие   ";
+            this.BtnGrowth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnGrowth.UseVisualStyleBackColor = true;
+            this.BtnGrowth.Click += new System.EventHandler(this.BtnGrowth_Click);
+            this.BtnGrowth.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
-            // btnWeight
+            // pnlNav
             // 
-            this.btnWeight.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWeight.FlatAppearance.BorderSize = 0;
-            this.btnWeight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeight.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnWeight.Image = global::UI_Design.Properties.Resources.weight1;
-            this.btnWeight.Location = new System.Drawing.Point(0, 253);
-            this.btnWeight.Margin = new System.Windows.Forms.Padding(2);
-            this.btnWeight.Name = "btnWeight";
-            this.btnWeight.Size = new System.Drawing.Size(140, 34);
-            this.btnWeight.TabIndex = 5;
-            this.btnWeight.Text = "Weight";
-            this.btnWeight.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnWeight.UseVisualStyleBackColor = true;
-            this.btnWeight.Click += new System.EventHandler(this.BtnWeight_Click);
-            this.btnWeight.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 202);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(4, 65);
+            this.pnlNav.TabIndex = 1;
             // 
-            // btnGrowth
+            // BtnMed
             // 
-            this.btnGrowth.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGrowth.FlatAppearance.BorderSize = 0;
-            this.btnGrowth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrowth.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnGrowth.Image = global::UI_Design.Properties.Resources.growth;
-            this.btnGrowth.Location = new System.Drawing.Point(0, 219);
-            this.btnGrowth.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGrowth.Name = "btnGrowth";
-            this.btnGrowth.Size = new System.Drawing.Size(140, 34);
-            this.btnGrowth.TabIndex = 4;
-            this.btnGrowth.Text = "Growth";
-            this.btnGrowth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGrowth.UseVisualStyleBackColor = true;
-            this.btnGrowth.Click += new System.EventHandler(this.BtnGrowth_Click);
-            this.btnGrowth.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.BtnMed.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnMed.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnMed.FlatAppearance.BorderSize = 0;
+            this.BtnMed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnMed.Image = global::UI_Design.Properties.Resources.treatment_64_1px;
+            this.BtnMed.Location = new System.Drawing.Point(0, 332);
+            this.BtnMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMed.Name = "BtnMed";
+            this.BtnMed.Size = new System.Drawing.Size(218, 65);
+            this.BtnMed.TabIndex = 3;
+            this.BtnMed.Text = "> Медицина  ";
+            this.BtnMed.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnMed.UseVisualStyleBackColor = true;
+            this.BtnMed.Click += new System.EventHandler(this.BtnMed_Click);
+            this.BtnMed.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
-            // btnMed
+            // BtnDocuments
             // 
-            this.btnMed.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMed.FlatAppearance.BorderSize = 0;
-            this.btnMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMed.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnMed.Image = global::UI_Design.Properties.Resources.med1;
-            this.btnMed.Location = new System.Drawing.Point(0, 185);
-            this.btnMed.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMed.Name = "btnMed";
-            this.btnMed.Size = new System.Drawing.Size(140, 34);
-            this.btnMed.TabIndex = 3;
-            this.btnMed.Text = "Medicina";
-            this.btnMed.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMed.UseVisualStyleBackColor = true;
-            this.btnMed.Click += new System.EventHandler(this.BtnMed_Click);
-            this.btnMed.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.BtnDocuments.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnDocuments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnDocuments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnDocuments.FlatAppearance.BorderSize = 0;
+            this.BtnDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnDocuments.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnDocuments.Image = global::UI_Design.Properties.Resources.document_64_1px;
+            this.BtnDocuments.Location = new System.Drawing.Point(0, 267);
+            this.BtnDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDocuments.Name = "BtnDocuments";
+            this.BtnDocuments.Size = new System.Drawing.Size(218, 65);
+            this.BtnDocuments.TabIndex = 2;
+            this.BtnDocuments.Text = "> Документы";
+            this.BtnDocuments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnDocuments.UseVisualStyleBackColor = true;
+            this.BtnDocuments.Click += new System.EventHandler(this.BtnDocuments_Click);
+            this.BtnDocuments.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
-            // btnDocuments
+            // BtnHome
             // 
-            this.btnDocuments.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDocuments.FlatAppearance.BorderSize = 0;
-            this.btnDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDocuments.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnDocuments.Image = global::UI_Design.Properties.Resources.doc4;
-            this.btnDocuments.Location = new System.Drawing.Point(0, 151);
-            this.btnDocuments.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDocuments.Name = "btnDocuments";
-            this.btnDocuments.Size = new System.Drawing.Size(140, 34);
-            this.btnDocuments.TabIndex = 2;
-            this.btnDocuments.Text = "Documents";
-            this.btnDocuments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnDocuments.UseVisualStyleBackColor = true;
-            this.btnDocuments.Click += new System.EventHandler(this.BtnDocuments_Click);
-            this.btnDocuments.Leave += new System.EventHandler(this.BtnAll_Leave);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnHome.Image = global::UI_Design.Properties.Resources.home1;
-            this.btnHome.Location = new System.Drawing.Point(0, 117);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(140, 34);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
-            this.btnHome.Leave += new System.EventHandler(this.BtnAll_Leave);
+            this.BtnHome.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnHome.FlatAppearance.BorderSize = 0;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.BtnHome.Image = global::UI_Design.Properties.Resources.home_64_1px;
+            this.BtnHome.Location = new System.Drawing.Point(0, 202);
+            this.BtnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(218, 65);
+            this.BtnHome.TabIndex = 1;
+            this.BtnHome.Text = "> Главная     ";
+            this.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnHome.UseVisualStyleBackColor = true;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.BtnHome.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblBaby);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.cmbBoxNameChild);
+            this.panel2.Controls.Add(this.btnAddChild);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 117);
+            this.panel2.Size = new System.Drawing.Size(218, 202);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // lblBaby
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
-            this.label2.Location = new System.Drawing.Point(50, 93);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Youth";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(16, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Shmakov Dima";
+            this.lblBaby.AutoSize = true;
+            this.lblBaby.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBaby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblBaby.Location = new System.Drawing.Point(16, 72);
+            this.lblBaby.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBaby.Name = "lblBaby";
+            this.lblBaby.Size = new System.Drawing.Size(0, 17);
+            this.lblBaby.TabIndex = 1;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::UI_Design.Properties.Resources.men;
-            this.pictureBox1.InitialImage = global::UI_Design.Properties.Resources.men;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Image = global::UI_Design.Properties.Resources.babys_room_64px;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(61, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 51);
+            this.pictureBox1.Size = new System.Drawing.Size(93, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlNav
+            // cmbBoxNameChild
             // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 117);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(2, 34);
-            this.pnlNav.TabIndex = 1;
+            this.cmbBoxNameChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.cmbBoxNameChild.Enabled = false;
+            this.cmbBoxNameChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbBoxNameChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbBoxNameChild.FormattingEnabled = true;
+            this.cmbBoxNameChild.Location = new System.Drawing.Point(39, 132);
+            this.cmbBoxNameChild.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBoxNameChild.Name = "cmbBoxNameChild";
+            this.cmbBoxNameChild.Size = new System.Drawing.Size(144, 30);
+            this.cmbBoxNameChild.TabIndex = 8;
+            this.toolTipMain.SetToolTip(this.cmbBoxNameChild, "Выберете ребенка для просмотра его данных");
+            this.cmbBoxNameChild.SelectedIndexChanged += new System.EventHandler(this.cmbBoxNameChild_SelectedIndexChanged);
+            // 
+            // btnAddChild
+            // 
+            this.btnAddChild.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_9;
+            this.btnAddChild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddChild.FlatAppearance.BorderSize = 0;
+            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnAddChild.Image = global::UI_Design.Properties.Resources.add_50px2;
+            this.btnAddChild.Location = new System.Drawing.Point(164, 0);
+            this.btnAddChild.Margin = new System.Windows.Forms.Padding(8, 16, 2, 2);
+            this.btnAddChild.Name = "btnAddChild";
+            this.btnAddChild.Size = new System.Drawing.Size(54, 56);
+            this.btnAddChild.TabIndex = 7;
+            this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTipMain.SetToolTip(this.btnAddChild, "Нажмите для добавления учетной записи ребенка");
+            this.btnAddChild.UseVisualStyleBackColor = true;
+            this.btnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
+            this.btnAddChild.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // pnlFormLoader
             // 
             this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFormLoader.Location = new System.Drawing.Point(140, 81);
-            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlFormLoader.Location = new System.Drawing.Point(218, 122);
+            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlFormLoader.Name = "pnlFormLoader";
-            this.pnlFormLoader.Size = new System.Drawing.Size(573, 388);
+            this.pnlFormLoader.Size = new System.Drawing.Size(982, 528);
             this.pnlFormLoader.TabIndex = 2;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitle.Location = new System.Drawing.Point(363, 7);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblTitle.Location = new System.Drawing.Point(584, 81);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(62, 24);
+            this.lblTitle.Size = new System.Drawing.Size(175, 31);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "Home";
+            this.lblTitle.Text = "> Главная <";
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
+            this.lblLogo.Location = new System.Drawing.Point(541, 7);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(248, 65);
+            this.lblLogo.TabIndex = 10;
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // toolTipMain
+            // 
+            this.toolTipMain.AutomaticDelay = 100;
+            this.toolTipMain.AutoPopDelay = 5000;
+            this.toolTipMain.InitialDelay = 100;
+            this.toolTipMain.ReshowDelay = 20;
+            this.toolTipMain.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(713, 469);
+            this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlFormLoader);
-            this.Controls.Add(this.pnlNav);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -326,19 +344,20 @@ namespace UI_Design
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.Button btnWeight;
-        private System.Windows.Forms.Button btnGrowth;
-        private System.Windows.Forms.Button btnMed;
-        private System.Windows.Forms.Button btnDocuments;
+        private System.Windows.Forms.Button BtnHome;
+        private System.Windows.Forms.Label lblBaby;
+        private System.Windows.Forms.Button BtnGrowth;
+        private System.Windows.Forms.Button BtnMed;
+        private System.Windows.Forms.Button BtnDocuments;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel pnlFormLoader;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddChild;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnSettings;
+        private System.Windows.Forms.ComboBox cmbBoxNameChild;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.ToolTip toolTipMain;
     }
 }
 

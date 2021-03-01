@@ -39,10 +39,12 @@ namespace UI_Design
         {
             db = new BabyDbContext();
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
-            db.Images.Load();
+
+
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
+            //db.Images.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -54,6 +56,7 @@ namespace UI_Design
             if (AuthService.LoginParentTrue(this, logForm))
             {
                 parent = logForm.GetParent();
+                ChildRepos.FindAllChild(parent, cmbBoxNameChild, false);//вот тут заполняем cmbBoxNameChild всеми детьми Parent'a
             }
             else
             {
@@ -63,21 +66,16 @@ namespace UI_Design
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            StylesService.ViewClickButton(sender, pnlNav);
-            lblTitle.Text = "Home";
+            StylesService.ViewClickButton(sender, pnlNav, lblTitle, "> Главная <");
             this.pnlFormLoader.Controls.Clear();
-            //Form1 formHome = new Form1(); //{ Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //formHome.FormBorderStyle = FormBorderStyle.None;
-            //this.pnlFormLoader.Controls.Add(formHome);
-            //formHome.Show();
         }
 
         private void BtnDocuments_Click(object sender, EventArgs e)
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormDocuments fornDoc = new FormDocuments();
-            StylesService.CreateForm(fornDoc, pnlFormLoader, lblTitle, "Documents");           
+            FormDocuments formDoc = new FormDocuments(parent);
+            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <");           
         }
 
         private void BtnMed_Click(object sender, EventArgs e)
@@ -85,19 +83,33 @@ namespace UI_Design
             StylesService.ViewClickButton(sender, pnlNav);
 
             FormMedicen formMed = new FormMedicen();
-            StylesService.CreateForm(formMed, pnlFormLoader, lblTitle, "Medicina");       
+            StylesService.CreateForm(formMed, pnlFormLoader, lblTitle, "> Медицина <");       
            
         }
 
         private void BtnGrowth_Click(object sender, EventArgs e)
         {
             StylesService.ViewClickButton(sender, pnlNav);
-        }
 
-        private void BtnWeight_Click(object sender, EventArgs e)
+            FormGrowth formGr = new FormGrowth();
+            StylesService.CreateForm(formGr, pnlFormLoader, lblTitle, "> Развитие <");
+        }
+                        
+        private void BtnExit_Click(object sender, EventArgs e)
+            
         {
             StylesService.ViewClickButton(sender, pnlNav);
+            Application.Exit();
         }
+
+        private void BtnSettings_Click_1(object sender, EventArgs e)
+        {
+            StylesService.ViewClickButton(sender, pnlNav);
+
+            FormSettings formSettings = new FormSettings();
+            StylesService.CreateForm(formSettings, pnlFormLoader, lblTitle, "> Свойства <");
+
+        }        
 
         private void BtnAddChild_Click(object sender, EventArgs e)
         {
@@ -108,26 +120,24 @@ namespace UI_Design
             if(AuthService.AddChildTrue(this, formAddChild))
             {
                 child = formAddChild.GetChild();
+                ChildRepos.FindAllChild(parent, cmbBoxNameChild, true);//добавили нового ребенка в cmbBoxNameChild
             }
             else
             {
                 // сюда скорее всего не попадем
             }
         }
-
-        private void BtnSettings_Click(object sender, EventArgs e)
-        {
-            StylesService.ViewClickButton(sender, pnlNav);
-        }
-
         private void BtnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
             StylesService.ViewBackColorButton(sender);
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
+        private void cmbBoxNameChild_SelectedIndexChanged(object sender, EventArgs e)//выбрали другого ребенка
         {
-            Application.Exit();
+            if(cmbBoxNameChild.Items.Count > 0)
+                child = StylesService.ViewChildComboBox(cmbBoxNameChild.SelectedItem.ToString());
+            
+            //сюда обработку данных о ребенке
         }
     }
 }

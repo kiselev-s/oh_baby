@@ -7,14 +7,17 @@ using System.Threading.Tasks;
 
 namespace UI_Design
 {
-    class Image
+   public class Imagge
     {
         public int Id { get; set; }
-        //public image ImageVew { get; set; }
+        
         public string Title { get; set; }
+        public byte[] ImageView { get; set; }
         public int Child_Id { get; set; }
         [ForeignKey("Child_Id")]
         public virtual Child Child { get; set; }
+
+        
 
         //public Child Child { get; set; }
     }

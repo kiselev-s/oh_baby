@@ -18,8 +18,7 @@ namespace UI_Design
         {
             InitializeComponent();
             parent = _parent;
-            dtpBirthday.MaxDate = DateTime.Now;
-            dtpBirthday.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
+            StylesService.SetEnabledPropDateTP(dtpBirthday);
         }
 
         private void BtnAddChild_Click(object sender, EventArgs e)
