@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace UI_Design
     class ImagesRepos
     {
         private static Imagge tempImg;
-        public static void AddImg(string TitleImg, byte[] Img, Parent inputParent)//добавление ребенка в базу
+        public static void AddImg(string TitleImg, byte[] Img, Child inputChild)//добавление img в базу
         {
             //try
             //{
@@ -39,12 +40,10 @@ namespace UI_Design
                     Title = TitleImg,
                     ImageView = Img
                 };
-                Child childd = db.Childs.FirstOrDefault(c => c.Parent_Id == inputParent.Id);
+                var childd = db.Childs.FirstOrDefault(c => c.Id == inputChild.Id);
                 childd.Images.Add(newImg);
-                db.SaveChanges();
-                
+                db.SaveChanges();               
             }
-
         }
     }
 }

@@ -30,12 +30,12 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnShowImg = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AddImd = new System.Windows.Forms.Button();
-            this.pctrBoxDoc = new System.Windows.Forms.PictureBox();
-            this.btnShowImg = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pctrBoxDoc)).BeginInit();
+            this.pcrBoxDoc = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcrBoxDoc)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -48,6 +48,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(260, 34);
             this.comboBox1.TabIndex = 3;
+            this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // label1
             // 
@@ -59,6 +60,22 @@
             this.label1.Size = new System.Drawing.Size(221, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "название документа";
+            // 
+            // btnShowImg
+            // 
+            this.btnShowImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnShowImg.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_3;
+            this.btnShowImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShowImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowImg.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowImg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.btnShowImg.Location = new System.Drawing.Point(329, 290);
+            this.btnShowImg.Name = "btnShowImg";
+            this.btnShowImg.Size = new System.Drawing.Size(260, 70);
+            this.btnShowImg.TabIndex = 8;
+            this.btnShowImg.Text = "  хочу посмотреть документ";
+            this.btnShowImg.UseVisualStyleBackColor = false;
+            this.btnShowImg.Click += new System.EventHandler(this.btnShowImg_Click);
             // 
             // button2
             // 
@@ -74,6 +91,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = " удалить";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -106,31 +124,15 @@
             this.AddImd.UseVisualStyleBackColor = false;
             this.AddImd.Click += new System.EventHandler(this.AddImd_Click);
             // 
-            // pctrBoxDoc
+            // pcrBoxDoc
             // 
-           
-            this.pctrBoxDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pctrBoxDoc.Location = new System.Drawing.Point(630, 36);
-            this.pctrBoxDoc.Name = "pctrBoxDoc";
-            this.pctrBoxDoc.Size = new System.Drawing.Size(588, 447);
-            this.pctrBoxDoc.TabIndex = 2;
-            this.pctrBoxDoc.TabStop = false;
-            // 
-            // btnShowImg
-            // 
-            this.btnShowImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnShowImg.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_3;
-            this.btnShowImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnShowImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowImg.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowImg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.btnShowImg.Location = new System.Drawing.Point(329, 290);
-            this.btnShowImg.Name = "btnShowImg";
-            this.btnShowImg.Size = new System.Drawing.Size(260, 70);
-            this.btnShowImg.TabIndex = 8;
-            this.btnShowImg.Text = "  хочу посмотреть документ";
-            this.btnShowImg.UseVisualStyleBackColor = false;
-            this.btnShowImg.Click += new System.EventHandler(this.btnShowImg_Click);
+            this.pcrBoxDoc.BackgroundImage = global::UI_Design.Properties.Resources.document_240px;
+            this.pcrBoxDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pcrBoxDoc.Location = new System.Drawing.Point(630, 36);
+            this.pcrBoxDoc.Name = "pcrBoxDoc";
+            this.pcrBoxDoc.Size = new System.Drawing.Size(588, 447);
+            this.pcrBoxDoc.TabIndex = 2;
+            this.pcrBoxDoc.TabStop = false;
             // 
             // FormDocuments
             // 
@@ -144,19 +146,19 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AddImd);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.pctrBoxDoc);
+            this.Controls.Add(this.pcrBoxDoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDocuments";
             this.Text = "FormDocuments";
             this.Load += new System.EventHandler(this.FormDocuments_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctrBoxDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcrBoxDoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pctrBoxDoc;
+        private System.Windows.Forms.PictureBox pcrBoxDoc;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button AddImd;
         private System.Windows.Forms.Button button1;

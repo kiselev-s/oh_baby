@@ -74,8 +74,9 @@ namespace UI_Design
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormDocuments formDoc = new FormDocuments(parent);
-            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <");           
+            FormDocuments formDoc = new FormDocuments(parent,child);
+            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <"); 
+      
         }
 
         private void BtnMed_Click(object sender, EventArgs e)
