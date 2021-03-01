@@ -36,12 +36,12 @@ namespace UI_Design
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.toolTipLogin = new System.Windows.Forms.ToolTip(this.components);
-            this.lblLogo = new System.Windows.Forms.Label();
-            this.lblRegister = new System.Windows.Forms.Label();
             this.btnVisiblePass = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.lblRegister = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -50,7 +50,6 @@ namespace UI_Design
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtEmail.Name = "txtEmail";
-            this.toolTipLogin.SetToolTip(this.txtEmail, resources.GetString("txtEmail.ToolTip"));
             // 
             // txtPass
             // 
@@ -58,7 +57,6 @@ namespace UI_Design
             resources.ApplyResources(this.txtPass, "txtPass");
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtPass.Name = "txtPass";
-            this.toolTipLogin.SetToolTip(this.txtPass, resources.GetString("txtPass.ToolTip"));
             // 
             // label3
             // 
@@ -80,20 +78,6 @@ namespace UI_Design
             this.toolTipLogin.ReshowDelay = 20;
             this.toolTipLogin.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // lblLogo
-            // 
-            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
-            resources.ApplyResources(this.lblLogo, "lblLogo");
-            this.lblLogo.Name = "lblLogo";
-            // 
-            // lblRegister
-            // 
-            resources.ApplyResources(this.lblRegister, "lblRegister");
-            this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblRegister.Image = global::UI_Design.Properties.Resources.here_80_2px1;
-            this.lblRegister.Name = "lblRegister";
-            // 
             // btnVisiblePass
             // 
             this.btnVisiblePass.BackgroundImage = global::UI_Design.Properties.Resources.eyelashes_3d_32px1;
@@ -113,7 +97,6 @@ namespace UI_Design
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnRegister.Name = "btnRegister";
-            this.toolTipLogin.SetToolTip(this.btnRegister, resources.GetString("btnRegister.ToolTip"));
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
@@ -125,7 +108,6 @@ namespace UI_Design
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Name = "btnCancel";
-            this.toolTipLogin.SetToolTip(this.btnCancel, resources.GetString("btnCancel.ToolTip"));
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
@@ -137,9 +119,22 @@ namespace UI_Design
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnLogin.Name = "btnLogin";
-            this.toolTipLogin.SetToolTip(this.btnLogin, resources.GetString("btnLogin.ToolTip"));
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // lblLogo
+            // 
+            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
+            resources.ApplyResources(this.lblLogo, "lblLogo");
+            this.lblLogo.Name = "lblLogo";
+            // 
+            // lblRegister
+            // 
+            resources.ApplyResources(this.lblRegister, "lblRegister");
+            this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblRegister.Image = global::UI_Design.Properties.Resources.here_80_2px1;
+            this.lblRegister.Name = "lblRegister";
             // 
             // FormLogin
             // 

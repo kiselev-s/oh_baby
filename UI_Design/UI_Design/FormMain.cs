@@ -39,7 +39,7 @@ namespace UI_Design
         {
             db = new BabyDbContext();
 
-            
+
 
             //db.Parents.Load();
             //db.Childs.Load();
@@ -56,25 +56,18 @@ namespace UI_Design
             if (AuthService.LoginParentTrue(this, logForm))
             {
                 parent = logForm.GetParent();
+                ChildRepos.FindAllChild(parent, cmbBoxNameChild, false);//вот тут заполняем cmbBoxNameChild всеми детьми Parent'a
             }
             else
             {
                 //а мы в эту ветку кода вообще попадем?
             }
-            cmbBoxNameChild.Items.Add("jjj");
-            cmbBoxNameChild.Items.Add("Lina");
-            cmbBoxNameChild.Update();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            StylesService.ViewClickButton(sender, pnlNav);
-            lblTitle.Text = "> Главная <";
+            StylesService.ViewClickButton(sender, pnlNav, lblTitle, "> Главная <");
             this.pnlFormLoader.Controls.Clear();
-            //Form1 formHome = new Form1(); //{ Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            //formHome.FormBorderStyle = FormBorderStyle.None;
-            //this.pnlFormLoader.Controls.Add(formHome);
-            //formHome.Show();
         }
 
         private void BtnDocuments_Click(object sender, EventArgs e)
@@ -127,6 +120,7 @@ namespace UI_Design
             if(AuthService.AddChildTrue(this, formAddChild))
             {
                 child = formAddChild.GetChild();
+                ChildRepos.FindAllChild(parent, cmbBoxNameChild, true);//добавили нового ребенка в cmbBoxNameChild
             }
             else
             {
@@ -136,6 +130,14 @@ namespace UI_Design
         private void BtnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
             StylesService.ViewBackColorButton(sender);
-        }        
+        }
+
+        private void cmbBoxNameChild_SelectedIndexChanged(object sender, EventArgs e)//выбрали другого ребенка
+        {
+            if(cmbBoxNameChild.Items.Count > 0)
+                child = StylesService.ViewChildComboBox(cmbBoxNameChild.SelectedItem.ToString());
+            
+            //сюда обработку данных о ребенке
+        }
     }
 }

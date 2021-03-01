@@ -16,7 +16,20 @@ namespace UI_Design
             senderPanel.Height = senderBtn.Height;
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
+            senderPanel.BringToFront();
             senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        public static void ViewClickButton(object sender, Panel senderPanel, Label senderLabel, string textLabel)
+        {
+            Button senderBtn = sender as Button;// приводим полученный объект к типу Button
+            senderPanel.Height = senderBtn.Height;
+            senderPanel.Top = senderBtn.Top;
+            senderPanel.Left = senderBtn.Left;
+            senderPanel.BringToFront();
+            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+
+            senderLabel.Text = textLabel;
         }
         public static void CreateForm(Form form, Panel senderPanel, Label senderLable, string titleForm)
         {
@@ -79,6 +92,22 @@ namespace UI_Design
 
             senderBtn.Click -= new EventHandler(visiblePassFalse);
             senderBtn.Click += new EventHandler(visiblePassTrue);
+        }
+
+        public static void SetEnabledPropDateTP(DateTimePicker dtpBirthday)
+        {
+            dtpBirthday.Value = DateTime.Now;
+            dtpBirthday.MaxDate = DateTime.Now;
+            dtpBirthday.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
+            dtpBirthday.Format = DateTimePickerFormat.Custom;
+            dtpBirthday.CustomFormat = "dd.MM.yyyy";
+        }
+
+        public static Child ViewChildComboBox (string firstName)
+        {
+            Child child = ChildRepos.FindByFirstName(firstName);
+            FormMessage.Show($"Ребенок: {child.FirstName} {child.LastName}");
+            return child;
         }
     }
 }

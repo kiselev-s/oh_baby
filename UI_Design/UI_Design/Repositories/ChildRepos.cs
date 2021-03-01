@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace UI_Design
 {
@@ -21,6 +22,22 @@ namespace UI_Design
             catch (Exception)
             {
                 FormMessage.Show("Данных о ребенке не существует в базе...");
+                return new Child();// ??????????????????????????????????????????????????
+            }
+        }
+
+        public static Child FindByFirstName(string firstName)
+        {
+            try
+            {
+                using (BabyDbContext db = new BabyDbContext())
+                {
+                    return db.Childs.FirstOrDefault(c => c.FirstName == firstName);
+                }
+            }
+            catch (Exception)
+            {
+                FormMessage.Show("Ребенок с таким именем не найден в базе данных...");
                 return new Child();// ??????????????????????????????????????????????????
             }
         }
@@ -54,5 +71,23 @@ namespace UI_Design
         }
 
         public static Child GetNewAddChild() => tempChild;
+
+        public static void FindAllChild(Parent parent, ComboBox cbx, bool addChild)
+        {
+            if (addChild)
+                cbx.Items.Clear();
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                var ch = db.Childs.Where(child => child.Parent_Id == parent.Id).ToList();
+                
+                foreach (Child item in ch)
+                {
+                    cbx.Items.Add(item.FirstName);
+                    cbx.SelectedIndex = 0;
+                }
+                if (cbx.Items.Count > 0 && cbx.Enabled == false)
+                    cbx.Enabled = true;
+            }
+        }
     }
 }

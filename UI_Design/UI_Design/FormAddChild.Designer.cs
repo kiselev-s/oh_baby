@@ -50,12 +50,11 @@ namespace UI_Design
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(70, 411);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(52, 334);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 61);
+            this.label3.Size = new System.Drawing.Size(116, 50);
             this.label3.TabIndex = 33;
             this.label3.Text = "Дата рождения";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,52 +62,46 @@ namespace UI_Design
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label2.Location = new System.Drawing.Point(104, 336);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(78, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 28);
+            this.label2.Size = new System.Drawing.Size(98, 24);
             this.label2.TabIndex = 32;
             this.label2.Text = "Фамилия";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(105, 241);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(79, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 28);
+            this.label1.Size = new System.Drawing.Size(49, 24);
             this.label1.TabIndex = 31;
             this.label1.Text = "Имя";
             // 
             // txtFirstName
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtFirstName.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.txtFirstName.Location = new System.Drawing.Point(282, 234);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Location = new System.Drawing.Point(212, 190);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(283, 34);
+            this.txtFirstName.Size = new System.Drawing.Size(213, 28);
             this.txtFirstName.TabIndex = 30;
             this.txtFirstName.Text = "Иван";
-            this.toolTipAddChild.SetToolTip(this.txtFirstName, "Введите имя ребенка");
             // 
             // txtLastName
             // 
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtLastName.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.txtLastName.Location = new System.Drawing.Point(282, 334);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Location = new System.Drawing.Point(212, 271);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(283, 34);
+            this.txtLastName.Size = new System.Drawing.Size(213, 28);
             this.txtLastName.TabIndex = 29;
             this.txtLastName.Text = "Иванов";
-            this.toolTipAddChild.SetToolTip(this.txtLastName, "Введите фамилию ребенка");
             // 
             // panel1
             // 
@@ -117,10 +110,10 @@ namespace UI_Design
             this.panel1.Controls.Add(this.btnAddChild);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 676);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 549);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 124);
+            this.panel1.Size = new System.Drawing.Size(600, 101);
             this.panel1.TabIndex = 25;
             // 
             // btnSettings
@@ -129,10 +122,10 @@ namespace UI_Design
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Location = new System.Drawing.Point(0, 514);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Location = new System.Drawing.Point(0, 418);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(187, 42);
+            this.btnSettings.Size = new System.Drawing.Size(140, 34);
             this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -144,17 +137,16 @@ namespace UI_Design
             this.btnAddChild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddChild.FlatAppearance.BorderSize = 0;
             this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddChild.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnAddChild.Image = global::UI_Design.Properties.Resources.add_50px21;
-            this.btnAddChild.Location = new System.Drawing.Point(12, 13);
-            this.btnAddChild.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddChild.Location = new System.Drawing.Point(9, 11);
+            this.btnAddChild.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddChild.Name = "btnAddChild";
-            this.btnAddChild.Size = new System.Drawing.Size(290, 80);
+            this.btnAddChild.Size = new System.Drawing.Size(218, 65);
             this.btnAddChild.TabIndex = 5;
             this.btnAddChild.Text = "Добавить";
             this.btnAddChild.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTipAddChild.SetToolTip(this.btnAddChild, "Добавить ребенка в приложение");
             this.btnAddChild.UseVisualStyleBackColor = true;
             this.btnAddChild.Click += new System.EventHandler(this.BtnAddChild_Click);
             // 
@@ -164,29 +156,27 @@ namespace UI_Design
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Image = global::UI_Design.Properties.Resources.unavailable_50px;
-            this.btnCancel.Location = new System.Drawing.Point(498, 13);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(374, 11);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(290, 80);
+            this.btnCancel.Size = new System.Drawing.Size(218, 65);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Отменить";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTipAddChild.SetToolTip(this.btnCancel, "Отменить добавление");
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label4.Location = new System.Drawing.Point(104, 540);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(78, 439);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 28);
+            this.label4.Size = new System.Drawing.Size(47, 24);
             this.label4.TabIndex = 35;
             this.label4.Text = "Пол";
             // 
@@ -196,31 +186,28 @@ namespace UI_Design
             this.dtpBirthday.CalendarMonthBackground = System.Drawing.Color.Maroon;
             this.dtpBirthday.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.dtpBirthday.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.dtpBirthday.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthday.Location = new System.Drawing.Point(282, 438);
-            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpBirthday.CustomFormat = "";
+            this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthday.Location = new System.Drawing.Point(212, 356);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(465, 34);
+            this.dtpBirthday.Size = new System.Drawing.Size(212, 28);
             this.dtpBirthday.TabIndex = 36;
-            this.toolTipAddChild.SetToolTip(this.dtpBirthday, "Выберите дату рождения");
             this.dtpBirthday.Value = new System.DateTime(2021, 2, 28, 0, 0, 0, 0);
             // 
             // cbxGender
             // 
             this.cbxGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.cbxGender.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.cbxGender.FormattingEnabled = true;
             this.cbxGender.Items.AddRange(new object[] {
             "женский",
             "мужской"});
-            this.cbxGender.Location = new System.Drawing.Point(282, 532);
-            this.cbxGender.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxGender.Location = new System.Drawing.Point(212, 432);
             this.cbxGender.Name = "cbxGender";
-            this.cbxGender.Size = new System.Drawing.Size(288, 36);
+            this.cbxGender.Size = new System.Drawing.Size(212, 30);
             this.cbxGender.TabIndex = 37;
             this.cbxGender.Text = "мужской";
-            this.toolTipAddChild.SetToolTip(this.cbxGender, "Выберите пол");
             // 
             // toolTipAddChild
             // 
@@ -234,31 +221,33 @@ namespace UI_Design
             // 
             this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
-            this.lblLogo.Location = new System.Drawing.Point(240, 9);
+            this.lblLogo.Location = new System.Drawing.Point(180, 7);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(325, 80);
+            this.lblLogo.Size = new System.Drawing.Size(244, 65);
             this.lblLogo.TabIndex = 38;
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label6.Image = global::UI_Design.Properties.Resources.Untitled_8;
-            this.label6.Location = new System.Drawing.Point(12, 116);
+            this.label6.Location = new System.Drawing.Point(9, 94);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(776, 50);
+            this.label6.Size = new System.Drawing.Size(582, 41);
             this.label6.TabIndex = 39;
             this.label6.Text = "ДАННЫЕ МОЕГО РЕБЕНКА";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAddChild
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(800, 800);
+            this.ClientSize = new System.Drawing.Size(600, 650);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.cbxGender);
@@ -271,7 +260,6 @@ namespace UI_Design
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddChild";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddChild";
