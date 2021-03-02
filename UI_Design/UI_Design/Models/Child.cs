@@ -24,6 +24,9 @@ namespace UI_Design
         [Required]
         public DateTime Birthday { get; set; }
 
+        [Required]
+        public int Gender { get; set; }
+
         public int Parent_Id { get; set; }
         [ForeignKey("Parent_Id")]
         public virtual Parent Parent { get; set; }

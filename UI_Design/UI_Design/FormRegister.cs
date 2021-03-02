@@ -28,7 +28,7 @@ namespace UI_Design
         {
             if(Validation.VerifyRegister(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text,txtPassCheck.Text))
             {
-                ParentRepos.AddParent(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
+                ParentRepos.Add(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -41,11 +41,6 @@ namespace UI_Design
         private void BtnVisiblePassFalse_Click(object sender, EventArgs e)//скрыть пароль
         {
             StylesService.ViewEyePassFalse(sender, txtPass, txtPassCheck, BtnVisiblePassTrue_Click, BtnVisiblePassFalse_Click);
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

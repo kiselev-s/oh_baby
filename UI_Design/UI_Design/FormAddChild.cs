@@ -14,6 +14,7 @@ namespace UI_Design
     {
         private static Parent parent;
         private static Child returnChild;
+
         public FormAddChild(Parent _parent)//приняли сущность Parent
         {
             InitializeComponent();
@@ -25,8 +26,7 @@ namespace UI_Design
         {
             if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
-                ChildRepos.AddChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent);//добавляем нового ребенка
-                returnChild =  ChildRepos.GetNewAddChild();
+                returnChild =  ChildRepos.Create(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent, cbxGender.SelectedIndex);//добавляем нового ребенка
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -37,7 +37,5 @@ namespace UI_Design
             DialogResult = DialogResult.Cancel;
             Close();
         }
-
-        public Child GetChild() => returnChild;
     }
 }

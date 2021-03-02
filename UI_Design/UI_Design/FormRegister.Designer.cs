@@ -41,9 +41,9 @@ namespace UI_Design
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.toolTipRegister = new System.Windows.Forms.ToolTip(this.components);
+            this.btnVisiblePass = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnVisiblePass = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -171,17 +171,35 @@ namespace UI_Design
             this.toolTipRegister.ReshowDelay = 20;
             this.toolTipRegister.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // btnVisiblePass
+            // 
+            this.btnVisiblePass.BackgroundImage = global::UI_Design.Properties.Resources.eyelashes_3d_32px1;
+            this.btnVisiblePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisiblePass.FlatAppearance.BorderSize = 0;
+            this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnVisiblePass.Location = new System.Drawing.Point(416, 336);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisiblePass.Name = "btnVisiblePass";
+            this.btnVisiblePass.Size = new System.Drawing.Size(28, 28);
+            this.btnVisiblePass.TabIndex = 24;
+            this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolTipRegister.SetToolTip(this.btnVisiblePass, "Показать пароль");
+            this.btnVisiblePass.UseVisualStyleBackColor = true;
+            this.btnVisiblePass.Click += new System.EventHandler(this.BtnVisiblePassTrue_Click);
+            // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnRegister.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_9;
             this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegister.FlatAppearance.BorderSize = 0;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnRegister.Location = new System.Drawing.Point(9, 474);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(582, 36);
             this.btnRegister.TabIndex = 25;
@@ -196,11 +214,11 @@ namespace UI_Design
             this.btnCancel.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_9;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Location = new System.Drawing.Point(9, 561);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(582, 36);
             this.btnCancel.TabIndex = 2;
@@ -208,24 +226,6 @@ namespace UI_Design
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
-            // btnVisiblePass
-            // 
-            this.btnVisiblePass.BackgroundImage = global::UI_Design.Properties.Resources.eyelashes_3d_32px1;
-            this.btnVisiblePass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVisiblePass.FlatAppearance.BorderSize = 0;
-            this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnVisiblePass.Location = new System.Drawing.Point(416, 336);
-            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVisiblePass.Name = "btnVisiblePass";
-            this.btnVisiblePass.Size = new System.Drawing.Size(28, 28);
-            this.btnVisiblePass.TabIndex = 24;
-            this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolTipRegister.SetToolTip(this.btnVisiblePass, "Показать пароль");
-            this.btnVisiblePass.UseVisualStyleBackColor = true;
-            this.btnVisiblePass.Click += new System.EventHandler(this.BtnVisiblePassTrue_Click);
             // 
             // lblLogo
             // 
@@ -251,7 +251,6 @@ namespace UI_Design
             this.label6.TabIndex = 25;
             this.label6.Text = "СОЗДАНИЕ МОЕЙ УЧЕТНОЙ ЗАПИСИ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FormRegister
             // 
