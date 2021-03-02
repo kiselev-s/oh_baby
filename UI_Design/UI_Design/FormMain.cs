@@ -43,10 +43,10 @@ namespace UI_Design
 
 
 
-            //db.Parents.Load();
-            //db.Childs.Load();
-            //db.Growth_Weights.Load();
-            //db.Images.Load();
+            db.Parents.Load();
+            db.Childs.Load();
+            db.Growth_Weights.Load();
+            db.Images.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -67,7 +67,7 @@ namespace UI_Design
 
                 GetParentChild();
 
-                child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
+                //child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
             }
             else
             {
