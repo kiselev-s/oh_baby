@@ -10,6 +10,7 @@ namespace UI_Design
 {
     class MyDateTimePicker : DateTimePicker
     {
+        private DateTimePicker dateTimePicker;
         const int WM_ERASEBKGND = 0x14;
         protected override void WndProc(ref System.Windows.Forms.Message m)
         {
@@ -26,6 +27,20 @@ namespace UI_Design
             }
 
             base.WndProc(ref m);
+        }
+
+        private void InitializeComponent()
+        {
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.SuspendLayout();
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker.TabIndex = 0;
+            this.ResumeLayout(false);
         }
     }
 }

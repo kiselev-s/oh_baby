@@ -18,7 +18,7 @@ namespace UI_Design
             }
         }
 
-        public static Child CreateChild(string firstName, string lastName, DateTime birthday, Parent inputParent)//добавление ребенка в базу
+        public static Child Create(string firstName, string lastName, DateTime birthday, Parent inputParent, int gender)//добавление ребенка в базу
         {
             try
             {
@@ -28,7 +28,8 @@ namespace UI_Design
                     {
                         FirstName = firstName,
                         LastName = lastName,
-                        Birthday = birthday
+                        Birthday = birthday,
+                        Gender = gender
                     };
 
                     Parent par = db.Parents.FirstOrDefault(p => p.Id == inputParent.Id);
@@ -45,21 +46,11 @@ namespace UI_Design
             }
         }
 
-        public static void FindByParent(Parent parent, ComboBox cbx, bool addChild)           //ВЕРНУТЬ В ФОРМУ !!!!!!!!!!!!!!!
+        public static List<Child> FindByParent(Parent parent)//найти всех детей родителя
         {
-            if (addChild)
-                cbx.Items.Clear();
             using (BabyDbContext db = new BabyDbContext())
             {
-                var ch = db.Childs.Where(child => child.Parent_Id == parent.Id).ToList();
-                
-                foreach (Child item in ch)
-                {
-                    cbx.Items.Add(item.FirstName);
-                    cbx.SelectedIndex = 0;
-                }
-                if (cbx.Items.Count > 0 && cbx.Enabled == false)
-                    cbx.Enabled = true;
+                return db.Childs.Where(child => child.Parent_Id == parent.Id).ToList();
             }
         }
     }

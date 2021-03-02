@@ -137,7 +137,7 @@ namespace UI_Design
             this.btnAddChild.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
             this.btnAddChild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddChild.FlatAppearance.BorderSize = 0;
-            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddChild.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnAddChild.Image = global::UI_Design.Properties.Resources.add_50px21;
@@ -156,7 +156,7 @@ namespace UI_Design
             this.btnCancel.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Image = global::UI_Design.Properties.Resources.unavailable_50px;
@@ -208,7 +208,6 @@ namespace UI_Design
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(212, 30);
             this.cbxGender.TabIndex = 37;
-            this.cbxGender.Text = "мужской";
             // 
             // toolTipAddChild
             // 

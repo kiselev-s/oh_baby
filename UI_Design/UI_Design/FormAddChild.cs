@@ -20,14 +20,13 @@ namespace UI_Design
             InitializeComponent();
             parent = _parent;
             StylesService.SetEnabledPropDateTP(dtpBirthday);
-            myDateTimePicker1.Invalidate();
         }
 
         private void BtnAddChild_Click(object sender, EventArgs e)
         {
             if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
-                returnChild =  ChildRepos.CreateChild(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent);//добавляем нового ребенка
+                returnChild =  ChildRepos.Create(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent, cbxGender.SelectedIndex);//добавляем нового ребенка
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -38,7 +37,5 @@ namespace UI_Design
             DialogResult = DialogResult.Cancel;
             Close();
         }
-
-        public Child GetChild() => returnChild;
     }
 }

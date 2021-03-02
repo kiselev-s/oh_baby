@@ -28,7 +28,7 @@ namespace UI_Design
         {
             if(Validation.VerifyRegister(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text,txtPassCheck.Text))
             {
-                ParentRepos.AddParent(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
+                ParentRepos.Add(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
                 DialogResult = DialogResult.OK;
                 Close();
             }

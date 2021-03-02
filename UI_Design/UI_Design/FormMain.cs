@@ -34,6 +34,8 @@ namespace UI_Design
 
         private static Child child;
         private static Parent parent;
+        private static List<Child> children = null;
+        private int textLength = 0;
 
         public FormMain()
         {
@@ -51,16 +53,25 @@ namespace UI_Design
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
+            Opacity = 0.85;
+            Show();
+
             FormLogin logForm = new FormLogin();
 
-            if (AuthService.CheckLogin(this, logForm))
+            if (logForm.ShowDialog() == DialogResult.OK)//если залогинились
             {
-                parent = logForm.GetParent();
-                ChildRepos.FindByParent(parent, cmbBoxNameChild, false);//вот тут заполняем cmbBoxNameChild всеми детьми Parent'a
+                Opacity = 1.0;
+
+                parent = logForm.GetParent();//получили того кто залогинился
+                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";//выводим имя родителя на главную
+
+                GetParentChild();
+
+                child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
             }
             else
             {
-                //а мы в эту ветку кода вообще попадем?
+                Opacity = 1.0;
             }
         }
 
@@ -113,18 +124,23 @@ namespace UI_Design
 
         private void BtnAddChild_Click(object sender, EventArgs e)
         {
-            StylesService.ViewClickButton(sender, pnlNav);        
+            StylesService.ViewClickButton(sender, pnlNav);
 
-            FormAddChild formAddChild = new FormAddChild(parent);//передали сущность Parent того кто залогинился в форме FormAddChild
+            Opacity = 0.85;
 
-            if(AuthService.AddChildTrue(this, formAddChild))
+            FormAddChild formAddChild = new FormAddChild(parent);//Parent который залогинился передан в форму FormAddChild
+
+            if(formAddChild.ShowDialog() == DialogResult.OK)
             {
-                child = formAddChild.GetChild();
-                ChildRepos.FindByParent(parent, cmbBoxNameChild, true);//добавили нового ребенка в cmbBoxNameChild
+                //child = formAddChild.GetChild(); // а может не надо?
+
+                Opacity = 1.0;
+
+                GetParentChild();
             }
             else
             {
-                // сюда скорее всего не попадем
+                Opacity = 1.0;
             }
         }
         private void BtnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
@@ -134,10 +150,63 @@ namespace UI_Design
 
         private void cmbBoxNameChild_SelectedIndexChanged(object sender, EventArgs e)//выбрали другого ребенка
         {
-            if(cmbBoxNameChild.Items.Count > 0)
-                child = StylesService.ViewChildComboBox(cmbBoxNameChild.SelectedItem.ToString());
+            if (cmbBoxNameChild.Items.Count > 0)
+                child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));
             
-            //сюда обработку данных о ребенке
+            //сюда обработку данных выбраного(текущего) ребенка
+        }
+
+        private void GetParentChild()//получаем всех детей родителя и заполняем в ComboBox
+        {
+            children = ChildRepos.FindByParent(parent);
+            cmbBoxNameChild.Items.Clear();
+            string tmp=  string.Empty;
+
+            if (children.Count > 0)
+            {
+                foreach (Child item in children)//заполнили ComboBox всеми детьми родителя
+                {
+                    tmp = item.FirstName + " " + item.LastName;
+                    AutoSizeComboBox(tmp);
+                    cmbBoxNameChild.Items.Add(tmp);
+                    cmbBoxNameChild.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void AutoSizeComboBox(string txt)//подгоняем размер ComboBox под самое длинное имя ребенка
+        {
+            int parentWidth = cmbBoxNameChild.Parent.Width;
+            float size = cmbBoxNameChild.Font.Size;
+            if (textLength == 0)
+            {
+                textLength = txt.Length;
+                lblTmp.Text = txt;
+            }
+            if(txt.Length > textLength)
+                lblTmp.Text = txt;
+
+            cmbBoxNameChild.Width = lblTmp.Width+15;
+
+            if (lblTmp.Width+10 > parentWidth-2)
+            {
+                while(lblTmp.Width+10 > parentWidth - 2)
+                {
+                    lblTmp.Font = new Font(FontFamily.GenericSansSerif, size--);// было size = size -1;
+                }
+
+                cmbBoxNameChild.Font = new Font(FontFamily.GenericSansSerif, lblTmp.Font.Size);
+                cmbBoxNameChild.Width = lblTmp.Width+15;
+            }
+
+            cmbBoxNameChild.Location = new Point((parentWidth - cmbBoxNameChild.Width) / 2, cmbBoxNameChild.Location.Y);
+        }
+
+        private string FilterByFirstName(string cbxSelItemFullName)//выбираем только имя ребенка, без фамилии
+        {
+            string[] temp;
+            temp = cbxSelItemFullName.Split(' ');
+            return temp[0];
         }
     }
 }

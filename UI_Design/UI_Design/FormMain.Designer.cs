@@ -47,6 +47,8 @@ namespace UI_Design
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
+            this.lblParentName = new System.Windows.Forms.Label();
+            this.lblTmp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,7 +98,7 @@ namespace UI_Design
             this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnExit.Image = global::UI_Design.Properties.Resources.exit_64_1px;
@@ -188,7 +190,7 @@ namespace UI_Design
             this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnHome.FlatAppearance.BorderSize = 0;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnHome.Image = global::UI_Design.Properties.Resources.home_64_1px;
@@ -205,6 +207,7 @@ namespace UI_Design
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblTmp);
             this.panel2.Controls.Add(this.lblBaby);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.cmbBoxNameChild);
@@ -242,7 +245,6 @@ namespace UI_Design
             // cmbBoxNameChild
             // 
             this.cmbBoxNameChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.cmbBoxNameChild.Enabled = false;
             this.cmbBoxNameChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbBoxNameChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbBoxNameChild.FormattingEnabled = true;
@@ -314,12 +316,37 @@ namespace UI_Design
             this.toolTipMain.ReshowDelay = 20;
             this.toolTipMain.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // lblParentName
+            // 
+            this.lblParentName.AutoSize = true;
+            this.lblParentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblParentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblParentName.Location = new System.Drawing.Point(924, 9);
+            this.lblParentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblParentName.Name = "lblParentName";
+            this.lblParentName.Size = new System.Drawing.Size(100, 31);
+            this.lblParentName.TabIndex = 11;
+            this.lblParentName.Text = "Parent";
+            // 
+            // lblTmp
+            // 
+            this.lblTmp.AutoSize = true;
+            this.lblTmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblTmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.lblTmp.Location = new System.Drawing.Point(3, 164);
+            this.lblTmp.Name = "lblTmp";
+            this.lblTmp.Size = new System.Drawing.Size(110, 24);
+            this.lblTmp.TabIndex = 9;
+            this.lblTmp.Text = "label_Temp";
+            this.lblTmp.Visible = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.lblParentName);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlFormLoader);
@@ -358,6 +385,8 @@ namespace UI_Design
         private System.Windows.Forms.ComboBox cmbBoxNameChild;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.ToolTip toolTipMain;
+        private System.Windows.Forms.Label lblParentName;
+        private System.Windows.Forms.Label lblTmp;
     }
 }
 
