@@ -47,6 +47,8 @@ namespace UI_Design
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
+            this.lblParentName = new System.Windows.Forms.Label();
+            this.lblTmp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,7 +67,7 @@ namespace UI_Design
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 650);
             this.panel1.TabIndex = 0;
@@ -81,7 +83,7 @@ namespace UI_Design
             this.BtnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnSettings.Image = global::UI_Design.Properties.Resources.automation_48px;
             this.BtnSettings.Location = new System.Drawing.Point(0, 520);
-            this.BtnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSettings.Name = "BtnSettings";
             this.BtnSettings.Size = new System.Drawing.Size(218, 65);
             this.BtnSettings.TabIndex = 8;
@@ -96,12 +98,12 @@ namespace UI_Design
             this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnExit.Image = global::UI_Design.Properties.Resources.exit_64_1px;
             this.BtnExit.Location = new System.Drawing.Point(0, 585);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(218, 65);
             this.BtnExit.TabIndex = 7;
@@ -121,7 +123,7 @@ namespace UI_Design
             this.BtnGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnGrowth.Image = global::UI_Design.Properties.Resources.increase_48px;
             this.BtnGrowth.Location = new System.Drawing.Point(0, 397);
-            this.BtnGrowth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGrowth.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGrowth.Name = "BtnGrowth";
             this.BtnGrowth.Size = new System.Drawing.Size(218, 65);
             this.BtnGrowth.TabIndex = 4;
@@ -135,7 +137,7 @@ namespace UI_Design
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.pnlNav.Location = new System.Drawing.Point(0, 202);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(4, 65);
             this.pnlNav.TabIndex = 1;
@@ -151,7 +153,7 @@ namespace UI_Design
             this.BtnMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnMed.Image = global::UI_Design.Properties.Resources.treatment_64_1px;
             this.BtnMed.Location = new System.Drawing.Point(0, 332);
-            this.BtnMed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnMed.Margin = new System.Windows.Forms.Padding(2);
             this.BtnMed.Name = "BtnMed";
             this.BtnMed.Size = new System.Drawing.Size(218, 65);
             this.BtnMed.TabIndex = 3;
@@ -172,7 +174,7 @@ namespace UI_Design
             this.BtnDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnDocuments.Image = global::UI_Design.Properties.Resources.document_64_1px;
             this.BtnDocuments.Location = new System.Drawing.Point(0, 267);
-            this.BtnDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDocuments.Name = "BtnDocuments";
             this.BtnDocuments.Size = new System.Drawing.Size(218, 65);
             this.BtnDocuments.TabIndex = 2;
@@ -188,12 +190,12 @@ namespace UI_Design
             this.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnHome.FlatAppearance.BorderSize = 0;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnHome.Image = global::UI_Design.Properties.Resources.home_64_1px;
             this.BtnHome.Location = new System.Drawing.Point(0, 202);
-            this.BtnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnHome.Margin = new System.Windows.Forms.Padding(2);
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(218, 65);
             this.BtnHome.TabIndex = 1;
@@ -205,13 +207,14 @@ namespace UI_Design
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblTmp);
             this.panel2.Controls.Add(this.lblBaby);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.cmbBoxNameChild);
             this.panel2.Controls.Add(this.btnAddChild);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(218, 202);
             this.panel2.TabIndex = 0;
@@ -232,7 +235,7 @@ namespace UI_Design
             this.pictureBox1.Image = global::UI_Design.Properties.Resources.babys_room_64px;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(61, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,12 +245,11 @@ namespace UI_Design
             // cmbBoxNameChild
             // 
             this.cmbBoxNameChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.cmbBoxNameChild.Enabled = false;
             this.cmbBoxNameChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbBoxNameChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbBoxNameChild.FormattingEnabled = true;
             this.cmbBoxNameChild.Location = new System.Drawing.Point(39, 132);
-            this.cmbBoxNameChild.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBoxNameChild.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBoxNameChild.Name = "cmbBoxNameChild";
             this.cmbBoxNameChild.Size = new System.Drawing.Size(144, 30);
             this.cmbBoxNameChild.TabIndex = 8;
@@ -278,7 +280,7 @@ namespace UI_Design
             // 
             this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFormLoader.Location = new System.Drawing.Point(218, 122);
-            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFormLoader.Name = "pnlFormLoader";
             this.pnlFormLoader.Size = new System.Drawing.Size(982, 528);
             this.pnlFormLoader.TabIndex = 2;
@@ -314,18 +316,43 @@ namespace UI_Design
             this.toolTipMain.ReshowDelay = 20;
             this.toolTipMain.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // lblParentName
+            // 
+            this.lblParentName.AutoSize = true;
+            this.lblParentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblParentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblParentName.Location = new System.Drawing.Point(924, 9);
+            this.lblParentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblParentName.Name = "lblParentName";
+            this.lblParentName.Size = new System.Drawing.Size(100, 31);
+            this.lblParentName.TabIndex = 11;
+            this.lblParentName.Text = "Parent";
+            // 
+            // lblTmp
+            // 
+            this.lblTmp.AutoSize = true;
+            this.lblTmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblTmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.lblTmp.Location = new System.Drawing.Point(3, 164);
+            this.lblTmp.Name = "lblTmp";
+            this.lblTmp.Size = new System.Drawing.Size(110, 24);
+            this.lblTmp.TabIndex = 9;
+            this.lblTmp.Text = "label_Temp";
+            this.lblTmp.Visible = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.lblParentName);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pnlFormLoader);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -358,6 +385,8 @@ namespace UI_Design
         private System.Windows.Forms.ComboBox cmbBoxNameChild;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.ToolTip toolTipMain;
+        private System.Windows.Forms.Label lblParentName;
+        private System.Windows.Forms.Label lblTmp;
     }
 }
 

@@ -24,7 +24,7 @@ namespace UI_Design
             }
         }
 
-        public static void AddParent(string firstName, string lastName, string email, string password)//добавление родителя в базу
+        public static void Add(string firstName, string lastName, string email, string password)//добавление родителя в базу
         {
             try
             {
