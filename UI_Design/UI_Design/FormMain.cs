@@ -11,6 +11,7 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Runtime.InteropServices;
+using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
 
 
 namespace UI_Design
@@ -47,6 +48,8 @@ namespace UI_Design
             db.Childs.Load();
             db.Growth_Weights.Load();
             db.Images.Load();
+            db.Healths.Load();
+            db.ImageHealths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -65,9 +68,7 @@ namespace UI_Design
                 parent = logForm.GetParent();//получили того кто залогинился
                 lblParentName.Text = $"{parent.FirstName} {parent.LastName}";//выводим имя родителя на главную
 
-                GetParentChild();
-
-                //child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
+                GetParentChilds();//заполнили всех детей родителя (если есть) + child = cmbBoxNameChild.SelectedIndex(0); (первый ребенок в списке)
             }
             else
             {
@@ -78,7 +79,15 @@ namespace UI_Design
         private void BtnHome_Click(object sender, EventArgs e)
         {
             StylesService.ViewClickButton(sender, pnlNav, lblTitle, "> Главная <");
-            this.pnlFormLoader.Controls.Clear();
+            this.pnlFormLoader.Controls.Clear();// тут явно надо что-то придумать    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //все стирается при переходе на медицину, документы и т.д....
+            //а пока так....
+            pnlFormLoader.Controls.Add(lblBirthText);
+            pnlFormLoader.Controls.Add(lblBirthday);
+            pnlFormLoader.Controls.Add(lbltFeastText);
+            pnlFormLoader.Controls.Add(lblFeast);
+            pnlFormLoader.Controls.Add(lblGenderText);
+            pnlFormLoader.Controls.Add(lblGender);
         }
 
         private void BtnDocuments_Click(object sender, EventArgs e)
@@ -137,10 +146,11 @@ namespace UI_Design
 
                 Opacity = 1.0;
 
-                GetParentChild();
+                GetParentChilds();
             }
             else
             {
+                BtnHome.PerformClick();
                 Opacity = 1.0;
             }
         }
@@ -153,11 +163,12 @@ namespace UI_Design
         {
             if (cmbBoxNameChild.Items.Count > 0)
                 child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));
-            
+
             //сюда обработку данных выбраного(текущего) ребенка
+            ChildShowData();
         }
 
-        private void GetParentChild()//получаем всех детей родителя и заполняем в ComboBox
+        private void GetParentChilds()//получаем всех детей родителя и заполняем в ComboBox
         {
             children = ChildRepos.FindByParent(parent);
             cmbBoxNameChild.Items.Clear();
@@ -169,9 +180,16 @@ namespace UI_Design
                 {
                     tmp = item.FirstName + " " + item.LastName;
                     AutoSizeComboBox(tmp);
-                    cmbBoxNameChild.Items.Add(tmp);
-                    cmbBoxNameChild.SelectedIndex = 0;
+                    cmbBoxNameChild.Items.Add(tmp);                    
                 }
+
+                cmbBoxNameChild.SelectedIndex = 0;
+                child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
+
+                ChildShowData();
+
+
+                //lblFeast.Text = ShowFeast(child.Birthday).ToString();
             }
         }
 
@@ -209,5 +227,78 @@ namespace UI_Design
             temp = cbxSelItemFullName.Split(' ');
             return temp[0];
         }
+
+        private void ChildShowData()//вывод данных о ребенке на главную форму
+        {
+            lblBirthday.Text = child.Birthday.ToShortDateString();
+            lblGender.Text = GetGender(child.Gender);
+
+            lblFeast.Text = ShowFeast(child.Birthday).ToString();
+        }
+
+        private string GetGender(int gender)//дешифратор пола ребенка
+        {
+            if (gender == 0)
+                return "женский";
+            else if (gender == 1)
+                return "мужской";
+            else
+                return "нафиг такой пол";
+        }
+
+        private string ShowFeast(DateTime birthday)//показать праздник
+        {
+            DateTime dateNow = DateTime.Now;
+
+            //int yearDiff = 0;
+
+            //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
+            int dayDiff = Math.Abs(DateSpan.DateDiffDay(dateNow, birthday));
+            //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
+            //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
+            //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
+            //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
+            //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
+
+            //if(dayDiff > 365)
+            //{
+            //    yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
+            //}
+
+            //TimeSpan ts = dateNow - birthday;
+            //ts.mo
+
+            return dayDiff.ToString() + " дн.";
+        }
+
+        //int GetMnthCnt(DateTime start, DateTime end)
+        //{
+        //    DateTime dt1 = new DateTime(start.Year, start.Month, start.Day);
+        //    DateTime dt2 = new DateTime(end.Year, end.Month, end.Day);
+
+        //    if (dt1 > dt2 || dt1 == dt2)
+        //        return 0;
+
+        //    double days = (dt2 - dt1).TotalDays;
+        //    double mnt = 0;
+
+        //    while (days != 0)
+        //    {
+        //        int inMnt = DateTime.DaysInMonth(dt1.Year, dt1.Month);
+        //        if (days >= inMnt)
+        //        {
+        //            days -= inMnt;
+        //            ++mnt;
+        //            dt1 = dt1.AddMonths(1);
+        //        }
+        //        else
+        //        {
+        //            mnt += days / inMnt;
+        //            days = 0;
+        //        }
+        //    }
+
+        //    return (int)mnt;
+        //}
     }
 }

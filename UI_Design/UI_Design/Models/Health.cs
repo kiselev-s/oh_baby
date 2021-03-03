@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Linq.Mapping;
+using ColumnAttribute = System.Data.Linq.Mapping.ColumnAttribute;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace UI_Design
 {
-    class Medicina
+    public class Health
     {
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
@@ -19,10 +21,14 @@ namespace UI_Design
         [Required, MaxLength(60)]
         public string Proff { get; set; }
 
-        public DateTime DatePriyom { get; set; }
+        public DateTime DateMeeting { get; set; }
 
-        public DateTime DateNextPriyom { get; set; }
+        public DateTime DateNextMeeting { get; set; }
 
-        public virtual ICollection<Imagge> Images { get; set; }
+        public int Child_Id { get; set; }
+        [ForeignKey("Child_Id")]
+        public virtual Child Child { get; set; }
+
+        public virtual ICollection<ImageHealth> ImageHealths { get; set; }
     }
 }
