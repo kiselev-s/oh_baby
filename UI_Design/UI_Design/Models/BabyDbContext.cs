@@ -18,6 +18,8 @@ namespace UI_Design
         public DbSet<Child> Childs { get; set; }
         public DbSet<Growth_Weight> Growth_Weights { get; set; }
         public DbSet<Imagge> Images { get; set; }
+        public DbSet<Health> Healths { get; set; }
+        public DbSet<ImageHealth> ImageHealths { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

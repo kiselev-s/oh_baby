@@ -15,9 +15,11 @@ namespace UI_Design
     {
         public static string titl;
         static public Parent parent = null;
-        public FormTitleImg(Parent _parent)
+        static public Child child = null;
+        public FormTitleImg(Parent _parent, Child _child)
         {
             parent = _parent;
+            child = _child;
             InitializeComponent();
         }
 
@@ -46,7 +48,8 @@ namespace UI_Design
                        if (dialog.ShowDialog() == DialogResult.OK)
                     {
                         byteImg = File.ReadAllBytes(dialog.FileName);
-                        ImagesRepos.AddImg(textBox1.Text, byteImg, parent);
+                        ImagesRepos.AddImg(textBox1.Text, byteImg, child);
+                    FormMessage.Show($"добавлен новый документ {textBox1.Text}"); ;
                     Close();
                         //b = false;
                     }

@@ -60,7 +60,7 @@ namespace UI_Design
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.Location = new System.Drawing.Point(209, 296);
+            this.button1.Location = new System.Drawing.Point(209, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(260, 70);
             this.button1.TabIndex = 1;

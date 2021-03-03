@@ -39,19 +39,26 @@ namespace UI_Design
             this.BtnDocuments = new System.Windows.Forms.Button();
             this.BtnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTmp = new System.Windows.Forms.Label();
             this.lblBaby = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbBoxNameChild = new System.Windows.Forms.ComboBox();
             this.btnAddChild = new System.Windows.Forms.Button();
             this.pnlFormLoader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblLogo = new System.Windows.Forms.Label();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
+            this.lblLogo = new System.Windows.Forms.Label();
             this.lblParentName = new System.Windows.Forms.Label();
-            this.lblTmp = new System.Windows.Forms.Label();
+            this.lblBirthText = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
+            this.lblGenderText = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
+            this.lblFeast = new System.Windows.Forms.Label();
+            this.lbltFeastText = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlFormLoader.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,7 +129,7 @@ namespace UI_Design
             this.BtnGrowth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnGrowth.Image = global::UI_Design.Properties.Resources.increase_48px;
-            this.BtnGrowth.Location = new System.Drawing.Point(0, 397);
+            this.BtnGrowth.Location = new System.Drawing.Point(0, 355);
             this.BtnGrowth.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGrowth.Name = "BtnGrowth";
             this.BtnGrowth.Size = new System.Drawing.Size(218, 65);
@@ -136,10 +143,10 @@ namespace UI_Design
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 202);
+            this.pnlNav.Location = new System.Drawing.Point(0, 160);
             this.pnlNav.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(4, 65);
+            this.pnlNav.Size = new System.Drawing.Size(3, 65);
             this.pnlNav.TabIndex = 1;
             // 
             // BtnMed
@@ -152,7 +159,7 @@ namespace UI_Design
             this.BtnMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnMed.Image = global::UI_Design.Properties.Resources.treatment_64_1px;
-            this.BtnMed.Location = new System.Drawing.Point(0, 332);
+            this.BtnMed.Location = new System.Drawing.Point(0, 290);
             this.BtnMed.Margin = new System.Windows.Forms.Padding(2);
             this.BtnMed.Name = "BtnMed";
             this.BtnMed.Size = new System.Drawing.Size(218, 65);
@@ -173,7 +180,7 @@ namespace UI_Design
             this.BtnDocuments.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnDocuments.Image = global::UI_Design.Properties.Resources.document_64_1px;
-            this.BtnDocuments.Location = new System.Drawing.Point(0, 267);
+            this.BtnDocuments.Location = new System.Drawing.Point(0, 225);
             this.BtnDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDocuments.Name = "BtnDocuments";
             this.BtnDocuments.Size = new System.Drawing.Size(218, 65);
@@ -194,7 +201,7 @@ namespace UI_Design
             this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.BtnHome.Image = global::UI_Design.Properties.Resources.home_64_1px;
-            this.BtnHome.Location = new System.Drawing.Point(0, 202);
+            this.BtnHome.Location = new System.Drawing.Point(0, 160);
             this.BtnHome.Margin = new System.Windows.Forms.Padding(2);
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(218, 65);
@@ -216,15 +223,28 @@ namespace UI_Design
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 202);
+            this.panel2.Size = new System.Drawing.Size(218, 160);
             this.panel2.TabIndex = 0;
+            // 
+            // lblTmp
+            // 
+            this.lblTmp.AutoSize = true;
+            this.lblTmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblTmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.lblTmp.Location = new System.Drawing.Point(2, 138);
+            this.lblTmp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTmp.Name = "lblTmp";
+            this.lblTmp.Size = new System.Drawing.Size(110, 24);
+            this.lblTmp.TabIndex = 9;
+            this.lblTmp.Text = "label_Temp";
+            this.lblTmp.Visible = false;
             // 
             // lblBaby
             // 
             this.lblBaby.AutoSize = true;
             this.lblBaby.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBaby.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblBaby.Location = new System.Drawing.Point(16, 72);
+            this.lblBaby.Location = new System.Drawing.Point(12, 58);
             this.lblBaby.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBaby.Name = "lblBaby";
             this.lblBaby.Size = new System.Drawing.Size(0, 17);
@@ -234,7 +254,7 @@ namespace UI_Design
             // 
             this.pictureBox1.Image = global::UI_Design.Properties.Resources.babys_room_64px;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(93, 99);
@@ -248,10 +268,10 @@ namespace UI_Design
             this.cmbBoxNameChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbBoxNameChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.cmbBoxNameChild.FormattingEnabled = true;
-            this.cmbBoxNameChild.Location = new System.Drawing.Point(39, 132);
+            this.cmbBoxNameChild.Location = new System.Drawing.Point(53, 107);
             this.cmbBoxNameChild.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBoxNameChild.Name = "cmbBoxNameChild";
-            this.cmbBoxNameChild.Size = new System.Drawing.Size(144, 30);
+            this.cmbBoxNameChild.Size = new System.Drawing.Size(109, 30);
             this.cmbBoxNameChild.TabIndex = 8;
             this.toolTipMain.SetToolTip(this.cmbBoxNameChild, "Выберете ребенка для просмотра его данных");
             this.cmbBoxNameChild.SelectedIndexChanged += new System.EventHandler(this.cmbBoxNameChild_SelectedIndexChanged);
@@ -278,11 +298,17 @@ namespace UI_Design
             // 
             // pnlFormLoader
             // 
+            this.pnlFormLoader.Controls.Add(this.lbltFeastText);
+            this.pnlFormLoader.Controls.Add(this.lblFeast);
+            this.pnlFormLoader.Controls.Add(this.lblGender);
+            this.pnlFormLoader.Controls.Add(this.lblGenderText);
+            this.pnlFormLoader.Controls.Add(this.lblBirthday);
+            this.pnlFormLoader.Controls.Add(this.lblBirthText);
             this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFormLoader.Location = new System.Drawing.Point(218, 122);
+            this.pnlFormLoader.Location = new System.Drawing.Point(218, 138);
             this.pnlFormLoader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlFormLoader.Name = "pnlFormLoader";
-            this.pnlFormLoader.Size = new System.Drawing.Size(982, 528);
+            this.pnlFormLoader.Size = new System.Drawing.Size(982, 512);
             this.pnlFormLoader.TabIndex = 2;
             // 
             // lblTitle
@@ -297,17 +323,6 @@ namespace UI_Design
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "> Главная <";
             // 
-            // lblLogo
-            // 
-            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
-            this.lblLogo.Location = new System.Drawing.Point(541, 7);
-            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(248, 65);
-            this.lblLogo.TabIndex = 10;
-            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // toolTipMain
             // 
             this.toolTipMain.AutomaticDelay = 100;
@@ -316,29 +331,100 @@ namespace UI_Design
             this.toolTipMain.ReshowDelay = 20;
             this.toolTipMain.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // lblLogo
+            // 
+            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
+            this.lblLogo.Location = new System.Drawing.Point(533, 9);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(289, 77);
+            this.lblLogo.TabIndex = 10;
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblParentName
             // 
             this.lblParentName.AutoSize = true;
             this.lblParentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblParentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblParentName.Location = new System.Drawing.Point(924, 9);
+            this.lblParentName.Location = new System.Drawing.Point(948, 25);
             this.lblParentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblParentName.Name = "lblParentName";
             this.lblParentName.Size = new System.Drawing.Size(100, 31);
             this.lblParentName.TabIndex = 11;
             this.lblParentName.Text = "Parent";
             // 
-            // lblTmp
+            // lblBirthText
             // 
-            this.lblTmp.AutoSize = true;
-            this.lblTmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblTmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.lblTmp.Location = new System.Drawing.Point(3, 164);
-            this.lblTmp.Name = "lblTmp";
-            this.lblTmp.Size = new System.Drawing.Size(110, 24);
-            this.lblTmp.TabIndex = 9;
-            this.lblTmp.Text = "label_Temp";
-            this.lblTmp.Visible = false;
+            this.lblBirthText.AutoSize = true;
+            this.lblBirthText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBirthText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblBirthText.Location = new System.Drawing.Point(22, 22);
+            this.lblBirthText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirthText.Name = "lblBirthText";
+            this.lblBirthText.Size = new System.Drawing.Size(169, 24);
+            this.lblBirthText.TabIndex = 12;
+            this.lblBirthText.Text = "Дата рождения:";
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblBirthday.Location = new System.Drawing.Point(195, 22);
+            this.lblBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(76, 24);
+            this.lblBirthday.TabIndex = 13;
+            this.lblBirthday.Text = "           ";
+            // 
+            // lblGenderText
+            // 
+            this.lblGenderText.AutoSize = true;
+            this.lblGenderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGenderText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblGenderText.Location = new System.Drawing.Point(805, 22);
+            this.lblGenderText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGenderText.Name = "lblGenderText";
+            this.lblGenderText.Size = new System.Drawing.Size(53, 24);
+            this.lblGenderText.TabIndex = 14;
+            this.lblGenderText.Text = "Пол:";
+            // 
+            // lblGender
+            // 
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblGender.Location = new System.Drawing.Point(862, 22);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(118, 24);
+            this.lblGender.TabIndex = 15;
+            this.lblGender.Text = "                  ";
+            // 
+            // lblFeast
+            // 
+            this.lblFeast.AutoSize = true;
+            this.lblFeast.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFeast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblFeast.Location = new System.Drawing.Point(276, 87);
+            this.lblFeast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFeast.Name = "lblFeast";
+            this.lblFeast.Size = new System.Drawing.Size(112, 24);
+            this.lblFeast.TabIndex = 16;
+            this.lblFeast.Text = "                 ";
+            // 
+            // lbltFeastText
+            // 
+            this.lbltFeastText.AutoSize = true;
+            this.lbltFeastText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbltFeastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lbltFeastText.Location = new System.Drawing.Point(22, 87);
+            this.lbltFeastText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbltFeastText.Name = "lbltFeastText";
+            this.lbltFeastText.Size = new System.Drawing.Size(250, 24);
+            this.lbltFeastText.TabIndex = 17;
+            this.lbltFeastText.Text = "До праздника осталось:";
             // 
             // FormMain
             // 
@@ -361,6 +447,8 @@ namespace UI_Design
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlFormLoader.ResumeLayout(false);
+            this.pnlFormLoader.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,6 +475,12 @@ namespace UI_Design
         private System.Windows.Forms.ToolTip toolTipMain;
         private System.Windows.Forms.Label lblParentName;
         private System.Windows.Forms.Label lblTmp;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.Label lblBirthText;
+        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblGenderText;
+        private System.Windows.Forms.Label lblFeast;
+        private System.Windows.Forms.Label lbltFeastText;
     }
 }
 
