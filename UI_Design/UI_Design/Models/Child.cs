@@ -32,5 +32,7 @@ namespace UI_Design
         public virtual Parent Parent { get; set; }
 
         public virtual ICollection<Imagge> Images { get; set; }
+
+        public virtual ICollection<Health> Healths { get; set; }
     }
 }

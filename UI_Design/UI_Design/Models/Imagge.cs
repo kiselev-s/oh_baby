@@ -14,9 +14,11 @@ namespace UI_Design
         public string Title { get; set; }
         public byte[] ImageView { get; set; }
 
+        public string Categor { get; set; }
         public int Child_Id { get; set; }
         [ForeignKey("Child_Id")]
         public virtual Child Child { get; set; }
+
 
         //public Child Child { get; set; }
     }
