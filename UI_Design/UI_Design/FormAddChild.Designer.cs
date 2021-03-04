@@ -45,7 +45,7 @@ namespace UI_Design
             this.toolTipAddChild = new System.Windows.Forms.ToolTip(this.components);
             this.lblLogo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.myDateTimePicker1 = new UI_Design.MyDateTimePicker();
+            this.dtpBirthday3 = new UI_Design.MyDateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,10 +183,8 @@ namespace UI_Design
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.dtpBirthday.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dtpBirthday.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.dtpBirthday.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.dtpBirthday.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtpBirthday.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
             this.dtpBirthday.CustomFormat = "";
             this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthday.Location = new System.Drawing.Point(212, 356);
@@ -242,12 +240,13 @@ namespace UI_Design
             this.label6.Text = "ДАННЫЕ МОЕГО РЕБЕНКА";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // myDateTimePicker1
+            // dtpBirthday3
             // 
-            this.myDateTimePicker1.Location = new System.Drawing.Point(212, 316);
-            this.myDateTimePicker1.Name = "myDateTimePicker1";
-            this.myDateTimePicker1.Size = new System.Drawing.Size(213, 20);
-            this.myDateTimePicker1.TabIndex = 40;
+            this.dtpBirthday3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.dtpBirthday3.Location = new System.Drawing.Point(212, 390);
+            this.dtpBirthday3.Name = "dtpBirthday3";
+            this.dtpBirthday3.Size = new System.Drawing.Size(212, 28);
+            this.dtpBirthday3.TabIndex = 42;
             // 
             // FormAddChild
             // 
@@ -255,7 +254,7 @@ namespace UI_Design
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(600, 650);
-            this.Controls.Add(this.myDateTimePicker1);
+            this.Controls.Add(this.dtpBirthday3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.cbxGender);
@@ -293,6 +292,6 @@ namespace UI_Design
         private System.Windows.Forms.ToolTip toolTipAddChild;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label label6;
-        private MyDateTimePicker myDateTimePicker1;
+        private MyDateTimePicker dtpBirthday3;
     }
 }

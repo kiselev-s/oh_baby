@@ -67,6 +67,7 @@
     <Compile Include="FormDocuments.Designer.cs">
       <DependentUpon>FormDocuments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\HealthRepos.cs" />
     <Compile Include="Models\ImageHealth.cs" />
     <Compile Include="Models\Health.cs" />
     <Compile Include="MyDateTimePicker.cs">
@@ -288,6 +289,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

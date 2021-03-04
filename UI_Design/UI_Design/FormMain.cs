@@ -44,12 +44,12 @@ namespace UI_Design
 
 
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
-            db.Images.Load();
-            db.Healths.Load();
-            db.ImageHealths.Load();
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
+            //db.Images.Load();
+            //db.Healths.Load();
+            //db.ImageHealths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -103,8 +103,8 @@ namespace UI_Design
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormMedicen formMed = new FormMedicen();
-            StylesService.CreateForm(formMed, pnlFormLoader, lblTitle, "> Медицина <");       
+            FormMedicen formMed = new FormMedicen(child);
+            StylesService.CreateForm(formMed, pnlFormLoader, lblTitle, "> Медицина <");
            
         }
 
@@ -188,7 +188,6 @@ namespace UI_Design
 
                 ChildShowData();
 
-
                 //lblFeast.Text = ShowFeast(child.Birthday).ToString();
             }
         }
@@ -246,59 +245,19 @@ namespace UI_Design
                 return "нафиг такой пол";
         }
 
-        private string ShowFeast(DateTime birthday)//показать праздник
+        private string ShowFeast(DateTime feast)//показать праздник
         {
             DateTime dateNow = DateTime.Now;
 
-            //int yearDiff = 0;
-
             //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
-            int dayDiff = Math.Abs(DateSpan.DateDiffDay(dateNow, birthday));
+            int dayDiff = DateSpan.DateDiffDay(dateNow, feast);
             //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
             //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
             //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
             //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
             //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
 
-            //if(dayDiff > 365)
-            //{
-            //    yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
-            //}
-
-            //TimeSpan ts = dateNow - birthday;
-            //ts.mo
-
-            return dayDiff.ToString() + " дн.";
+            return (365 + dayDiff).ToString() + " дн.";
         }
-
-        //int GetMnthCnt(DateTime start, DateTime end)
-        //{
-        //    DateTime dt1 = new DateTime(start.Year, start.Month, start.Day);
-        //    DateTime dt2 = new DateTime(end.Year, end.Month, end.Day);
-
-        //    if (dt1 > dt2 || dt1 == dt2)
-        //        return 0;
-
-        //    double days = (dt2 - dt1).TotalDays;
-        //    double mnt = 0;
-
-        //    while (days != 0)
-        //    {
-        //        int inMnt = DateTime.DaysInMonth(dt1.Year, dt1.Month);
-        //        if (days >= inMnt)
-        //        {
-        //            days -= inMnt;
-        //            ++mnt;
-        //            dt1 = dt1.AddMonths(1);
-        //        }
-        //        else
-        //        {
-        //            mnt += days / inMnt;
-        //            days = 0;
-        //        }
-        //    }
-
-        //    return (int)mnt;
-        //}
     }
 }
