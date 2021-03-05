@@ -36,20 +36,45 @@ namespace UI_Design
 
         private void FormDocuments_Load(object sender, EventArgs e)
         {
-
+            FillMedTableChild();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddHealth_Click(object sender, EventArgs e)
         {
-            HealthRepos.AddData(child.FirstName, child.LastName, "Хирург", DateTime.Now, DateTime.Now);//временно, тестим базу
+
+            FormAddHealth formAddHealth = new FormAddHealth(child);
+
+            if (formAddHealth.ShowDialog() == DialogResult.OK)
+            {
+                //Opacity = 1.0;
+
+                FillMedTableChild();
+            }
+            else
+            {
+                //Opacity = 1.0;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void FillMedTableChild()
         {
-            dataGridView1.Rows[0].Cells[0].Value = 1;//временно
-            dataGridView1.Rows[0].Cells[1].Value = 2;
-            dataGridView1.Rows[0].Cells[2].Value = 3;
-            dataGridView1.Rows[0].Cells[3].Value = 4;
+            try
+            {
+                List<Health> healths = HealthRepos.FindByChild(child);
+
+                for (int i = 0; i < healths.Count; i++)
+                {
+                    dataGridView1.Rows.Add(1);
+                    dataGridView1.Rows[i].Cells[0].Value = healths[i].FullName;
+                    dataGridView1.Rows[i].Cells[1].Value = healths[i].Proff;
+                    dataGridView1.Rows[i].Cells[2].Value = healths[i].DateMeeting.ToShortDateString();
+                    dataGridView1.Rows[i].Cells[3].Value = healths[i].DateNextMeeting.ToShortDateString();
+                }
+            }
+            catch (Exception)
+            {
+                FormMessage.Show("Что-то не так с таблицей... Надо дебажить...");
+            }
         }
     }
 }
