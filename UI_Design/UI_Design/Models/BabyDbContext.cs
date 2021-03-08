@@ -28,6 +28,14 @@ namespace UI_Design
             modelBuilder.Entity<Child>()
                         .Property(e => e.Birthday)
                         .HasColumnType("date");
+
+            modelBuilder.Entity<Health>()
+                        .Property(e => e.DateMeeting)
+                        .HasColumnType("date");
+
+            modelBuilder.Entity<Health>()
+                        .Property(e => e.DateNextMeeting)
+                        .HasColumnType("date");
         }
     }
 }

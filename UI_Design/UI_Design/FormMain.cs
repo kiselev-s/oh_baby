@@ -105,7 +105,6 @@ namespace UI_Design
 
             FormMedicen formMed = new FormMedicen(child);
             StylesService.CreateForm(formMed, pnlFormLoader, lblTitle, "> Медицина <");
-           
         }
 
         private void BtnGrowth_Click(object sender, EventArgs e)

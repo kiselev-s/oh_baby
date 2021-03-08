@@ -19,7 +19,7 @@ namespace UI_Design
         {
             InitializeComponent();
             parent = _parent;
-            StylesService.SetEnabledPropDateTP(dtpBirthday);
+            StylesService.SetEnabledPropDateTP(dtpBirthday, true);
         }
 
         private void BtnAddChild_Click(object sender, EventArgs e)

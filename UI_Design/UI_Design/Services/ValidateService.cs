@@ -109,5 +109,16 @@ namespace UI_Design
             else
                 return true;
         }
+
+        public static bool VerifyAddHealth(string prof)
+        {
+            if (prof == string.Empty)
+            {
+                FormMessage.Show("Введите специалиста!");
+                return false;
+            }
+            else
+                return true;
+        }
     }
 }
