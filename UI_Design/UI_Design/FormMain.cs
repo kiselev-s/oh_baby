@@ -44,12 +44,12 @@ namespace UI_Design
 
 
 
-            //db.Parents.Load();
-            //db.Childs.Load();
-            //db.Growth_Weights.Load();
-            //db.Images.Load();
-            //db.Healths.Load();
-            //db.ImageHealths.Load();
+            db.Parents.Load();
+            db.Childs.Load();
+            db.Growth_Weights.Load();
+            db.Images.Load();
+            db.Healths.Load();
+            db.ImageHealths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
