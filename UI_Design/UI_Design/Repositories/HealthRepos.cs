@@ -21,6 +21,7 @@ namespace UI_Design
                         DateMeeting = dateMeeting,
                         DateNextMeeting = dateNextMeeting,
                     };
+                    //health.ImageHealths.Add();
                     Child child = db.Childs.FirstOrDefault(c => c.FirstName == firstName);
                     child.Healths.Add(health);
                     db.SaveChanges();
@@ -30,6 +31,22 @@ namespace UI_Design
             {
                 FormMessage.Show("Ошибка работы с базой Health...");
                 throw;
+            }
+        }
+
+        public static Health FindByChildId(int childId)
+        {
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                return db.Healths.FirstOrDefault(Health => Health.Child_Id == childId);
+            }
+        }
+
+        public static List<Health> FindByChild(Child child)
+        {
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                return db.Healths.Where(health => health.Child_Id == child.Id).ToList();
             }
         }
     }

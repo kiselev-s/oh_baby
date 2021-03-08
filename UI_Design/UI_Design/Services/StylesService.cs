@@ -94,13 +94,18 @@ namespace UI_Design
             senderBtn.Click += new EventHandler(visiblePassTrue);
         }
 
-        public static void SetEnabledPropDateTP(DateTimePicker dtpBirthday)//установка значений по умолчанию для календаря (DateTimePicker)
+        public static void SetEnabledPropDateTP(DateTimePicker dtp, bool dateTimeNow)//установка значений по умолчанию для календаря (DateTimePicker)
         {
-            dtpBirthday.Value = DateTime.Now;
-            dtpBirthday.MaxDate = DateTime.Now;
-            dtpBirthday.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
-            dtpBirthday.Format = DateTimePickerFormat.Custom;
-            dtpBirthday.CustomFormat = "dd.MM.yyyy";
+            if (dateTimeNow)
+            {
+                dtp.Value = DateTime.Now;
+                dtp.MaxDate = DateTime.Now;
+                dtp.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
+            }
+            else
+                dtp.MinDate = DateTime.Now;
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = "dd.MM.yyyy";
         }
     }
 }
