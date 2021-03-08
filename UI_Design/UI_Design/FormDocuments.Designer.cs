@@ -30,14 +30,14 @@ namespace UI_Design
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDocuments));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
             this.butPrint = new System.Windows.Forms.Button();
             this.butShare = new System.Windows.Forms.Button();
             this.butDel = new System.Windows.Forms.Button();
             this.butAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnElse = new System.Windows.Forms.Button();
             this.butStrah = new System.Windows.Forms.Button();
             this.butSport = new System.Windows.Forms.Button();
             this.butUch = new System.Windows.Forms.Button();
@@ -48,33 +48,35 @@ namespace UI_Design
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnNext
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.button3.Image = global::UI_Design.Properties.Resources.double_right_50px1;
-            this.button3.Location = new System.Drawing.Point(1110, 462);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 63);
-            this.button3.TabIndex = 14;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnNext.Image = global::UI_Design.Properties.Resources.double_right_50px1;
+            this.btnNext.Location = new System.Drawing.Point(1110, 462);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(95, 63);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // button2
+            // btnPrev
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.button2.Image = global::UI_Design.Properties.Resources.double_left_50px2;
-            this.button2.Location = new System.Drawing.Point(628, 462);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 63);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrev.BackgroundImage")));
+            this.btnPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnPrev.Image = global::UI_Design.Properties.Resources.double_left_50px22;
+            this.btnPrev.Location = new System.Drawing.Point(628, 462);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(95, 63);
+            this.btnPrev.TabIndex = 13;
+            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // butPrint
             // 
@@ -117,6 +119,7 @@ namespace UI_Design
             this.butDel.Size = new System.Drawing.Size(95, 63);
             this.butDel.TabIndex = 10;
             this.butDel.UseVisualStyleBackColor = true;
+            this.butDel.Click += new System.EventHandler(this.butDel_Click);
             // 
             // butAdd
             // 
@@ -131,28 +134,31 @@ namespace UI_Design
             this.butAdd.Size = new System.Drawing.Size(95, 63);
             this.butAdd.TabIndex = 9;
             this.butAdd.UseVisualStyleBackColor = true;
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(628, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(577, 371);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnElse
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.button1.Location = new System.Drawing.Point(90, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Другие";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnElse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnElse.BackgroundImage")));
+            this.btnElse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnElse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnElse.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnElse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnElse.Location = new System.Drawing.Point(90, 475);
+            this.btnElse.Name = "btnElse";
+            this.btnElse.Size = new System.Drawing.Size(350, 50);
+            this.btnElse.TabIndex = 7;
+            this.btnElse.Text = "Другие";
+            this.btnElse.UseVisualStyleBackColor = true;
+            this.btnElse.Click += new System.EventHandler(this.btnElse_Click);
             // 
             // butStrah
             // 
@@ -167,6 +173,7 @@ namespace UI_Design
             this.butStrah.TabIndex = 6;
             this.butStrah.Text = "Страховка";
             this.butStrah.UseVisualStyleBackColor = true;
+            this.butStrah.Click += new System.EventHandler(this.butStrah_Click);
             // 
             // butSport
             // 
@@ -181,6 +188,7 @@ namespace UI_Design
             this.butSport.TabIndex = 5;
             this.butSport.Text = "Спортивные достижения";
             this.butSport.UseVisualStyleBackColor = true;
+            this.butSport.Click += new System.EventHandler(this.butSport_Click);
             // 
             // butUch
             // 
@@ -195,6 +203,7 @@ namespace UI_Design
             this.butUch.TabIndex = 4;
             this.butUch.Text = "Учебные достижения";
             this.butUch.UseVisualStyleBackColor = true;
+            this.butUch.Click += new System.EventHandler(this.butUch_Click);
             // 
             // butInn
             // 
@@ -209,6 +218,7 @@ namespace UI_Design
             this.butInn.TabIndex = 3;
             this.butInn.Text = "ИНН";
             this.butInn.UseVisualStyleBackColor = true;
+            this.butInn.Click += new System.EventHandler(this.butInn_Click);
             // 
             // butZagPas
             // 
@@ -223,6 +233,7 @@ namespace UI_Design
             this.butZagPas.TabIndex = 2;
             this.butZagPas.Text = "Загранпаспорт";
             this.butZagPas.UseVisualStyleBackColor = true;
+            this.butZagPas.Click += new System.EventHandler(this.butZagPas_Click);
             // 
             // butUaPas
             // 
@@ -237,6 +248,7 @@ namespace UI_Design
             this.butUaPas.TabIndex = 1;
             this.butUaPas.Text = "Украинский паспорт";
             this.butUaPas.UseVisualStyleBackColor = true;
+            this.butUaPas.Click += new System.EventHandler(this.butUaPas_Click);
             // 
             // butSv
             // 
@@ -251,6 +263,8 @@ namespace UI_Design
             this.butSv.TabIndex = 0;
             this.butSv.Text = "Свидетельство о рождении";
             this.butSv.UseVisualStyleBackColor = true;
+            this.butSv.Click += new System.EventHandler(this.butSv_Click);
+            
             // 
             // FormDocuments
             // 
@@ -258,14 +272,14 @@ namespace UI_Design
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1292, 603);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.butPrint);
             this.Controls.Add(this.butShare);
             this.Controls.Add(this.butDel);
             this.Controls.Add(this.butAdd);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnElse);
             this.Controls.Add(this.butStrah);
             this.Controls.Add(this.butSport);
             this.Controls.Add(this.butUch);
@@ -276,6 +290,7 @@ namespace UI_Design
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDocuments";
             this.Text = "FormDocuments";
+            this.Load += new System.EventHandler(this.FormDocuments_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -290,13 +305,13 @@ namespace UI_Design
         private System.Windows.Forms.Button butUch;
         private System.Windows.Forms.Button butStrah;
         private System.Windows.Forms.Button butSport;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnElse;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button butAdd;
         private System.Windows.Forms.Button butDel;
         private System.Windows.Forms.Button butShare;
         private System.Windows.Forms.Button butPrint;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Button btnNext;
     }
 }

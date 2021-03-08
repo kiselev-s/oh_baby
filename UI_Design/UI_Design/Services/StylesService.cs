@@ -17,7 +17,7 @@ namespace UI_Design
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
             senderPanel.BringToFront();
-            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+           senderBtn.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         public static void ViewClickButton(object sender, Panel senderPanel, Label senderLabel, string textLabel)//перемещение панели (выделения) к нажатой кнопке "Главная"
@@ -27,7 +27,7 @@ namespace UI_Design
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
             senderPanel.BringToFront();
-            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+           senderBtn.BackColor = Color.FromArgb(46, 51, 73);
 
             senderLabel.Text = textLabel;
         }

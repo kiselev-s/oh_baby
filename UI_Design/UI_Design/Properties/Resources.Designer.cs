@@ -143,6 +143,16 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dell {
+            get {
+                object obj = ResourceManager.GetObject("dell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_240px {
             get {
                 object obj = ResourceManager.GetObject("document_240px", resourceCulture);
@@ -163,6 +173,16 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document_64px {
+            get {
+                object obj = ResourceManager.GetObject("document_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap double_left_50px {
             get {
                 object obj = ResourceManager.GetObject("double_left_50px", resourceCulture);
@@ -176,6 +196,26 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap double_left_50px2 {
             get {
                 object obj = ResourceManager.GetObject("double_left_50px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap double_left_50px21 {
+            get {
+                object obj = ResourceManager.GetObject("double_left_50px21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap double_left_50px22 {
+            get {
+                object obj = ResourceManager.GetObject("double_left_50px22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +316,36 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap logo31 {
             get {
                 object obj = ResourceManager.GetObject("logo31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noImg {
+            get {
+                object obj = ResourceManager.GetObject("noImg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noImg1 {
+            get {
+                object obj = ResourceManager.GetObject("noImg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notepad_50px {
+            get {
+                object obj = ResourceManager.GetObject("notepad_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -95,6 +95,7 @@ namespace UI_Design
             StylesService.ViewClickButton(sender, pnlNav);
 
             FormDocuments formDoc = new FormDocuments(parent,child);
+            
             StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <"); 
       
         }
