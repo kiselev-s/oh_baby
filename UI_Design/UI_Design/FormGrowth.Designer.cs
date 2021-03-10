@@ -167,7 +167,7 @@ namespace UI_Design
             "9",
             "10",
             "11"});
-            this.cmbBoxMonth.Location = new System.Drawing.Point(364, 31);
+            this.cmbBoxMonth.Location = new System.Drawing.Point(364, 28);
             this.cmbBoxMonth.Name = "cmbBoxMonth";
             this.cmbBoxMonth.Size = new System.Drawing.Size(121, 31);
             this.cmbBoxMonth.TabIndex = 11;
@@ -242,7 +242,7 @@ namespace UI_Design
             this.btnBild.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBild.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnBild.Location = new System.Drawing.Point(449, 159);
+            this.btnBild.Location = new System.Drawing.Point(437, 159);
             this.btnBild.Name = "btnBild";
             this.btnBild.Size = new System.Drawing.Size(445, 51);
             this.btnBild.TabIndex = 7;

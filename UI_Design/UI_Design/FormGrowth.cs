@@ -20,6 +20,10 @@ namespace UI_Design
     {
         private static Child child;
         private static Parent parent;
+        private static ChartValues<float> weight = new ChartValues<float>();
+        private static ChartValues<int> growth = new ChartValues<int>();
+        private static List<string> year = new List<string>();
+        private static List<int> month = new List<int>();
         public FormGrowth(Parent _parent, Child _child)
         {
             InitializeComponent();
@@ -34,87 +38,53 @@ namespace UI_Design
 
         private void btnBild_Click(object sender, EventArgs e)
         {
-            //using (BabyDbContext db = new BabyDbContext())
-            //{
-            //    List<Imagge> img = db.Images.ToList();
-
-            //    for (int i = 0; i < img.Count; i++)
-            //    {
-            //        if (img[i].Child_Id == child.Id && img[i].Categor == nameButton)
-            //        {
-            //            imagges.Add(img[i]);
-            //        }
-            //    }
-            //}
-
-            //using (BabyDbContext db = new BabyDbContext())
-            //{
-            //    List<int> year = db.Growth_Weights.Add.year
-
-            //    for (int i = 0; i < img.Count; i++)
-            //    {
-            //        if (img[i].Child_Id == child.Id && img[i].Categor == nameButton)
-            //        {
-            //            imagges.Add(img[i]);
-            //        }
-            //    }
-            //}
+            
+        
+            LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollection();
             using (BabyDbContext db = new BabyDbContext())
             {
                 List<Growth_Weight> gw = db.Growth_Weights.ToList();
-                LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollection();
-                ChartValues<float> weight = new ChartValues<float>();
-                ChartValues<int> growth = new ChartValues<int>();
-                List<int> year = new List<int>();
-                List<int> month = new List<int>();
 
-                //foreach (var g in growth)
-
-                for (int i = 0; i < year.Count; i++)
+                Growth_Weight new_gw = new Growth_Weight()
                 {
-                    if (gw[i].Child_Id == child.Id)
-                        year[i] = Int32.Parse(cmbBoxYear.Text);
-                    growth[i] = Int32.Parse(txtBoxGr.Text);
-                    weight[i] = float.Parse(txtBoxWght.Text);
-                }
+                    Month = Int32.Parse(cmbBoxMonth.Text),
+                    Year = Int32.Parse(cmbBoxYear.Text),
+                    Growth = Int32.Parse(txtBoxGr.Text),
+                    Weight = float.Parse(txtBoxWght.Text)
+                };
+                Child ch = db.Childs.FirstOrDefault(c => c.Id == child.Id);
+                ch.Growth_Weights.Add(new_gw);
+                db.SaveChanges();
 
-                //foreach (var w in weight)
-                for (int i = 0; i < month.Count; i++)
+                month.Clear();
+                year.Clear();
+                growth.Clear();
+                weight.Clear();
+                foreach (var i in gw)
                 {
-                    month[i] = Int32.Parse(cmbBoxMonth.Text);
-                    growth[i] = Int32.Parse(txtBoxGr.Text);
-                    weight[i] = float.Parse(txtBoxWght.Text);
+                    if (i.Child_Id == child.Id)
+                    {
+                        month.Add(i.Month);
+                        year.Add(i.Year.ToString());
+                        growth.Add(i.Growth);
+                        weight.Add(i.Weight);
+                    }                          
                 }
+                 crtsnChrtDiagramm.AxisX.Clear();
+                crtsnChrtDiagramm.AxisX.Add(new LiveCharts.Wpf.Axis()
+                {
+                    Title = "Возраст, лет",
+                    Labels = year
+                }) ;
 
-                month[0] = Int32.Parse(cmbBoxMonth.Text);
+                LineSeries line = new LineSeries();
+                line.Title = "1";
+                line.Values = weight;
 
+                series.Add(line);
+                crtsnChrtDiagramm.Series = series;
 
-                //try
-                //{
-                //    using (BabyDbContext db = new BabyDbContext())
-                //    {
-                //        Growth_Weight g_w = new Growth_Weight()
-                //        {
-                //            Year = year[0],
-                //            Month = month[0],
-                //            Growth = growth[0],
-                //            Weight = weight[0]
-                //        };
-
-                //        db.Growth_Weights.Add(g_w);
-                //        db.SaveChanges();
-                //    }
-                //    crtsnChrtDiagramm.AxisX.Clear();
-                //    crtsnChrtDiagramm.AxisX.Add(new LiveCharts.Wpf.Axis()
-                //    {
-                //        Title = "Возраст, лет",
-                //        //Labels = year.ToString()
-                //    });
-                //}
-                //catch (Exception)
-                //{
-                //    FormMessage.Show("!");
-                //}
+              
             }
         }
 
