@@ -16,7 +16,13 @@ namespace UI_Design
         public int Id { get; set; }
 
         [Required, MaxLength(60)]
-        public string FullName { get; set; }
+        public string LastName { get; set; }
+
+        [Required, MaxLength(60)]
+        public string FirstName { get; set; }
+
+        [Required, MaxLength(60)]
+        public string FatherName { get; set; }
 
         [Required, MaxLength(60)]
         public string Proff { get; set; }
@@ -25,10 +31,10 @@ namespace UI_Design
 
         public DateTime DateNextMeeting { get; set; }
 
+        public byte[] ImageView { get; set; }
+
         public int Child_Id { get; set; }
         [ForeignKey("Child_Id")]
         public virtual Child Child { get; set; }
-
-        public virtual ICollection<ImageHealth> ImageHealths { get; set; }
     }
 }

@@ -89,7 +89,6 @@
       <DependentUpon>FormDocuments.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositories\HealthRepos.cs" />
-    <Compile Include="Models\ImageHealth.cs" />
     <Compile Include="Models\Health.cs" />
     <Compile Include="MyDateTimePicker.cs">
       <SubType>Component</SubType>

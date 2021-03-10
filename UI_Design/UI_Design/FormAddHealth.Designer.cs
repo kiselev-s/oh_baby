@@ -41,6 +41,12 @@ namespace UI_Design
             this.dtpNextMeeting = new System.Windows.Forms.DateTimePicker();
             this.lblNextDate = new System.Windows.Forms.Label();
             this.chbUploadImg = new System.Windows.Forms.CheckBox();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.lblFatherName = new System.Windows.Forms.Label();
+            this.txtFatherName = new System.Windows.Forms.TextBox();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +57,7 @@ namespace UI_Design
             this.panel1.Controls.Add(this.btnAddHealth);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 466);
+            this.panel1.Location = new System.Drawing.Point(0, 551);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(605, 107);
@@ -130,7 +136,7 @@ namespace UI_Design
             this.dtpMeeting.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
             this.dtpMeeting.CustomFormat = "";
             this.dtpMeeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpMeeting.Location = new System.Drawing.Point(270, 208);
+            this.dtpMeeting.Location = new System.Drawing.Point(270, 332);
             this.dtpMeeting.Name = "dtpMeeting";
             this.dtpMeeting.Size = new System.Drawing.Size(212, 28);
             this.dtpMeeting.TabIndex = 45;
@@ -140,7 +146,7 @@ namespace UI_Design
             // 
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblDate.Location = new System.Drawing.Point(88, 186);
+            this.lblDate.Location = new System.Drawing.Point(88, 310);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(116, 50);
             this.lblDate.TabIndex = 44;
@@ -152,7 +158,7 @@ namespace UI_Design
             this.lblProff.AutoSize = true;
             this.lblProff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblProff.Location = new System.Drawing.Point(99, 124);
+            this.lblProff.Location = new System.Drawing.Point(99, 248);
             this.lblProff.Name = "lblProff";
             this.lblProff.Size = new System.Drawing.Size(128, 24);
             this.lblProff.TabIndex = 43;
@@ -163,7 +169,7 @@ namespace UI_Design
             this.txtProff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtProff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.txtProff.Location = new System.Drawing.Point(269, 124);
+            this.txtProff.Location = new System.Drawing.Point(269, 248);
             this.txtProff.Name = "txtProff";
             this.txtProff.Size = new System.Drawing.Size(213, 28);
             this.txtProff.TabIndex = 40;
@@ -175,7 +181,7 @@ namespace UI_Design
             this.dtpNextMeeting.CalendarMonthBackground = System.Drawing.SystemColors.MenuHighlight;
             this.dtpNextMeeting.CustomFormat = "";
             this.dtpNextMeeting.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNextMeeting.Location = new System.Drawing.Point(269, 287);
+            this.dtpNextMeeting.Location = new System.Drawing.Point(269, 411);
             this.dtpNextMeeting.Name = "dtpNextMeeting";
             this.dtpNextMeeting.Size = new System.Drawing.Size(212, 28);
             this.dtpNextMeeting.TabIndex = 48;
@@ -185,7 +191,7 @@ namespace UI_Design
             // 
             this.lblNextDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNextDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblNextDate.Location = new System.Drawing.Point(88, 264);
+            this.lblNextDate.Location = new System.Drawing.Point(88, 388);
             this.lblNextDate.Name = "lblNextDate";
             this.lblNextDate.Size = new System.Drawing.Size(139, 79);
             this.lblNextDate.TabIndex = 47;
@@ -197,19 +203,92 @@ namespace UI_Design
             this.chbUploadImg.AutoSize = true;
             this.chbUploadImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.chbUploadImg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.chbUploadImg.Location = new System.Drawing.Point(103, 364);
+            this.chbUploadImg.Location = new System.Drawing.Point(103, 488);
             this.chbUploadImg.Name = "chbUploadImg";
             this.chbUploadImg.Size = new System.Drawing.Size(199, 28);
             this.chbUploadImg.TabIndex = 50;
             this.chbUploadImg.Text = "Загрузить фото?";
             this.chbUploadImg.UseVisualStyleBackColor = true;
+            this.chbUploadImg.CheckedChanged += new System.EventHandler(this.ChbUploadImg_CheckedChanged);
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblLastName.Location = new System.Drawing.Point(99, 104);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(98, 24);
+            this.lblLastName.TabIndex = 52;
+            this.lblLastName.Text = "Фамилия";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtLastName.Location = new System.Drawing.Point(269, 100);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(213, 28);
+            this.txtLastName.TabIndex = 51;
+            this.txtLastName.Text = "Авиценна";
+            // 
+            // lblFatherName
+            // 
+            this.lblFatherName.AutoSize = true;
+            this.lblFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFatherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblFatherName.Location = new System.Drawing.Point(99, 185);
+            this.lblFatherName.Name = "lblFatherName";
+            this.lblFatherName.Size = new System.Drawing.Size(106, 24);
+            this.lblFatherName.TabIndex = 54;
+            this.lblFatherName.Text = "Отчество";
+            // 
+            // txtFatherName
+            // 
+            this.txtFatherName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtFatherName.Location = new System.Drawing.Point(269, 181);
+            this.txtFatherName.Name = "txtFatherName";
+            this.txtFatherName.Size = new System.Drawing.Size(213, 28);
+            this.txtFatherName.TabIndex = 53;
+            this.txtFatherName.Text = "Аркадьевич";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblFirstName.Location = new System.Drawing.Point(99, 144);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(49, 24);
+            this.lblFirstName.TabIndex = 56;
+            this.lblFirstName.Text = "Имя";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtFirstName.Location = new System.Drawing.Point(269, 140);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(213, 28);
+            this.txtFirstName.TabIndex = 55;
+            this.txtFirstName.Text = "Андрей";
             // 
             // FormAddHealth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(605, 573);
+            this.ClientSize = new System.Drawing.Size(605, 658);
+            this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.lblFatherName);
+            this.Controls.Add(this.txtFatherName);
+            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.chbUploadImg);
             this.Controls.Add(this.dtpNextMeeting);
             this.Controls.Add(this.lblNextDate);
@@ -243,5 +322,11 @@ namespace UI_Design
         private System.Windows.Forms.DateTimePicker dtpNextMeeting;
         private System.Windows.Forms.Label lblNextDate;
         private System.Windows.Forms.CheckBox chbUploadImg;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label lblFatherName;
+        private System.Windows.Forms.TextBox txtFatherName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox txtFirstName;
     }
 }

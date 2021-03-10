@@ -110,11 +110,26 @@ namespace UI_Design
                 return true;
         }
 
-        public static bool VerifyAddHealth(string prof)
+        public static bool VerifyAddHealth(string lastName, string firstName, string fatherName, string prof)
         {
-            if (prof == string.Empty)
+            if (lastName == string.Empty)
             {
-                FormMessage.Show("Введите специалиста!");
+                FormMessage.Show("Введите фамилию специалиста!");
+                return false;
+            }
+            else if (firstName == string.Empty)
+            {
+                FormMessage.Show("Введите имя специалиста!");
+                return false;
+            }
+            else if (fatherName == string.Empty)
+            {
+                FormMessage.Show("Введите отчество специалиста!");
+                return false;
+            }
+            else if (prof == string.Empty)
+            {
+                FormMessage.Show("Введите проффесию специалиста!");
                 return false;
             }
             else

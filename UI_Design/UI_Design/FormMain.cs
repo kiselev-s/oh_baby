@@ -48,7 +48,6 @@ namespace UI_Design
             db.Growth_Weights.Load();
             db.Images.Load();
             db.Healths.Load();
-            db.ImageHealths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -68,6 +67,7 @@ namespace UI_Design
                 lblParentName.Text = $"{parent.FirstName} {parent.LastName}";//выводим имя родителя на главную
 
                 GetParentChilds();//заполнили всех детей родителя (если есть) + child = cmbBoxNameChild.SelectedIndex(0); (первый ребенок в списке)
+                ChildShowData();
             }
             else
             {
@@ -87,6 +87,11 @@ namespace UI_Design
             pnlFormLoader.Controls.Add(lblFeast);
             pnlFormLoader.Controls.Add(lblGenderText);
             pnlFormLoader.Controls.Add(lblGender);
+            pnlFormLoader.Controls.Add(lblParentName);
+            pnlFormLoader.Controls.Add(lblLastDoc);
+            pnlFormLoader.Controls.Add(lblLastDocTxt);
+            pnlFormLoader.Controls.Add(lblSoonMed);
+            pnlFormLoader.Controls.Add(lblSoonMedTxt);
         }
 
         private void BtnDocuments_Click(object sender, EventArgs e)
