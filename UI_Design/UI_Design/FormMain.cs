@@ -43,12 +43,11 @@ namespace UI_Design
             db = new BabyDbContext();
 
 
-            db.Parents.Load();
-            db.Childs.Load();
-            db.Growth_Weights.Load();
-            db.Images.Load();
-            db.Healths.Load();
-            db.ImageHealths.Load();
+            //db.Parents.Load();
+            //db.Childs.Load();
+            //db.Growth_Weights.Load();
+            //db.Images.Load();
+            //db.Healths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -65,9 +64,11 @@ namespace UI_Design
                 Opacity = 1.0;
 
                 parent = logForm.GetParent();//получили того кто залогинился
-                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";//выводим имя родителя на главную
+                //lblParentName.Text = $"{parent.FirstName} {parent.LastName}";//выводим имя родителя на главную
 
                 GetParentChilds();//заполнили всех детей родителя (если есть) + child = cmbBoxNameChild.SelectedIndex(0); (первый ребенок в списке)
+
+                BtnHome.PerformClick();
             }
             else
             {
@@ -78,22 +79,26 @@ namespace UI_Design
         private void BtnHome_Click(object sender, EventArgs e)
         {
             StylesService.ViewClickButton(sender, pnlNav, lblTitle, "> Главная <");
-            this.pnlFormLoader.Controls.Clear();// тут явно надо что-то придумать    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //все стирается при переходе на медицину, документы и т.д....
-            //а пока так....
-            pnlFormLoader.Controls.Add(lblBirthText);
-            pnlFormLoader.Controls.Add(lblBirthday);
-            pnlFormLoader.Controls.Add(lbltFeastText);
-            pnlFormLoader.Controls.Add(lblFeast);
-            pnlFormLoader.Controls.Add(lblGenderText);
-            pnlFormLoader.Controls.Add(lblGender);
+            //this.pnlFormLoader.Controls.Clear();// тут явно надо что-то придумать    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            ////все стирается при переходе на медицину, документы и т.д....
+            ////а пока так....
+            //pnlFormLoader.Controls.Add(lblBirthText);
+            //pnlFormLoader.Controls.Add(lblBirthday);
+            //pnlFormLoader.Controls.Add(lbltFeastText);
+            //pnlFormLoader.Controls.Add(lblFeast);
+            //pnlFormLoader.Controls.Add(lblGenderText);
+            //pnlFormLoader.Controls.Add(lblGender);
+
+            FormMainData main = new FormMainData(child, parent);
+
+            StylesService.CreateForm(main, pnlFormLoader, lblTitle, "> Главная <");
         }
 
         private void BtnDocuments_Click(object sender, EventArgs e)
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormDocuments formDoc = new FormDocuments(parent,child);
+            FormDocuments formDoc = new FormDocuments(parent, child);
             
             StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <"); 
       
@@ -153,6 +158,7 @@ namespace UI_Design
                 Opacity = 1.0;
             }
         }
+
         private void BtnAll_Leave(object sender, EventArgs e)//курсор покинул пределы любой кнопки
         {
             StylesService.ViewBackColorButton(sender);
@@ -164,7 +170,8 @@ namespace UI_Design
                 child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));
 
             //сюда обработку данных выбраного(текущего) ребенка
-            ChildShowData();
+            // ChildShowData();
+            GetGender(child.Gender);
         }
 
         private void GetParentChilds()//получаем всех детей родителя и заполняем в ComboBox
@@ -185,7 +192,7 @@ namespace UI_Design
                 cmbBoxNameChild.SelectedIndex = 0;
                 child = ChildRepos.FindByFirstName(FilterByFirstName(cmbBoxNameChild.SelectedItem.ToString()));//полчили сущность Child по умолчанию (если она уже есть), после загрузки
 
-                ChildShowData();
+                //ChildShowData();
 
                 //lblFeast.Text = ShowFeast(child.Birthday).ToString();
             }
@@ -226,45 +233,40 @@ namespace UI_Design
             return temp[0];
         }
 
-        private void ChildShowData()//вывод данных о ребенке на главную форму
-        {
-            lblBirthday.Text = child.Birthday.ToShortDateString();
-            lblGender.Text = GetGender(child.Gender);
+        //private void ChildShowData()//вывод данных о ребенке на главную форму
+        //{
+        //    lblBirthday.Text = child.Birthday.ToShortDateString();
+        //    lblGender.Text = GetGender(child.Gender);
 
-            lblFeast.Text = ShowFeast(child.Birthday).ToString();
-        }
+        //    lblFeast.Text = ShowFeast(child.Birthday).ToString();
+        //}
 
-        private string GetGender(int gender)//дешифратор пола ребенка
+        private void GetGender(int gender)//дешифратор пола ребенка
         {
             if (gender == 0)
             {
                 pictureBox1.Image = Properties.Resources.sleeping_baby_girl_64px;
-                return ($"дочь {child.FirstName}");
             }
-            else if (gender == 1)
+            else
             {
                 pictureBox1.Image = Properties.Resources.babys_room_64px;            
-                return ($"сын {child.FirstName}");
             }
-                   
-            else
-                return "нафиг такой пол";
         }
 
-        private string ShowFeast(DateTime feast)//показать праздник
-        {
-            DateTime dateNow = DateTime.Now;
+        //private string ShowFeast(DateTime feast)//показать праздник
+        //{
+        //    DateTime dateNow = DateTime.Now;
 
-            //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
-            int dayDiff = DateSpan.DateDiffDay(dateNow, feast);
-            //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
-            //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
-            //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
-            //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
-            //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
+        //    //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
+        //    int dayDiff = DateSpan.DateDiffDay(dateNow, feast);
+        //    //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
+        //    //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
+        //    //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
+        //    //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
+        //    //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
 
-            return (365 + dayDiff).ToString() + " дн.";
-        }
+        //    return (365 + dayDiff).ToString() + " дн.";
+        //}
 
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
         {
