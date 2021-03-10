@@ -8,7 +8,7 @@ namespace UI_Design
 {
     class HealthRepos
     {
-        public static void AddData(string firstName, string lastName, string proff, DateTime dateMeeting, DateTime dateNextMeeting)
+        public static void AddData(string childFirstName, string lastName, string firstName, string fatherName, string proff, DateTime dateMeeting, DateTime dateNextMeeting, byte[] img)
         {
             try
             {
@@ -16,29 +16,22 @@ namespace UI_Design
                 {
                     Health health = new Health
                     {
-                        FullName = firstName + " " + lastName,
+                        LastName = lastName,
+                        FirstName = firstName,
+                        FatherName = fatherName,
                         Proff = proff,
                         DateMeeting = dateMeeting,
                         DateNextMeeting = dateNextMeeting,
+                        ImageView = img
                     };
-                    //health.ImageHealths.Add();
-                    Child child = db.Childs.FirstOrDefault(c => c.FirstName == firstName);
+                    Child child = db.Childs.FirstOrDefault(c => c.FirstName == childFirstName);
                     child.Healths.Add(health);
                     db.SaveChanges();
                 }
             }
             catch (Exception)
             {
-                FormMessage.Show("Ошибка работы с базой Health...");
-                throw;
-            }
-        }
-
-        public static Health FindByChildId(int childId)
-        {
-            using (BabyDbContext db = new BabyDbContext())
-            {
-                return db.Healths.FirstOrDefault(Health => Health.Child_Id == childId);
+                FormMessage.Show("При добавлении данных произошла ошибка...");
             }
         }
 
@@ -47,6 +40,25 @@ namespace UI_Design
             using (BabyDbContext db = new BabyDbContext())
             {
                 return db.Healths.Where(health => health.Child_Id == child.Id).ToList();
+            }
+        }
+
+        public static void UpdateImage(int healthId, byte[] img)
+        {
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                var health = db.Healths.Where(c => c.Id == healthId).FirstOrDefault();
+                health.ImageView = img;
+                db.SaveChanges();
+            }
+        }
+
+        public static void Remove(int healthId)
+        {
+            using (BabyDbContext db = new BabyDbContext())
+            {
+                db.Healths.Remove(db.Healths.Where(c => c.Id == healthId).FirstOrDefault());
+                db.SaveChanges();
             }
         }
     }

@@ -88,8 +88,13 @@
     <Compile Include="FormDocuments.Designer.cs">
       <DependentUpon>FormDocuments.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMainData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainData.Designer.cs">
+      <DependentUpon>FormMainData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositories\HealthRepos.cs" />
-    <Compile Include="Models\ImageHealth.cs" />
     <Compile Include="Models\Health.cs" />
     <Compile Include="MyDateTimePicker.cs">
       <SubType>Component</SubType>
@@ -174,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddChild.resx">
       <DependentUpon>FormAddChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainData.resx">
+      <DependentUpon>FormMainData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMedicen.resx">
       <DependentUpon>FormMedicen.cs</DependentUpon>
@@ -317,6 +325,7 @@
   <ItemGroup>
     <Content Include="Properties\dell.png" />
     <Content Include="Properties\noImg.png" />
+    <None Include="Resources\minus.png" />
     <None Include="Resources\father_50px.png" />
     <None Include="Resources\calendar_50px.png" />
     <None Include="Resources\confetti_50px.png" />
