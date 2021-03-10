@@ -34,71 +34,101 @@ namespace UI_Design
             this.cmbBoxYear = new System.Windows.Forms.ComboBox();
             this.txtBoxGr = new System.Windows.Forms.TextBox();
             this.txtBoxWght = new System.Windows.Forms.TextBox();
-            this.btnBild = new System.Windows.Forms.Button();
             this.rdBtnMnth = new System.Windows.Forms.RadioButton();
             this.rdBtnYr = new System.Windows.Forms.RadioButton();
             this.cmbBoxMonth = new System.Windows.Forms.ComboBox();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblGr = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBild = new System.Windows.Forms.Button();
             this.panelG.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelG
             // 
             this.panelG.Controls.Add(this.crtsnChrtDiagramm);
-            this.panelG.Location = new System.Drawing.Point(102, 173);
+            this.panelG.Location = new System.Drawing.Point(43, 216);
             this.panelG.Name = "panelG";
-            this.panelG.Size = new System.Drawing.Size(1000, 400);
+            this.panelG.Size = new System.Drawing.Size(1221, 402);
             this.panelG.TabIndex = 0;
             // 
             // crtsnChrtDiagramm
             // 
-            this.crtsnChrtDiagramm.Location = new System.Drawing.Point(273, 121);
+            this.crtsnChrtDiagramm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.crtsnChrtDiagramm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crtsnChrtDiagramm.Location = new System.Drawing.Point(0, 0);
             this.crtsnChrtDiagramm.Name = "crtsnChrtDiagramm";
-            this.crtsnChrtDiagramm.Size = new System.Drawing.Size(460, 208);
+            this.crtsnChrtDiagramm.Size = new System.Drawing.Size(1221, 402);
             this.crtsnChrtDiagramm.TabIndex = 0;
             this.crtsnChrtDiagramm.Text = "cartesianChart1";
+            this.crtsnChrtDiagramm.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.crtsnChrtDiagramm_ChildChanged);
             // 
             // cmbBoxYear
             // 
+            this.cmbBoxYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbBoxYear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbBoxYear.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbBoxYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.cmbBoxYear.FormattingEnabled = true;
-            this.cmbBoxYear.Location = new System.Drawing.Point(283, 36);
+            this.cmbBoxYear.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21"});
+            this.cmbBoxYear.Location = new System.Drawing.Point(364, 83);
             this.cmbBoxYear.Name = "cmbBoxYear";
-            this.cmbBoxYear.Size = new System.Drawing.Size(121, 24);
+            this.cmbBoxYear.Size = new System.Drawing.Size(121, 31);
             this.cmbBoxYear.TabIndex = 2;
             this.cmbBoxYear.Text = "лет";
             // 
             // txtBoxGr
             // 
-            this.txtBoxGr.Location = new System.Drawing.Point(692, 35);
+            this.txtBoxGr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtBoxGr.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBoxGr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtBoxGr.Location = new System.Drawing.Point(949, 33);
             this.txtBoxGr.Name = "txtBoxGr";
-            this.txtBoxGr.Size = new System.Drawing.Size(100, 22);
+            this.txtBoxGr.Size = new System.Drawing.Size(100, 31);
             this.txtBoxGr.TabIndex = 4;
             // 
             // txtBoxWght
             // 
-            this.txtBoxWght.Location = new System.Drawing.Point(999, 38);
+            this.txtBoxWght.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtBoxWght.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtBoxWght.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.txtBoxWght.Location = new System.Drawing.Point(949, 85);
             this.txtBoxWght.Name = "txtBoxWght";
-            this.txtBoxWght.Size = new System.Drawing.Size(100, 22);
+            this.txtBoxWght.Size = new System.Drawing.Size(100, 31);
             this.txtBoxWght.TabIndex = 6;
-            // 
-            // btnBild
-            // 
-            this.btnBild.Location = new System.Drawing.Point(520, 121);
-            this.btnBild.Name = "btnBild";
-            this.btnBild.Size = new System.Drawing.Size(176, 46);
-            this.btnBild.TabIndex = 7;
-            this.btnBild.Text = "Построить диаграмму";
-            this.btnBild.UseVisualStyleBackColor = true;
-            this.btnBild.Click += new System.EventHandler(this.btnBild_Click);
             // 
             // rdBtnMnth
             // 
             this.rdBtnMnth.AutoSize = true;
-            this.rdBtnMnth.Location = new System.Drawing.Point(408, 134);
+            this.rdBtnMnth.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdBtnMnth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.rdBtnMnth.Location = new System.Drawing.Point(189, 31);
             this.rdBtnMnth.Name = "rdBtnMnth";
-            this.rdBtnMnth.Size = new System.Drawing.Size(81, 21);
+            this.rdBtnMnth.Size = new System.Drawing.Size(116, 28);
             this.rdBtnMnth.TabIndex = 8;
             this.rdBtnMnth.TabStop = true;
             this.rdBtnMnth.Text = "До года";
@@ -107,9 +137,11 @@ namespace UI_Design
             // rdBtnYr
             // 
             this.rdBtnYr.AutoSize = true;
-            this.rdBtnYr.Location = new System.Drawing.Point(732, 134);
+            this.rdBtnYr.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdBtnYr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.rdBtnYr.Location = new System.Drawing.Point(189, 81);
             this.rdBtnYr.Name = "rdBtnYr";
-            this.rdBtnYr.Size = new System.Drawing.Size(103, 21);
+            this.rdBtnYr.Size = new System.Drawing.Size(150, 28);
             this.rdBtnYr.TabIndex = 9;
             this.rdBtnYr.TabStop = true;
             this.rdBtnYr.Text = "После года";
@@ -117,39 +149,106 @@ namespace UI_Design
             // 
             // cmbBoxMonth
             // 
+            this.cmbBoxMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbBoxMonth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbBoxMonth.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cmbBoxMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.cmbBoxMonth.FormattingEnabled = true;
-            this.cmbBoxMonth.Location = new System.Drawing.Point(422, 35);
+            this.cmbBoxMonth.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
+            this.cmbBoxMonth.Location = new System.Drawing.Point(364, 31);
             this.cmbBoxMonth.Name = "cmbBoxMonth";
-            this.cmbBoxMonth.Size = new System.Drawing.Size(121, 24);
+            this.cmbBoxMonth.Size = new System.Drawing.Size(121, 31);
             this.cmbBoxMonth.TabIndex = 11;
             this.cmbBoxMonth.Text = "месяцев";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(201, 39);
+            this.lblAge.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblAge.Location = new System.Drawing.Point(33, 8);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(62, 17);
+            this.lblAge.Size = new System.Drawing.Size(124, 28);
             this.lblAge.TabIndex = 12;
-            this.lblAge.Text = "Возраст";
+            this.lblAge.Text = "Возраст:";
             // 
             // lblGr
             // 
             this.lblGr.AutoSize = true;
-            this.lblGr.Location = new System.Drawing.Point(634, 38);
+            this.lblGr.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblGr.Location = new System.Drawing.Point(819, 35);
             this.lblGr.Name = "lblGr";
-            this.lblGr.Size = new System.Drawing.Size(39, 17);
+            this.lblGr.Size = new System.Drawing.Size(60, 24);
             this.lblGr.TabIndex = 13;
             this.lblGr.Text = "Рост";
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(927, 41);
+            this.lbl.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lbl.Location = new System.Drawing.Point(819, 85);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(32, 17);
+            this.lbl.Size = new System.Drawing.Size(47, 24);
             this.lbl.TabIndex = 14;
             this.lbl.Text = "Вес";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.label1.Location = new System.Drawing.Point(615, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 28);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Параметры:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.lblAge);
+            this.panel1.Controls.Add(this.lbl);
+            this.panel1.Controls.Add(this.rdBtnMnth);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtBoxWght);
+            this.panel1.Controls.Add(this.cmbBoxYear);
+            this.panel1.Controls.Add(this.rdBtnYr);
+            this.panel1.Controls.Add(this.txtBoxGr);
+            this.panel1.Controls.Add(this.cmbBoxMonth);
+            this.panel1.Controls.Add(this.lblGr);
+            this.panel1.Location = new System.Drawing.Point(43, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1221, 132);
+            this.panel1.TabIndex = 16;
+            // 
+            // btnBild
+            // 
+            this.btnBild.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_53;
+            this.btnBild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBild.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBild.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnBild.Location = new System.Drawing.Point(449, 159);
+            this.btnBild.Name = "btnBild";
+            this.btnBild.Size = new System.Drawing.Size(445, 51);
+            this.btnBild.TabIndex = 7;
+            this.btnBild.Text = "Построить диаграмму";
+            this.btnBild.UseVisualStyleBackColor = true;
+            this.btnBild.Click += new System.EventHandler(this.btnBild_Click);
             // 
             // FormGrowth
             // 
@@ -157,24 +256,17 @@ namespace UI_Design
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1309, 630);
-            this.Controls.Add(this.lbl);
-            this.Controls.Add(this.lblGr);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.cmbBoxMonth);
-            this.Controls.Add(this.rdBtnYr);
-            this.Controls.Add(this.rdBtnMnth);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBild);
-            this.Controls.Add(this.txtBoxWght);
-            this.Controls.Add(this.txtBoxGr);
-            this.Controls.Add(this.cmbBoxYear);
             this.Controls.Add(this.panelG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGrowth";
             this.Text = "FormGrowht";
             this.Load += new System.EventHandler(this.FormGrowth_Load);
             this.panelG.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -192,5 +284,7 @@ namespace UI_Design
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblGr;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

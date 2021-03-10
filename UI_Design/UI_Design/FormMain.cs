@@ -55,7 +55,7 @@ namespace UI_Design
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            Opacity = 0.85;
+            Opacity = 0.5;
             Show();
 
             FormLogin logForm = new FormLogin();
@@ -267,6 +267,11 @@ namespace UI_Design
         }
 
         private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

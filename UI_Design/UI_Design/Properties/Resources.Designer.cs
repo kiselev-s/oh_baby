@@ -123,6 +123,26 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_50px {
+            get {
+                object obj = ResourceManager.GetObject("calendar_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confetti_50px {
+            get {
+                object obj = ResourceManager.GetObject("confetti_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_receipt_50px {
             get {
                 object obj = ResourceManager.GetObject("delete_receipt_50px", resourceCulture);
@@ -146,6 +166,16 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap dell {
             get {
                 object obj = ResourceManager.GetObject("dell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doctors_bag_50px {
+            get {
+                object obj = ResourceManager.GetObject("doctors_bag_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +293,16 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap father_50px {
+            get {
+                object obj = ResourceManager.GetObject("father_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap here_80_2px1 {
             get {
                 object obj = ResourceManager.GetObject("here_80_2px1", resourceCulture);
@@ -286,6 +326,16 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap increase_48px {
             get {
                 object obj = ResourceManager.GetObject("increase_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kitchen_scales_50px {
+            get {
+                object obj = ResourceManager.GetObject("kitchen_scales_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +416,36 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap print_50px {
             get {
                 object obj = ResourceManager.GetObject("print_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sewing_tape_measure_50px {
+            get {
+                object obj = ResourceManager.GetObject("sewing_tape_measure_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sewing_tape_measure_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("sewing_tape_measure_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sewing_tape_measure_50px2 {
+            get {
+                object obj = ResourceManager.GetObject("sewing_tape_measure_50px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +546,16 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap Untitled_52 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-52", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_53 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-53", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
