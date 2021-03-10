@@ -83,16 +83,20 @@ namespace UI_Design
         
         private void butAdd_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.CheckFileExists = true;
-            dialog.Multiselect = false;
-            dialog.Filter = "Image Files(*.bmp;*.png;*.jpg;*.jpeg;)|*.bmp;*.png;*.jpg;*.jpeg;";
-            byte[] byteImg1 = null;
-            if(dialog.ShowDialog()==DialogResult.OK)
+            if(nameButton!=null)
             {
-                byteImg1 = File.ReadAllBytes(dialog.FileName);
-                ImagesRepos.AddImg(dialog.FileName, byteImg1, child, nameButton);
-            }
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.CheckFileExists = true;
+                dialog.Multiselect = false;
+                dialog.Filter = "Image Files(*.bmp;*.png;*.jpg;*.jpeg;)|*.bmp;*.png;*.jpg;*.jpeg;";
+                byte[] byteImg1 = null;
+                if(dialog.ShowDialog()==DialogResult.OK)
+                {
+                    byteImg1 = File.ReadAllBytes(dialog.FileName);
+                    ImagesRepos.AddImg(dialog.FileName, byteImg1, child, nameButton);
+                }
+                ImagesRepos.ViewImgCateg(nameButton, imagges, child, byteImg, pictureBox1);
+            }         
         }
         private void FormDocuments_Load_1(object sender, EventArgs e)
         {
@@ -200,6 +204,11 @@ namespace UI_Design
         {
             nameButton = btnElse.Text;
             ImagesRepos.ViewImgCateg(nameButton, imagges, child, byteImg, pictureBox1);
+        }
+
+        private void BtnAll_Leave(object sender, EventArgs e)
+        {
+            StylesService.ViewBackColorButton(sender);
         }
     }
 }

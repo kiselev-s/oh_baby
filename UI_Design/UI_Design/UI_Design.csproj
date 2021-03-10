@@ -61,6 +61,7 @@
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -316,6 +317,8 @@
   <ItemGroup>
     <Content Include="Properties\dell.png" />
     <Content Include="Properties\noImg.png" />
+    <None Include="Resources\sleeping_baby_girl_64px.png" />
+    <None Include="Resources\logo4.png" />
     <None Include="Resources\double_left_50px22.png" />
     <None Include="Resources\noImg2.png" />
     <None Include="Resources\double_left_50px21.png" />

@@ -52,7 +52,7 @@ namespace UI_Design
             // 
             this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNext.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnNext.Image = global::UI_Design.Properties.Resources.double_right_50px1;
@@ -67,7 +67,7 @@ namespace UI_Design
             // 
             this.btnPrev.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrev.BackgroundImage")));
             this.btnPrev.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrev.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnPrev.Image = global::UI_Design.Properties.Resources.double_left_50px22;
@@ -82,7 +82,7 @@ namespace UI_Design
             // 
             this.butPrint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butPrint.BackgroundImage")));
             this.butPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butPrint.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butPrint.Image = global::UI_Design.Properties.Resources.print_50px;
@@ -96,7 +96,7 @@ namespace UI_Design
             // 
             this.butShare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butShare.BackgroundImage")));
             this.butShare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butShare.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butShare.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butShare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butShare.Image = global::UI_Design.Properties.Resources.share_50px1;
@@ -110,7 +110,7 @@ namespace UI_Design
             // 
             this.butDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butDel.BackgroundImage")));
             this.butDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butDel.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butDel.Image = global::UI_Design.Properties.Resources.delete_receipt_50px2;
@@ -125,7 +125,7 @@ namespace UI_Design
             // 
             this.butAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butAdd.BackgroundImage")));
             this.butAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butAdd.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butAdd.Image = global::UI_Design.Properties.Resources.add_receipt_50px2;
@@ -149,7 +149,7 @@ namespace UI_Design
             // 
             this.btnElse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnElse.BackgroundImage")));
             this.btnElse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnElse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnElse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnElse.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnElse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnElse.Location = new System.Drawing.Point(90, 475);
@@ -159,12 +159,13 @@ namespace UI_Design
             this.btnElse.Text = "Другие";
             this.btnElse.UseVisualStyleBackColor = true;
             this.btnElse.Click += new System.EventHandler(this.btnElse_Click);
+            this.btnElse.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butStrah
             // 
             this.butStrah.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butStrah.BackgroundImage")));
             this.butStrah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butStrah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butStrah.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butStrah.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butStrah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butStrah.Location = new System.Drawing.Point(90, 277);
@@ -174,12 +175,13 @@ namespace UI_Design
             this.butStrah.Text = "Страховка";
             this.butStrah.UseVisualStyleBackColor = true;
             this.butStrah.Click += new System.EventHandler(this.butStrah_Click);
+            this.butStrah.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butSport
             // 
             this.butSport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butSport.BackgroundImage")));
             this.butSport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butSport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butSport.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butSport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butSport.Location = new System.Drawing.Point(90, 409);
@@ -189,12 +191,13 @@ namespace UI_Design
             this.butSport.Text = "Спортивные достижения";
             this.butSport.UseVisualStyleBackColor = true;
             this.butSport.Click += new System.EventHandler(this.butSport_Click);
+            this.butSport.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butUch
             // 
             this.butUch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butUch.BackgroundImage")));
             this.butUch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butUch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butUch.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butUch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butUch.Location = new System.Drawing.Point(90, 342);
@@ -204,12 +207,13 @@ namespace UI_Design
             this.butUch.Text = "Учебные достижения";
             this.butUch.UseVisualStyleBackColor = true;
             this.butUch.Click += new System.EventHandler(this.butUch_Click);
+            this.butUch.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butInn
             // 
             this.butInn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butInn.BackgroundImage")));
             this.butInn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butInn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butInn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butInn.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butInn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butInn.Location = new System.Drawing.Point(90, 211);
@@ -219,12 +223,13 @@ namespace UI_Design
             this.butInn.Text = "ИНН";
             this.butInn.UseVisualStyleBackColor = true;
             this.butInn.Click += new System.EventHandler(this.butInn_Click);
+            this.butInn.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butZagPas
             // 
             this.butZagPas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butZagPas.BackgroundImage")));
             this.butZagPas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butZagPas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butZagPas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butZagPas.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butZagPas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butZagPas.Location = new System.Drawing.Point(90, 146);
@@ -234,12 +239,13 @@ namespace UI_Design
             this.butZagPas.Text = "Загранпаспорт";
             this.butZagPas.UseVisualStyleBackColor = true;
             this.butZagPas.Click += new System.EventHandler(this.butZagPas_Click);
+            this.butZagPas.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butUaPas
             // 
             this.butUaPas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("butUaPas.BackgroundImage")));
             this.butUaPas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butUaPas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butUaPas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butUaPas.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butUaPas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butUaPas.Location = new System.Drawing.Point(90, 80);
@@ -249,12 +255,13 @@ namespace UI_Design
             this.butUaPas.Text = "Украинский паспорт";
             this.butUaPas.UseVisualStyleBackColor = true;
             this.butUaPas.Click += new System.EventHandler(this.butUaPas_Click);
+            this.butUaPas.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // butSv
             // 
             this.butSv.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_52;
             this.butSv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.butSv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butSv.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.butSv.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.butSv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.butSv.Location = new System.Drawing.Point(90, 12);
@@ -264,14 +271,14 @@ namespace UI_Design
             this.butSv.Text = "Свидетельство о рождении";
             this.butSv.UseVisualStyleBackColor = true;
             this.butSv.Click += new System.EventHandler(this.butSv_Click);
-            
+            this.butSv.Leave += new System.EventHandler(this.BtnAll_Leave);
             // 
             // FormDocuments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1292, 603);
+            this.ClientSize = new System.Drawing.Size(1309, 630);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.butPrint);

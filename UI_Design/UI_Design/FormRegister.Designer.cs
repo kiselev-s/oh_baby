@@ -53,9 +53,10 @@ namespace UI_Design
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label5.Location = new System.Drawing.Point(209, 382);
+            this.label5.Location = new System.Drawing.Point(279, 470);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 17);
+            this.label5.Size = new System.Drawing.Size(183, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Повторить пароль";
             // 
@@ -64,9 +65,10 @@ namespace UI_Design
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label4.Location = new System.Drawing.Point(209, 324);
+            this.label4.Location = new System.Drawing.Point(279, 399);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Пароль";
             // 
@@ -75,9 +77,10 @@ namespace UI_Design
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label3.Location = new System.Drawing.Point(209, 271);
+            this.label3.Location = new System.Drawing.Point(279, 334);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Email";
             // 
@@ -86,9 +89,10 @@ namespace UI_Design
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label2.Location = new System.Drawing.Point(209, 214);
+            this.label2.Location = new System.Drawing.Point(279, 263);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 20;
             this.label2.Text = "Фамилия";
             // 
@@ -97,9 +101,10 @@ namespace UI_Design
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(209, 162);
+            this.label1.Location = new System.Drawing.Point(279, 199);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 17);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Имя";
             // 
@@ -108,9 +113,10 @@ namespace UI_Design
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Location = new System.Drawing.Point(205, 174);
+            this.txtFirstName.Location = new System.Drawing.Point(273, 214);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(207, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(275, 30);
             this.txtFirstName.TabIndex = 18;
             this.txtFirstName.Text = "Василий";
             // 
@@ -119,9 +125,10 @@ namespace UI_Design
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(205, 229);
+            this.txtLastName.Location = new System.Drawing.Point(273, 282);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(207, 26);
+            this.txtLastName.Size = new System.Drawing.Size(275, 30);
             this.txtLastName.TabIndex = 17;
             this.txtLastName.Text = "Иванов";
             // 
@@ -130,10 +137,11 @@ namespace UI_Design
             this.txtPassCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtPassCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassCheck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPassCheck.Location = new System.Drawing.Point(205, 392);
+            this.txtPassCheck.Location = new System.Drawing.Point(273, 482);
+            this.txtPassCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassCheck.Name = "txtPassCheck";
             this.txtPassCheck.PasswordChar = '*';
-            this.txtPassCheck.Size = new System.Drawing.Size(207, 26);
+            this.txtPassCheck.Size = new System.Drawing.Size(275, 30);
             this.txtPassCheck.TabIndex = 16;
             this.txtPassCheck.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPassCheck, "Повторно введите придуманный пароль");
@@ -143,10 +151,11 @@ namespace UI_Design
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPass.Location = new System.Drawing.Point(205, 336);
+            this.txtPass.Location = new System.Drawing.Point(273, 414);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(207, 26);
+            this.txtPass.Size = new System.Drawing.Size(275, 30);
             this.txtPass.TabIndex = 15;
             this.txtPass.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPass, "Придумайте пароль. Минимальная длина - 8 символов, максимальная - 16");
@@ -156,9 +165,10 @@ namespace UI_Design
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(205, 281);
+            this.txtEmail.Location = new System.Drawing.Point(273, 346);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(207, 26);
+            this.txtEmail.Size = new System.Drawing.Size(275, 30);
             this.txtEmail.TabIndex = 14;
             this.txtEmail.Text = "vvv@vvv.ru";
             this.toolTipRegister.SetToolTip(this.txtEmail, "Введите настоящий email");
@@ -179,10 +189,10 @@ namespace UI_Design
             this.btnVisiblePass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnVisiblePass.Location = new System.Drawing.Point(416, 336);
-            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisiblePass.Location = new System.Drawing.Point(555, 414);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVisiblePass.Name = "btnVisiblePass";
-            this.btnVisiblePass.Size = new System.Drawing.Size(28, 28);
+            this.btnVisiblePass.Size = new System.Drawing.Size(37, 34);
             this.btnVisiblePass.TabIndex = 24;
             this.btnVisiblePass.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.toolTipRegister.SetToolTip(this.btnVisiblePass, "Показать пароль");
@@ -198,10 +208,10 @@ namespace UI_Design
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnRegister.Location = new System.Drawing.Point(9, 474);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(12, 583);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(582, 36);
+            this.btnRegister.Size = new System.Drawing.Size(776, 44);
             this.btnRegister.TabIndex = 25;
             this.btnRegister.Text = "З А Р Е Г И С Т Р И Р О В А Т Ь С Я";
             this.btnRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -217,10 +227,10 @@ namespace UI_Design
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnCancel.Location = new System.Drawing.Point(9, 561);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(12, 690);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(582, 36);
+            this.btnCancel.Size = new System.Drawing.Size(776, 44);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "О Т М Е Н И Т Ь";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -229,12 +239,12 @@ namespace UI_Design
             // 
             // lblLogo
             // 
+            this.lblLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
-            this.lblLogo.Location = new System.Drawing.Point(169, 7);
-            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo4;
+            this.lblLogo.Location = new System.Drawing.Point(0, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(268, 65);
+            this.lblLogo.Size = new System.Drawing.Size(800, 80);
             this.lblLogo.TabIndex = 26;
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -244,20 +254,19 @@ namespace UI_Design
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label6.Image = global::UI_Design.Properties.Resources.Untitled_8;
-            this.label6.Location = new System.Drawing.Point(9, 96);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(12, 118);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(582, 41);
+            this.label6.Size = new System.Drawing.Size(776, 50);
             this.label6.TabIndex = 25;
             this.label6.Text = "СОЗДАНИЕ МОЕЙ УЧЕТНОЙ ЗАПИСИ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(600, 650);
+            this.ClientSize = new System.Drawing.Size(800, 800);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRegister);
@@ -274,6 +283,7 @@ namespace UI_Design
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRegister";

@@ -124,9 +124,9 @@ namespace UI_Design
             // 
             // lblLogo
             // 
-            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo2;
             resources.ApplyResources(this.lblLogo, "lblLogo");
+            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblLogo.Image = global::UI_Design.Properties.Resources.logo4;
             this.lblLogo.Name = "lblLogo";
             // 
             // lblRegister

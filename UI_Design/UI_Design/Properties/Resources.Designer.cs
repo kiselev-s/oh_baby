@@ -323,6 +323,16 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo4 {
+            get {
+                object obj = ResourceManager.GetObject("logo4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap noImg {
             get {
                 object obj = ResourceManager.GetObject("noImg", resourceCulture);
@@ -376,6 +386,16 @@ namespace UI_Design.Properties {
         internal static System.Drawing.Bitmap share_50px1 {
             get {
                 object obj = ResourceManager.GetObject("share_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sleeping_baby_girl_64px {
+            get {
+                object obj = ResourceManager.GetObject("sleeping_baby_girl_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

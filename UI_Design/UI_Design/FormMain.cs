@@ -43,7 +43,6 @@ namespace UI_Design
             db = new BabyDbContext();
 
 
-
             db.Parents.Load();
             db.Childs.Load();
             db.Growth_Weights.Load();
@@ -112,7 +111,7 @@ namespace UI_Design
         {
             StylesService.ViewClickButton(sender, pnlNav);
 
-            FormGrowth formGr = new FormGrowth();
+            FormGrowth formGr = new FormGrowth(parent, child);
             StylesService.CreateForm(formGr, pnlFormLoader, lblTitle, "> Развитие <");
         }
                         
@@ -238,9 +237,16 @@ namespace UI_Design
         private string GetGender(int gender)//дешифратор пола ребенка
         {
             if (gender == 0)
-                return "женский";
+            {
+                pictureBox1.Image = Properties.Resources.sleeping_baby_girl_64px;
+                return ($"дочь {child.FirstName}");
+            }
             else if (gender == 1)
-                return "мужской";
+            {
+                pictureBox1.Image = Properties.Resources.babys_room_64px;            
+                return ($"сын {child.FirstName}");
+            }
+                   
             else
                 return "нафиг такой пол";
         }
@@ -258,6 +264,11 @@ namespace UI_Design
             //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
 
             return (365 + dayDiff).ToString() + " дн.";
+        }
+
+        private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
