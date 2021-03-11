@@ -98,6 +98,11 @@ namespace UI_Design
                         FormViewImage formView = new FormViewImage(healths[e.RowIndex].ImageView, formMain);
                         formView.ShowDialog();
                     }
+                    else
+                    {
+                        AddImage(e);
+                        FillMedTableChild();
+                    }
                 }
                 catch (Exception)
                 {

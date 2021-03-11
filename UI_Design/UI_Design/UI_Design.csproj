@@ -108,9 +108,6 @@
     </Compile>
     <Compile Include="Repositories\HealthRepos.cs" />
     <Compile Include="Models\Health.cs" />
-    <Compile Include="MyDateTimePicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="FormGrowth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,9 +206,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewImage.resx">
       <DependentUpon>FormViewImage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyDateTimePicker.resx">
-      <DependentUpon>MyDateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -340,6 +334,7 @@
   <ItemGroup>
     <Content Include="Properties\dell.png" />
     <Content Include="Properties\noImg.png" />
+    <None Include="Resources\close.png" />
     <None Include="Resources\minus.png" />
     <None Include="Resources\father_50px.png" />
     <None Include="Resources\calendar_50px.png" />

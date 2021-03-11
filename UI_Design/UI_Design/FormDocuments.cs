@@ -223,51 +223,20 @@ namespace UI_Design
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            //e.Graphics.DrawString(richTextBox1.Text, richTextBox1.Font, Brushes.Black, 0, 0);
-            e.Graphics.DrawImage(pictureBox1.Image, new Point(0, 0));
+            e.Graphics.DrawImage(pictureBox1.BackgroundImage, new Point(5, 5));
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Image image = pictureBox1.BackgroundImage;
-
-            //byte[] b = imageToByteArray(image);
-            //byte[] b = ImageToByteArray(image);
-            //byte[] b = converterDemo(image);
-            byte[] b = test();
-
-            FormViewImage formView = new FormViewImage(b, formMain);
-            formView.ShowDialog();
-        }
-
-        public byte[] imageToByteArray(Image imageIn)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
-        }
-        public byte[] ImageToByteArray(System.Drawing.Image imageIn)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        {
-            using (var ms = new MemoryStream())
+            try
             {
-                imageIn.Save(ms, imageIn.RawFormat);
-                return ms.ToArray();
+                FormViewImage formView = new FormViewImage(pictureBox1.BackgroundImage, formMain);
+                formView.ShowDialog();
             }
-        }
-
-        public static byte[] converterDemo(Image x)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        {
-            ImageConverter _imageConverter = new ImageConverter();
-            byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
-            return xByte;
-        }
-
-        public byte[] test()//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        {
-            MemoryStream ms = new MemoryStream();
-            pictureBox1.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            //imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
+            catch (Exception)
+            {
+                FormMessage.Show("Не удается открыть картинку...");
+            }
         }
     }
 }

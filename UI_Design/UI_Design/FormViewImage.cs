@@ -26,6 +26,15 @@ namespace UI_Design
             pictureBox1.Image = Image.FromStream(new MemoryStream(img));
             btnClose.Anchor = (AnchorStyles.Right | AnchorStyles.Top);
         }
+        public FormViewImage(Image img, FormMain _formMain)
+        {
+            InitializeComponent();
+
+            formMain = _formMain;
+            formMain.Opacity = 0.5;
+            pictureBox1.Image = img;
+            btnClose.Anchor = (AnchorStyles.Right | AnchorStyles.Top);
+        }
         protected override CreateParams CreateParams  //круто, но оставляет белую рамку вверху
         {
             get
