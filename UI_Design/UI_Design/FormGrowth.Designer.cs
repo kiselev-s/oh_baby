@@ -64,7 +64,7 @@ namespace UI_Design
             this.crtsnChrtDiagramm.Size = new System.Drawing.Size(1221, 402);
             this.crtsnChrtDiagramm.TabIndex = 0;
             this.crtsnChrtDiagramm.Text = "cartesianChart1";
-            this.crtsnChrtDiagramm.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.crtsnChrtDiagramm_ChildChanged);
+            
             // 
             // cmbBoxYear
             // 
@@ -133,6 +133,7 @@ namespace UI_Design
             this.rdBtnMnth.TabStop = true;
             this.rdBtnMnth.Text = "До года";
             this.rdBtnMnth.UseVisualStyleBackColor = true;
+            this.rdBtnMnth.CheckedChanged += new System.EventHandler(this.rdBtnMnth_CheckedChanged);
             // 
             // rdBtnYr
             // 
@@ -146,6 +147,7 @@ namespace UI_Design
             this.rdBtnYr.TabStop = true;
             this.rdBtnYr.Text = "После года";
             this.rdBtnYr.UseVisualStyleBackColor = true;
+            this.rdBtnYr.CheckedChanged += new System.EventHandler(this.rdBtnYr_CheckedChanged);
             // 
             // cmbBoxMonth
             // 
@@ -262,7 +264,7 @@ namespace UI_Design
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormGrowth";
             this.Text = "FormGrowht";
-            this.Load += new System.EventHandler(this.FormGrowth_Load);
+           
             this.panelG.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
