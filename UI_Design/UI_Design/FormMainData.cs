@@ -43,7 +43,9 @@ namespace UI_Design
 
             health = HealthRepos.FindByChild(child);
             //if(health.Count > 0)
-                //lblDateHealth.Text = health[0].DateMeeting.ToShortTimeString().ToString();
+            //lblDateHealth.Text = health[0].DateMeeting.ToShortTimeString().ToString();
+            //date();
+            lblDateHealth.Text = GetDateHealth(health).DateNextMeeting.ToShortDateString().ToString();
         }
 
         private string ShowFeast(DateTime feast)//показать праздник
@@ -81,6 +83,16 @@ namespace UI_Design
             };
             var today = DateTime.Now;
             var closestValue = dict.MinBy(kvp => (kvp.Key - today).Duration());
+        }
+
+        private static Health GetDateHealth (List<Health> healths)
+        {
+            var i = healths
+                .Where(h => h.DateNextMeeting.Date > DateTime.Now.Date)
+                .OrderBy(h => h.DateNextMeeting.Date)
+                .FirstOrDefault();
+
+            return i;
         }
     }
 }
