@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
+using MoreLinq;
 
 namespace UI_Design
 {
@@ -16,6 +17,7 @@ namespace UI_Design
     {
         private static Child child = null;
         private static Parent parent = null;
+        private static List<Health> health = null;
 
         public FormMainData(Child _child, Parent _parent)
         {
@@ -26,10 +28,10 @@ namespace UI_Design
 
         private void FormMainData_Load(object sender, EventArgs e)
         {
-            if(child != null)
-                ChildShowData();
+            if (child != null)
+                ChildShowData();                
             if(parent != null)
-                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";
+                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";            
         }
 
         private void ChildShowData()//вывод данных о ребенке на главную форму
@@ -38,6 +40,10 @@ namespace UI_Design
             lblGender.Text = GetGender(child.Gender);
 
             lblFeast.Text = ShowFeast(child.Birthday).ToString();
+
+            health = HealthRepos.FindByChild(child);
+            //if(health.Count > 0)
+                //lblDateHealth.Text = health[0].DateMeeting.ToShortTimeString().ToString();
         }
 
         private string ShowFeast(DateTime feast)//показать праздник
@@ -58,18 +64,23 @@ namespace UI_Design
         private string GetGender(int gender)//дешифратор пола ребенка
         {
             if (gender == 0)
-            {
-                //pictureBox1.Image = Properties.Resources.sleeping_baby_girl_64px;
                 return ($"дочь {child.FirstName}");
-            }
             else if (gender == 1)
-            {
-                //pictureBox1.Image = Properties.Resources.babys_room_64px;
                 return ($"сын {child.FirstName}");
-            }
-
             else
                 return "нафиг такой пол";
+        }
+
+        private static void date()
+        {
+            var dict = new Dictionary<DateTime, string>()
+            {
+                [new DateTime(2016, 1, 1)] = "прошедший Новый Год",
+                [new DateTime(2016, 12, 31)] = "будущий Новый Год",
+                [new DateTime(2014, 1, 5)] = "давным-давно"
+            };
+            var today = DateTime.Now;
+            var closestValue = dict.MinBy(kvp => (kvp.Key - today).Duration());
         }
     }
 }

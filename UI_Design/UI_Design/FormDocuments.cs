@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -34,9 +35,13 @@ namespace UI_Design
         public static List<Imagge> imagges = new List<Imagge>();
         int i=0;
         public static byte[] byteImg = null;
-        public FormDocuments(Parent _parent, Child _child)
+        private readonly FormMain formMain;
+
+        public FormDocuments(Parent _parent, Child _child, FormMain _formMain)
         {
             InitializeComponent();
+
+            formMain = _formMain;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             child = _child;
             parent = _parent;
@@ -206,9 +211,63 @@ namespace UI_Design
             ImagesRepos.ViewImgCateg(nameButton, imagges, child, byteImg, pictureBox1);
         }
 
-        private void BtnAll_Leave(object sender, EventArgs e)
+        private void ButPrint_Click(object sender, EventArgs e)
+        {            
+            PrintDocument printDocument = new PrintDocument();// объект для печати            
+            printDocument.PrintPage += PrintDocument_PrintPage;// обработчик события печати            
+            printDialog.Document = printDocument;// установка объекта печати для его настройки
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print();
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            StylesService.ViewBackColorButton(sender);
+            //e.Graphics.DrawString(richTextBox1.Text, richTextBox1.Font, Brushes.Black, 0, 0);
+            e.Graphics.DrawImage(pictureBox1.Image, new Point(0, 0));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        {
+            Image image = pictureBox1.BackgroundImage;
+
+            //byte[] b = imageToByteArray(image);
+            //byte[] b = ImageToByteArray(image);
+            //byte[] b = converterDemo(image);
+            byte[] b = test();
+
+            FormViewImage formView = new FormViewImage(b, formMain);
+            formView.ShowDialog();
+        }
+
+        public byte[] imageToByteArray(Image imageIn)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
+
+        public static byte[] converterDemo(Image x)//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        {
+            ImageConverter _imageConverter = new ImageConverter();
+            byte[] xByte = (byte[])_imageConverter.ConvertTo(x, typeof(byte[]));
+            return xByte;
+        }
+
+        public byte[] test()//    не работает!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        {
+            MemoryStream ms = new MemoryStream();
+            pictureBox1.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            //imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
         }
     }
 }

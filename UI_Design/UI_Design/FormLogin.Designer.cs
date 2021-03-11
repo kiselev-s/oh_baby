@@ -128,6 +128,7 @@ namespace UI_Design
             this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblLogo.Image = global::UI_Design.Properties.Resources.logo4;
             this.lblLogo.Name = "lblLogo";
+            this.lblLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             // 
             // lblRegister
             // 
@@ -157,6 +158,7 @@ namespace UI_Design
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

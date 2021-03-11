@@ -127,7 +127,7 @@ namespace UI_Design
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(582, 41);
             this.label6.TabIndex = 46;
-            this.label6.Text = "КАКИЕ-ТО ДАННЫЕ ПО ЗДОРОВЬЮ";
+            this.label6.Text = "ДОБАВИТЬ ВИЗИТ К ВРАЧУ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtpMeeting
@@ -302,6 +302,7 @@ namespace UI_Design
             this.Name = "FormAddHealth";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddHealth";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
