@@ -13,6 +13,8 @@ namespace UI_Design
 {
     public partial class FormRegister : Form
     {
+        private Point MouseHook;
+
         public FormRegister()
         {
             InitializeComponent();
@@ -41,6 +43,12 @@ namespace UI_Design
         private void BtnVisiblePassFalse_Click(object sender, EventArgs e)//скрыть пароль
         {
             StylesService.ViewEyePassFalse(sender, txtPass, txtPassCheck, BtnVisiblePassTrue_Click, BtnVisiblePassFalse_Click);
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
     }
 }

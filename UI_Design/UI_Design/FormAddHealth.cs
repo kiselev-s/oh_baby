@@ -15,6 +15,8 @@ namespace UI_Design
     {
         private static Child child = null;
         private static byte[] tempImg;
+        private Point MouseHook;
+
         public FormAddHealth(Child _child)
         {
             InitializeComponent();
@@ -57,6 +59,12 @@ namespace UI_Design
                 return File.ReadAllBytes(dialog.FileName);
             else
                 return null;
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
     }
 }

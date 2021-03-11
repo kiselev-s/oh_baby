@@ -37,7 +37,7 @@ namespace UI_Design
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.lblSoonMed = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDateHealth = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,12 +72,12 @@ namespace UI_Design
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Bookman Old Style", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblGender.Location = new System.Drawing.Point(147, 11);
             this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(69, 25);
+            this.lblGender.Size = new System.Drawing.Size(62, 26);
             this.lblGender.TabIndex = 15;
             this.lblGender.Text = "child";
             // 
@@ -125,8 +125,8 @@ namespace UI_Design
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.lblSoonMed);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel4.Controls.Add(this.lblDateHealth);
+            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel4.Location = new System.Drawing.Point(564, 340);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
@@ -148,7 +148,7 @@ namespace UI_Design
             // 
             // lblSoonMed
             // 
-            this.lblSoonMed.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSoonMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblSoonMed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblSoonMed.Location = new System.Drawing.Point(107, 6);
             this.lblSoonMed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -157,17 +157,17 @@ namespace UI_Design
             this.lblSoonMed.TabIndex = 20;
             this.lblSoonMed.Text = "Ближайшее медобследование:";
             // 
-            // label1
+            // lblDateHealth
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label1.Location = new System.Drawing.Point(107, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 22);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "date soon med";
+            this.lblDateHealth.AutoSize = true;
+            this.lblDateHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDateHealth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblDateHealth.Location = new System.Drawing.Point(107, 64);
+            this.lblDateHealth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDateHealth.Name = "lblDateHealth";
+            this.lblDateHealth.Size = new System.Drawing.Size(149, 24);
+            this.lblDateHealth.TabIndex = 21;
+            this.lblDateHealth.Text = "date soon med";
             // 
             // panel3
             // 
@@ -181,7 +181,7 @@ namespace UI_Design
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel3.Location = new System.Drawing.Point(564, 66);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -216,7 +216,7 @@ namespace UI_Design
             // 
             // lblLastDoc
             // 
-            this.lblLastDoc.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLastDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLastDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblLastDoc.Location = new System.Drawing.Point(83, 25);
             this.lblLastDoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -228,42 +228,42 @@ namespace UI_Design
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label6.Location = new System.Drawing.Point(192, 176);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 22);
+            this.label6.Size = new System.Drawing.Size(77, 24);
             this.label6.TabIndex = 26;
             this.label6.Text = "вес, кг";
             // 
             // lblLastDocTxt
             // 
             this.lblLastDocTxt.AutoSize = true;
-            this.lblLastDocTxt.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLastDocTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblLastDocTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblLastDocTxt.Location = new System.Drawing.Point(192, 128);
             this.lblLastDocTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastDocTxt.Name = "lblLastDocTxt";
-            this.lblLastDocTxt.Size = new System.Drawing.Size(94, 22);
+            this.lblLastDocTxt.Size = new System.Drawing.Size(93, 24);
             this.lblLastDocTxt.TabIndex = 19;
             this.lblLastDocTxt.Text = "рост, см";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label5.Location = new System.Drawing.Point(168, 76);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 22);
+            this.label5.Size = new System.Drawing.Size(179, 24);
             this.label5.TabIndex = 25;
             this.label5.Text = "возраст, лет/мес";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label2.Location = new System.Drawing.Point(14, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -274,7 +274,7 @@ namespace UI_Design
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label4.Location = new System.Drawing.Point(94, 176);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -285,7 +285,7 @@ namespace UI_Design
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.label3.Location = new System.Drawing.Point(94, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -297,18 +297,18 @@ namespace UI_Design
             // lblParentName
             // 
             this.lblParentName.AutoSize = true;
-            this.lblParentName.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblParentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblParentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblParentName.Location = new System.Drawing.Point(302, 121);
             this.lblParentName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblParentName.Name = "lblParentName";
-            this.lblParentName.Size = new System.Drawing.Size(76, 22);
+            this.lblParentName.Size = new System.Drawing.Size(70, 24);
             this.lblParentName.TabIndex = 46;
             this.lblParentName.Text = "Parent";
             // 
             // lbltFeastText
             // 
-            this.lbltFeastText.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbltFeastText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbltFeastText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lbltFeastText.Location = new System.Drawing.Point(106, 260);
             this.lbltFeastText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -320,48 +320,48 @@ namespace UI_Design
             // lblFeast
             // 
             this.lblFeast.AutoSize = true;
-            this.lblFeast.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFeast.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblFeast.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblFeast.Location = new System.Drawing.Point(303, 280);
             this.lblFeast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFeast.Name = "lblFeast";
-            this.lblFeast.Size = new System.Drawing.Size(113, 22);
+            this.lblFeast.Size = new System.Drawing.Size(107, 24);
             this.lblFeast.TabIndex = 50;
             this.lblFeast.Text = "date event";
             // 
             // lblGenderText
             // 
             this.lblGenderText.AutoSize = true;
-            this.lblGenderText.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGenderText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblGenderText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblGenderText.Location = new System.Drawing.Point(106, 121);
             this.lblGenderText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenderText.Name = "lblGenderText";
-            this.lblGenderText.Size = new System.Drawing.Size(113, 22);
+            this.lblGenderText.Size = new System.Drawing.Size(112, 24);
             this.lblGenderText.TabIndex = 49;
             this.lblGenderText.Text = "Родитель:";
             // 
             // lblBirthday
             // 
             this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblBirthday.Location = new System.Drawing.Point(303, 200);
             this.lblBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(40, 22);
+            this.lblBirthday.Size = new System.Drawing.Size(38, 24);
             this.lblBirthday.TabIndex = 48;
             this.lblBirthday.Text = "HB";
             // 
             // lblBirthText
             // 
             this.lblBirthText.AutoSize = true;
-            this.lblBirthText.Font = new System.Drawing.Font("Bookman Old Style", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBirthText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBirthText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.lblBirthText.Location = new System.Drawing.Point(106, 200);
             this.lblBirthText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthText.Name = "lblBirthText";
-            this.lblBirthText.Size = new System.Drawing.Size(173, 22);
+            this.lblBirthText.Size = new System.Drawing.Size(169, 24);
             this.lblBirthText.TabIndex = 47;
             this.lblBirthText.Text = "Дата рождения:";
             // 
@@ -408,7 +408,7 @@ namespace UI_Design
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblSoonMed;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDateHealth;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;

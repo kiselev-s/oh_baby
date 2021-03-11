@@ -28,12 +28,15 @@ namespace UI_Design
 
         private static Child child = null;
         private static List<Health> healths = null;
+        private readonly FormMain formMain;
 
-        public FormMedicen(Child ch)
+        public FormMedicen(Child ch, FormMain _formMain)
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             child = ch;
+
+            formMain = _formMain;
         }
 
         private void FormDocuments_Load(object sender, EventArgs e)
@@ -41,8 +44,9 @@ namespace UI_Design
             FillMedTableChild();
         }
 
-        private void btnAddHealth_Click(object sender, EventArgs e)
+        private void BtnAddHealth_Click(object sender, EventArgs e)
         {
+            formMain.Opacity = 0.5;
 
             FormAddHealth formAddHealth = new FormAddHealth(child);
 
@@ -51,6 +55,8 @@ namespace UI_Design
                 FillMedTableChild();
             }
             else{}
+
+            formMain.Opacity = 1.0;
         }
 
         private void FillMedTableChild()
@@ -77,26 +83,7 @@ namespace UI_Design
             }
             catch (Exception)
             {
-                FormMessage.Show("Таблица пока не содержит записей...");
-            }
-        }
-
-        private void FillMedTableChild2()////// не работает, удаилть!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        {
-            try
-            {
-                healths = HealthRepos.FindByChild(child);
-
-                var bindingList = new BindingList<Health>(healths);
-
-                var source = new BindingSource(bindingList, null);
-
-                dataGridView1.DataSource = source;
-
-            }
-            catch (Exception)
-            {
-                FormMessage.Show("Таблица пока не содержит записей...");
+                //FormMessage.Show("Таблица пока не содержит записей...");
             }
         }
 
@@ -104,11 +91,18 @@ namespace UI_Design
         {
             if (e.ColumnIndex == 6)
             {
-                //FormMessage.Show($"Клик: строка{e.RowIndex}");
                 try
                 {
                     if (healths[e.RowIndex].ImageView.Length > 0)
-                        FormMessage.Show("Изображение уже добавлено...");
+                    {
+                        FormViewImage formView = new FormViewImage(healths[e.RowIndex].ImageView, formMain);
+                        formView.ShowDialog();
+                    }
+                    else
+                    {
+                        AddImage(e);
+                        FillMedTableChild();
+                    }
                 }
                 catch (Exception)
                 {

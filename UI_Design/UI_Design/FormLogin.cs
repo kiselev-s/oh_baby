@@ -14,6 +14,7 @@ namespace UI_Design
     public partial class FormLogin : Form
     {
         private static Parent returnParent;
+        private Point MouseHook;
 
         public FormLogin()
         {
@@ -62,6 +63,12 @@ namespace UI_Design
         private void BtnVisiblePassFalse_Click(object sender, EventArgs e)//скрыть пароль
         {
             StylesService.ViewEyePassFalse(sender, txtPass, BtnVisiblePassTrue_Click, BtnVisiblePassFalse_Click);
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
         }
     }
 }

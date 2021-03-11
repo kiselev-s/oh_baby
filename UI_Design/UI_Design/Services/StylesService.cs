@@ -27,7 +27,6 @@ namespace UI_Design
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
             senderPanel.BringToFront();
-           senderBtn.BackColor = Color.FromArgb(46, 51, 73);
 
             senderLabel.Text = textLabel;
         }
@@ -41,14 +40,7 @@ namespace UI_Design
             form.TopMost = true;
             form.FormBorderStyle = FormBorderStyle.None;
             senderPanel.Controls.Add(form);
-            senderPanel.BackColor = Color.FromArgb(46, 51, 73);
             form.Show();
-        }
-
-        public static void ViewBackColorButton(object sender)
-        {
-            Button senderBtn = sender as Button;
-            senderBtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
         public static void ViewEyePassTrue(object senderButton, TextBox txtPass, TextBox txtPassCheck, EventHandler visiblePassTrue, EventHandler visiblePassFalse)//показать пароль регистрация

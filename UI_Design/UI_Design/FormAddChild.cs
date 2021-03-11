@@ -13,7 +13,7 @@ namespace UI_Design
     public partial class FormAddChild : Form
     {
         private static Parent parent;
-        private static Child returnChild;
+        private Point MouseHook;
 
         public FormAddChild(Parent _parent)//приняли сущность Parent
         {
@@ -26,7 +26,7 @@ namespace UI_Design
         {
             if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
-                returnChild =  ChildRepos.Create(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent, cbxGender.SelectedIndex);//добавляем нового ребенка
+                ChildRepos.Create(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent, cbxGender.SelectedIndex);//добавляем нового ребенка
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -36,6 +36,17 @@ namespace UI_Design
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+        }
+
+        private void DtpBirthday_ValueChanged(object sender, EventArgs e)
+        {
+            txtDtp.Text = dtpBirthday.Value.ToShortDateString().ToString();
         }
     }
 }

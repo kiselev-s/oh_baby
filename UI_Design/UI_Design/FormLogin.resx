@@ -119,17 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtEmail.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 182</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>181, 148</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 31</value>
+    <value>240, 26</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
@@ -151,19 +147,16 @@
     <value>9</value>
   </data>
   <data name="txtPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="txtPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>241, 274</value>
-  </data>
-  <data name="txtPass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>181, 223</value>
   </data>
   <data name="txtPass.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="txtPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 31</value>
+    <value>240, 26</value>
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -187,19 +180,17 @@
     <value>True</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 162</value>
-  </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>189, 132</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 24</value>
+    <value>53, 20</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -223,19 +214,16 @@
     <value>True</value>
   </data>
   <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 255</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>189, 207</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>73, 20</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -271,13 +259,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnVisiblePass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>567, 272</value>
+    <value>425, 221</value>
   </data>
   <data name="btnVisiblePass.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnVisiblePass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 34</value>
+    <value>29, 28</value>
   </data>
   <data name="btnVisiblePass.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -307,7 +295,7 @@
     <value>Popup</value>
   </data>
   <data name="btnRegister.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 10.2pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
   <data name="btnRegister.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -316,13 +304,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegister.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 724</value>
+    <value>9, 588</value>
   </data>
   <data name="btnRegister.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnRegister.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 44</value>
+    <value>582, 36</value>
   </data>
   <data name="btnRegister.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -352,7 +340,7 @@
     <value>Popup</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 10.2pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
   <data name="btnCancel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomRight</value>
@@ -361,13 +349,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 482</value>
+    <value>9, 392</value>
   </data>
   <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 44</value>
+    <value>582, 36</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -397,7 +385,7 @@
     <value>Popup</value>
   </data>
   <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 10.2pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
   <data name="btnLogin.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -406,13 +394,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 377</value>
+    <value>9, 306</value>
   </data>
   <data name="btnLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 44</value>
+    <value>582, 36</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -444,8 +432,11 @@
   <data name="lblLogo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="lblLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
   <data name="lblLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 95</value>
+    <value>600, 77</value>
   </data>
   <data name="lblLogo.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -466,7 +457,7 @@
     <value>0</value>
   </data>
   <data name="lblRegister.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bookman Old Style, 12pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="lblRegister.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
@@ -475,13 +466,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegister.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 610</value>
-  </data>
-  <data name="lblRegister.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>159, 496</value>
   </data>
   <data name="lblRegister.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 111</value>
+    <value>283, 90</value>
   </data>
   <data name="lblRegister.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -508,13 +496,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 800</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>600, 650</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

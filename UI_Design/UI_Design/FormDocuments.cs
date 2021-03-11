@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -34,9 +35,13 @@ namespace UI_Design
         public static List<Imagge> imagges = new List<Imagge>();
         int i=0;
         public static byte[] byteImg = null;
-        public FormDocuments(Parent _parent, Child _child)
+        private readonly FormMain formMain;
+
+        public FormDocuments(Parent _parent, Child _child, FormMain _formMain)
         {
             InitializeComponent();
+
+            formMain = _formMain;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             child = _child;
             parent = _parent;
@@ -206,9 +211,32 @@ namespace UI_Design
             ImagesRepos.ViewImgCateg(nameButton, imagges, child, byteImg, pictureBox1);
         }
 
-        private void BtnAll_Leave(object sender, EventArgs e)
+        private void ButPrint_Click(object sender, EventArgs e)
+        {            
+            PrintDocument printDocument = new PrintDocument();// объект для печати            
+            printDocument.PrintPage += PrintDocument_PrintPage;// обработчик события печати            
+            printDialog.Document = printDocument;// установка объекта печати для его настройки
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print();
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            StylesService.ViewBackColorButton(sender);
+            e.Graphics.DrawImage(pictureBox1.BackgroundImage, new Point(5, 5));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormViewImage formView = new FormViewImage(pictureBox1.BackgroundImage, formMain);
+                formView.ShowDialog();
+            }
+            catch (Exception)
+            {
+                FormMessage.Show("Не удается открыть картинку...");
+            }
         }
     }
 }

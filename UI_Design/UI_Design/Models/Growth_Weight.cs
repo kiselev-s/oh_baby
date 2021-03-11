@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UI_Design
 {
-    class Growth_Weight
+    public class Growth_Weight
     {
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
