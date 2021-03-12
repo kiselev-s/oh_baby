@@ -123,6 +123,36 @@ namespace UI_Design.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baby_step1_ {
+            get {
+                object obj = ResourceManager.GetObject("baby_step1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baby_step1_1 {
+            get {
+                object obj = ResourceManager.GetObject("baby_step1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baby_step2_2 {
+            get {
+                object obj = ResourceManager.GetObject("baby_step2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap babys_room_64px {
             get {
                 object obj = ResourceManager.GetObject("babys_room_64px", resourceCulture);

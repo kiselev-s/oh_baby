@@ -88,6 +88,18 @@
     <Compile Include="FormAddHealth.Designer.cs">
       <DependentUpon>FormAddHealth.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBabyStep_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBabyStep_1.Designer.cs">
+      <DependentUpon>FormBabyStep_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBabyStep_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBabyStep_2.Designer.cs">
+      <DependentUpon>FormBabyStep_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDocuments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     <Compile Include="Services\ValidateService.cs" />
     <EmbeddedResource Include="FormAddHealth.resx">
       <DependentUpon>FormAddHealth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBabyStep_1.resx">
+      <DependentUpon>FormBabyStep_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBabyStep_2.resx">
+      <DependentUpon>FormBabyStep_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocuments.resx">
       <DependentUpon>FormDocuments.cs</DependentUpon>
@@ -327,6 +345,9 @@
     <Content Include="2363103-baby-boy-girl-kid-toy_85451.ico" />
     <Content Include="Properties\dell.png" />
     <Content Include="Properties\noImg.png" />
+    <None Include="Resources\baby_step2_2.png" />
+    <None Include="Resources\baby_step1_1.png" />
+    <None Include="Resources\baby_step1_.png" />
     <None Include="Resources\2363103-baby-boy-girl-kid-toy_85451.ico" />
     <None Include="Resources\minimize.png" />
     <None Include="Resources\close.png" />

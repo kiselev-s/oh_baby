@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
-
+using System.Threading;
 
 namespace UI_Design
 {
@@ -40,6 +40,10 @@ namespace UI_Design
 
         private Point MouseHook;
 
+        private static FormBabyStep_1 formStep1 = new FormBabyStep_1();
+        private static FormBabyStep_2 formStep2 = new FormBabyStep_2();
+        private static int count = 0;
+
         public FormMain()
         {
             db = new BabyDbContext();
@@ -53,28 +57,38 @@ namespace UI_Design
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+
+            formStep1.Opacity = 1.0;
+            formStep2.Opacity = 0.0;
+
+            formStep1.Show();
+            formStep2.Show();
+
+            timer.Start();
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
-            Opacity = 0.5;
-            Show();
+            Hide();
+            //Thread.Sleep(5000);
+            //Opacity = 0.5;
+            //Show();
 
-            FormLogin logForm = new FormLogin();
+            //FormLogin logForm = new FormLogin();
 
-            if (logForm.ShowDialog() == DialogResult.OK)//если залогинились
-            {
-                Opacity = 1.0;
+            //if (logForm.ShowDialog() == DialogResult.OK)//если залогинились
+            //{
+            //    Opacity = 1.0;
 
-                parent = logForm.GetParent();//получили того кто залогинился
+            //    parent = logForm.GetParent();//получили того кто залогинился
 
-                GetParentChilds();//заполнили всех детей родителя (если есть) + child = cmbBoxNameChild.SelectedIndex(0); (первый ребенок в списке)
+            //    GetParentChilds();//заполнили всех детей родителя (если есть) + child = cmbBoxNameChild.SelectedIndex(0); (первый ребенок в списке)
 
-                BtnHome.PerformClick();
-            }
-            else
-            {
-                Opacity = 1.0;
-            }
+            //    BtnHome.PerformClick();
+            //}
+            //else
+            //{
+            //    Opacity = 1.0;
+            //}
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
@@ -226,6 +240,34 @@ namespace UI_Design
         {
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
             Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+        }
+
+        private void timer_Tick_1(object sender, EventArgs e)
+        {
+            if (count == 5)
+            {
+                formStep1.Opacity = 0.0;
+                formStep2.Opacity = 1.0;
+
+                timer.Tick -= timer_Tick_1;
+                timer.Tick += timer_Tick_2;
+
+                count++;
+            }
+        }
+
+        private void timer_Tick_2(object sender, EventArgs e)
+        {
+            if (count == 5)
+            {
+                formStep2.Opacity = 0.0;
+                formStep1.Opacity = 1.0;
+
+                timer.Tick -= timer_Tick_2;
+                timer.Tick += timer_Tick_1;
+
+                count++;
+            }
         }
     }
 }
