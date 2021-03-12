@@ -43,7 +43,7 @@ namespace UI_Design
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if(Validation.VerifyLogin(txtEmail.Text, txtPass.Text))
+            if(ValidateService.VerifyLogin(txtEmail.Text, txtPass.Text))
             {
                 if (AuthService.Login(txtEmail.Text, txtPass.Text))
                 {

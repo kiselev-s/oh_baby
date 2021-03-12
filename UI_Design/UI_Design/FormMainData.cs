@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
-using MoreLinq;
 
 namespace UI_Design
 {
@@ -49,25 +48,43 @@ namespace UI_Design
                 lblFeast.Text = ShowFeast(child.Birthday).ToString();
 
                 health = HealthRepos.FindByChild(child);
-                lblDateHealth.Text = GetDateHealth(health).DateNextMeeting.ToShortDateString().ToString();
+            }
+            catch (Exception)
+            { }
+            try
+            {
+                lblDateHealth.Text = HealthRepos.GetDate(health).DateNextMeeting.ToShortDateString().ToString();
             }
             catch (Exception)
             {}
+            try
+            {
+                lblGrowth.Text = GrowthRepos.GetGrowth(child.Id).Growth.ToString();
+            }
+            catch (Exception)
+            {}
+            try
+            {
+                lblWeight.Text = GrowthRepos.GetWeight(child.Id).Weight.ToString();
+            }
+            catch (Exception)
+            { }
+
         }
 
         private string ShowFeast(DateTime feast)//показать праздник
         {
             DateTime dateNow = DateTime.Now;
 
-            //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
-            int dayDiff = DateSpan.DateDiffDay(dateNow, feast);
-            //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
-            //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
-            //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
-            //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
-            //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
+            int yearDiff = Math.Abs(DateSpan.DateDiffYear(feast, dateNow));
+            int dayDiff = Math.Abs(DateSpan.DateDiffDay(dateNow, feast));
 
-            return (365 + dayDiff).ToString() + " дн.";
+            if (yearDiff > 0)
+            {
+                return ((365 * yearDiff) + 1 - dayDiff).ToString() + " дн.";
+            }
+            else
+                return ((365*yearDiff) - dayDiff).ToString() + " дн.";
         }
 
         private string GetGender(int gender)//дешифратор пола ребенка
@@ -78,16 +95,6 @@ namespace UI_Design
                 return ($"сын {child.FirstName}");
             else
                 return "нафиг такой пол";
-        }
-
-        private static Health GetDateHealth (List<Health> healths)
-        {
-            var i = healths
-                .Where(h => h.DateNextMeeting.Date > DateTime.Now.Date)
-                .OrderBy(h => h.DateNextMeeting.Date)
-                .FirstOrDefault();
-
-            return i;
         }
     }
 }

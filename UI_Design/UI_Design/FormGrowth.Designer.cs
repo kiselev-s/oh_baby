@@ -133,7 +133,7 @@ namespace UI_Design
             this.rdBtnMnth.TabStop = true;
             this.rdBtnMnth.Text = "До года";
             this.rdBtnMnth.UseVisualStyleBackColor = true;
-            this.rdBtnMnth.CheckedChanged += new System.EventHandler(this.rdBtnMnth_CheckedChanged);
+            this.rdBtnMnth.CheckedChanged += new System.EventHandler(this.RdBtnMnth_CheckedChanged);
             // 
             // rdBtnYr
             // 
@@ -147,7 +147,7 @@ namespace UI_Design
             this.rdBtnYr.TabStop = true;
             this.rdBtnYr.Text = "После года";
             this.rdBtnYr.UseVisualStyleBackColor = true;
-            this.rdBtnYr.CheckedChanged += new System.EventHandler(this.rdBtnYr_CheckedChanged);
+            this.rdBtnYr.CheckedChanged += new System.EventHandler(this.RdBtnYr_CheckedChanged);
             // 
             // cmbBoxMonth
             // 
@@ -250,7 +250,7 @@ namespace UI_Design
             this.btnBild.TabIndex = 7;
             this.btnBild.Text = "Построить диаграмму";
             this.btnBild.UseVisualStyleBackColor = true;
-            this.btnBild.Click += new System.EventHandler(this.btnBild_Click);
+            this.btnBild.Click += new System.EventHandler(this.BtnBild_Click);
             // 
             // FormGrowth
             // 
