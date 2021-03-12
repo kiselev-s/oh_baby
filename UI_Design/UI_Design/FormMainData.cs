@@ -28,24 +28,31 @@ namespace UI_Design
 
         private void FormMainData_Load(object sender, EventArgs e)
         {
-            if (child != null)
-                ChildShowData();                
-            if(parent != null)
-                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";            
+            try
+            {
+                if (child != null)
+                    ChildShowData();
+                if (parent != null)
+                    lblParentName.Text = $"{parent.FirstName} {parent.LastName}";
+            }
+            catch (Exception)
+            {}          
         }
 
         private void ChildShowData()//вывод данных о ребенке на главную форму
         {
-            lblBirthday.Text = child.Birthday.ToShortDateString();
-            lblGender.Text = GetGender(child.Gender);
+            try
+            {
+                lblBirthday.Text = child.Birthday.ToShortDateString();
+                lblGender.Text = GetGender(child.Gender);
 
-            lblFeast.Text = ShowFeast(child.Birthday).ToString();
+                lblFeast.Text = ShowFeast(child.Birthday).ToString();
 
-            health = HealthRepos.FindByChild(child);
-            //if(health.Count > 0)
-            //lblDateHealth.Text = health[0].DateMeeting.ToShortTimeString().ToString();
-            //date();
-            lblDateHealth.Text = GetDateHealth(health).DateNextMeeting.ToShortDateString().ToString();
+                health = HealthRepos.FindByChild(child);
+                lblDateHealth.Text = GetDateHealth(health).DateNextMeeting.ToShortDateString().ToString();
+            }
+            catch (Exception)
+            {}
         }
 
         private string ShowFeast(DateTime feast)//показать праздник
@@ -71,18 +78,6 @@ namespace UI_Design
                 return ($"сын {child.FirstName}");
             else
                 return "нафиг такой пол";
-        }
-
-        private static void date()
-        {
-            var dict = new Dictionary<DateTime, string>()
-            {
-                [new DateTime(2016, 1, 1)] = "прошедший Новый Год",
-                [new DateTime(2016, 12, 31)] = "будущий Новый Год",
-                [new DateTime(2014, 1, 5)] = "давным-давно"
-            };
-            var today = DateTime.Now;
-            var closestValue = dict.MinBy(kvp => (kvp.Key - today).Duration());
         }
 
         private static Health GetDateHealth (List<Health> healths)
