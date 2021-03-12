@@ -59,13 +59,13 @@ namespace UI_Design
             {}
             try
             {
-                lblGrowth.Text = GrowthRepos.GetGrowth(child.Id).Growth.ToString();
+                lblGrowth.Text = GrowthRepos.GetGrowth(child.Id).Growth.ToString() + " см";
             }
             catch (Exception)
             {}
             try
             {
-                lblWeight.Text = GrowthRepos.GetWeight(child.Id).Weight.ToString();
+                lblWeight.Text = GrowthRepos.GetWeight(child.Id).Weight.ToString() + " кг";
             }
             catch (Exception)
             { }
@@ -84,7 +84,7 @@ namespace UI_Design
                 return ((365 * yearDiff) + 1 - dayDiff).ToString() + " дн.";
             }
             else
-                return ((365*yearDiff) - dayDiff).ToString() + " дн.";
+                return Math.Abs(((365*yearDiff) - dayDiff)).ToString() + " дн.";
         }
 
         private string GetGender(int gender)//дешифратор пола ребенка

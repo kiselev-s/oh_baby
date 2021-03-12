@@ -165,9 +165,9 @@ namespace UI_Design
             this.lblDateHealth.Location = new System.Drawing.Point(107, 64);
             this.lblDateHealth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateHealth.Name = "lblDateHealth";
-            this.lblDateHealth.Size = new System.Drawing.Size(149, 24);
+            this.lblDateHealth.Size = new System.Drawing.Size(74, 24);
             this.lblDateHealth.TabIndex = 21;
-            this.lblDateHealth.Text = "date soon med";
+            this.lblDateHealth.Text = "дата...";
             // 
             // panel3
             // 
@@ -325,9 +325,9 @@ namespace UI_Design
             this.lblFeast.Location = new System.Drawing.Point(303, 280);
             this.lblFeast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFeast.Name = "lblFeast";
-            this.lblFeast.Size = new System.Drawing.Size(107, 24);
+            this.lblFeast.Size = new System.Drawing.Size(77, 24);
             this.lblFeast.TabIndex = 50;
-            this.lblFeast.Text = "date event";
+            this.lblFeast.Text = "дней...";
             // 
             // lblGenderText
             // 
@@ -349,9 +349,9 @@ namespace UI_Design
             this.lblBirthday.Location = new System.Drawing.Point(303, 200);
             this.lblBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(38, 24);
+            this.lblBirthday.Size = new System.Drawing.Size(74, 24);
             this.lblBirthday.TabIndex = 48;
-            this.lblBirthday.Text = "HB";
+            this.lblBirthday.Text = "дата...";
             // 
             // lblBirthText
             // 

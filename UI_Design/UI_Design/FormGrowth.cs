@@ -39,6 +39,8 @@ namespace UI_Design
         {
             try
             {
+                if (rdBtnMnth.Checked == false && rdBtnYr.Checked == false)
+                    FormMessage.Show("Выберите варианты построения диаграммы...");
                 if (rdBtnYr.Checked == true)
                 {
                     cmbBoxYear.Text = "0";

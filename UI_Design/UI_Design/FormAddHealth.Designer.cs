@@ -31,6 +31,8 @@ namespace UI_Design
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnAddHealth = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.dtpMeeting = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblProff = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@ namespace UI_Design
             this.txtDate = new System.Windows.Forms.TextBox();
             this.txtDateNext = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnAddHealth = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,44 @@ namespace UI_Design
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
+            // 
+            // btnAddHealth
+            // 
+            this.btnAddHealth.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.btnAddHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddHealth.FlatAppearance.BorderSize = 0;
+            this.btnAddHealth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddHealth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnAddHealth.Image = global::UI_Design.Properties.Resources.add_50px21;
+            this.btnAddHealth.Location = new System.Drawing.Point(9, 21);
+            this.btnAddHealth.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddHealth.Name = "btnAddHealth";
+            this.btnAddHealth.Size = new System.Drawing.Size(218, 65);
+            this.btnAddHealth.TabIndex = 5;
+            this.btnAddHealth.Text = "Добавить";
+            this.btnAddHealth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAddHealth.UseVisualStyleBackColor = true;
+            this.btnAddHealth.Click += new System.EventHandler(this.BtnAddHealth_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnCancel.Image = global::UI_Design.Properties.Resources.unavailable_50px;
+            this.btnCancel.Location = new System.Drawing.Point(376, 21);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(218, 65);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Отменить";
+            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // dtpMeeting
             // 
@@ -124,7 +162,6 @@ namespace UI_Design
             this.txtProff.Name = "txtProff";
             this.txtProff.Size = new System.Drawing.Size(213, 28);
             this.txtProff.TabIndex = 40;
-            this.txtProff.Text = "Хирург";
             // 
             // dtpNextMeeting
             // 
@@ -183,7 +220,6 @@ namespace UI_Design
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(213, 28);
             this.txtFirstName.TabIndex = 61;
-            this.txtFirstName.Text = "Андрей";
             // 
             // lblFatherName
             // 
@@ -205,7 +241,6 @@ namespace UI_Design
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(213, 28);
             this.txtFatherName.TabIndex = 59;
-            this.txtFatherName.Text = "Аркадьевич";
             // 
             // lblLastName
             // 
@@ -227,7 +262,6 @@ namespace UI_Design
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(213, 28);
             this.txtLastName.TabIndex = 57;
-            this.txtLastName.Text = "Авиценна";
             // 
             // txtDate
             // 
@@ -264,44 +298,6 @@ namespace UI_Design
             this.label6.TabIndex = 46;
             this.label6.Text = "ДОБАВИТЬ ВИЗИТ К ВРАЧУ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnAddHealth
-            // 
-            this.btnAddHealth.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
-            this.btnAddHealth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddHealth.FlatAppearance.BorderSize = 0;
-            this.btnAddHealth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddHealth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnAddHealth.Image = global::UI_Design.Properties.Resources.add_50px21;
-            this.btnAddHealth.Location = new System.Drawing.Point(9, 21);
-            this.btnAddHealth.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddHealth.Name = "btnAddHealth";
-            this.btnAddHealth.Size = new System.Drawing.Size(218, 65);
-            this.btnAddHealth.TabIndex = 5;
-            this.btnAddHealth.Text = "Добавить";
-            this.btnAddHealth.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAddHealth.UseVisualStyleBackColor = true;
-            this.btnAddHealth.Click += new System.EventHandler(this.BtnAddHealth_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.btnCancel.Image = global::UI_Design.Properties.Resources.unavailable_50px;
-            this.btnCancel.Location = new System.Drawing.Point(376, 21);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(218, 65);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Отменить";
-            this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // FormAddHealth
             // 

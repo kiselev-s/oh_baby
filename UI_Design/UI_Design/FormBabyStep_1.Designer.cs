@@ -38,6 +38,7 @@ namespace UI_Design
             this.BackgroundImage = global::UI_Design.Properties.Resources.baby_step1_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(189, 187);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormBabyStep_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBabyStep_1";

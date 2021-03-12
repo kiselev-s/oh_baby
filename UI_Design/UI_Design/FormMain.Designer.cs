@@ -30,6 +30,7 @@ namespace UI_Design
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@ namespace UI_Design
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             this.pnlFormLoader = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -325,11 +325,6 @@ namespace UI_Design
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
             // 
-            // timer
-            // 
-            this.timer.Interval = 250;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +336,7 @@ namespace UI_Design
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFormLoader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -376,7 +372,6 @@ namespace UI_Design
         private System.Windows.Forms.ToolTip toolTipMain;
         private System.Windows.Forms.Label lblTmp;
         private System.Windows.Forms.Panel pnlFormLoader;
-        private System.Windows.Forms.Timer timer;
     }
 }
 
